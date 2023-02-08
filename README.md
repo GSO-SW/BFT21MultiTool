@@ -64,10 +64,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |	          |Entwickler       |<a href="https://github.com/demkodim">@Dmytro Demko</a>|Feature19             |
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
-|**Mathematik**	    |Menü MT    |Teamkoordinator  | @EmirCGN        |MAEntwicklung,Feature21|				
-|		                |           |Entwickler       | @Selo05        |Feature22             |		
-|		                |           |Entwickler       | @ErayAlish        |Feature23             |		
-|		                |           |Entwickler       | @aliaaalmustafa 	      |Feature24             |
+|**Mathematik**	    |Menü MT & Polynom|Teamkoordinator  | <a href="https://github.com/EmirCGN">@EmirCGN<a/>        |MAEntwicklung,Feature21|				
+|		                |Flächenberechnung           |Entwickler       | <a href="https://github.com/Selo05">@Selo05<a/>        |Feature22             |		
+|		                | Quadratische Funktionen          |Entwickler       | <a href="https://github.com/ErayAlish">@ErayAlish<a/>        |Feature23             |		
+|		                |  Lineare Funktionen         |Entwickler       | <a href="https://github.com/aliaaalmustafa">@aliaaalmustafa<a/> 	      |Feature24             |
 |		                |           |Entwickler	      |       	|Feature25             |
 
 
