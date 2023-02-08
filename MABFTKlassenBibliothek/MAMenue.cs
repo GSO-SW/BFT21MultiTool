@@ -1,7 +1,10 @@
 ﻿namespace MABFTKlassenBibliothek
 {
-    public class Class1
+    public class MAMenue
     {
-
+        public static void MASubMenue()
+        {
+            
+        }
     }
 }
