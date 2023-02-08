@@ -31,14 +31,14 @@ namespace MultiTool
                                   "                              >>> Hauptmenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
-                Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
+                Console.WriteLine("esc\t->\tbeendet das Programm");
 
                 //Beschreibung der Software.
                 Console.WriteLine("\n\nMit der Software 'BFTMulti-Tool' sollen wiederkehrende oder besonders aufwendige\n" +
                                   "Aufgabenaus dem schulischen Kontext erleichtert oder gelöst werden. Diese Aufgaben\n" +
                                   "ergeben sich aus den Problemstellungen aus dem Unterricht der Berufsfachschule für Technik.\n\n");
 
-                string HauptAusw;
+                ConsoleKeyInfo HauptAusw;
 
 
                 //Eingabeaufforderung 
@@ -47,49 +47,41 @@ namespace MultiTool
                 Console.WriteLine("\ti - Informatik");
                 Console.WriteLine("\tm - Mathematik");
                 Console.WriteLine("\tp - Physik");
-                Console.WriteLine("\tw - Wirtschaft\n");
-                Console.Write("Eingabe:");
-                HauptAusw = Console.ReadLine().ToLower();
+                Console.WriteLine("\tw - Wirtschaft");
+                HauptAusw = Console.ReadKey(true);
 
-                switch (HauptAusw)
+                switch (HauptAusw.Key)
                 {
-                    case "e":
+                    case ConsoleKey.E:
                         Console.Clear();
                         //Hier das Etechnikmenü aufrufen
                         break;
 
-                    case "i":
+                    case ConsoleKey.I:
                         Console.Clear();
                         //Hier das Informationstechnikmenü aufrufen
                         break;
 
-                    case "m":
+                    case ConsoleKey.M:
                         Console.Clear();
                         //Hier das Mathematikmenü aufrufen
                         break;
 
-                    case "p":
+                    case ConsoleKey.P:
                         Console.Clear();
                         //Hier das Physikmenü aufrufen
                         break;
 
-                    case "w":
+                    case ConsoleKey.W:
                         Console.Clear();
                         //Hier das Wirtschaftsmenü aufrufen
                         break;
 
-                    case "exit":
+                    case ConsoleKey.Escape:
                         Exit = true;
                         break;
                     default:
-
-                        Console.WriteLine("Ungültige Eingabe");
-                        Console.ReadKey();
-
-                        (int, int) cPosAM = Console.GetCursorPosition();
-
-                        KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
-
+                        Console.Clear();
                         break;
                 }
 
