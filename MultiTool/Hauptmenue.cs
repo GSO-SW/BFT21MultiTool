@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Figgle;
+using WIBFTKlassenBibliothek;
 
 namespace MultiTool
 {
@@ -75,7 +76,7 @@ namespace MultiTool
 
                     case "w":
                         Console.Clear();
-                        //Hier das Wirtschaftsmenü aufrufen
+                        WIMenue.WISubMenue();
                         break;
 
                     case "exit":
