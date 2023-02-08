@@ -23,7 +23,7 @@ Die Einhaltung der Anforderungen wird bei der Bewertung der Teilprogramme geprü
 |----------|----------|----------|
 |Programmiert in C#|Programm und einzelne Optionen sind beliebig oft wiederholbar.|Alle gesetzlichen vorgaben werden eingehalten.|
 |Konsolenanwendung|Eine Fehleingabe führt zu einer erneuten Eingabeaufforderung.|Moralische und ethische Grundsätze sind einzuhalten.|
-|.NET 5 |Eingabeaufforderungen können ohne gültige Eingabe verlassen werden. |-|
+|.NET 6 |Eingabeaufforderungen können ohne gültige Eingabe verlassen werden. |-|
 |Alle Features und Menüs sind in der Klassenbibliothek zu erstellen|Das Programm kann in jederzeit beendet werden.|-|
 |-|Alle Eingaben werden über die Tastatur gemacht.|-|
 |-|Die Konsole wird beim Verlassen des aktuellen Moduls gelöscht.|-|
@@ -40,10 +40,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 | --------------- 	| -------- 	|------		        |--------	|-----------	         |
 |**Administration**	|Release    |Administrator		|@AI-Assistant|Release, main         |
 |		                |	          |		              |      		|		                   |		
-|**Elektrotechnik**	|Menü ET    |Teamkoordinator  |         |ETEntwicklung,Feature1|
-|                   |           |Entwickler       |         |Feature2              |
-|                   |           |Entwickler       |         |Feature3              |
-|                   |           |Entwickler       |         |Feature4              |
+|**Elektrotechnik**	|Menü ET    |Teamkoordinator  |@alex030406         |ETEntwicklung,Feature1|
+|                   |           |Entwickler       |@Nilsbrocki         |Feature2              |
+|                   |           |Entwickler       |@Baran-Aydin05         |Feature3              |
+|                   |           |Entwickler       |@ZFNico         |Feature4              |
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
 |**Physik**	        |Menü PY 	  |Teamkoordinator  |         |PHEntwicklung	,Feature6|
@@ -52,22 +52,22 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |           |Entwickler	      |         |Feature9              |
 |		                |           |Entwickler       |         |Feature10             |		
 |		                |	          |                 |         |                      |				
-|**Informatik**	    |Menü IT    |Teamkoordinator  |         |ITEntwicklung,Feature11|				
-|		                |	          |Entwickler       |		      |Feature12             |		
-|		                |	          |Entwickler       |         |Feature13             |	
-|		                |	          |Entwickler       |  	      |Feature14             |			
+|**Informatik**	    |Menü IT    |Teamkoordinator  | Nuri    |ITEntwicklung,Feature11|				
+|		                |	          |Entwickler       |	Alend	  |Feature12             |		
+|		                |	          |Entwickler       | Raphael |Feature13             |	
+|		                |	          |Entwickler       | Rahim   |Feature14             |			
 |		                |	          |Entwickler       |         |Feature15             |			
-|		                |	          |	                |		      |		                   |				
+|		                |	          |	                |		      |		                   |
 |**Wirtschaft**	    |Menü WI    |Teamkoordinator  |<a href="github.com/Julcraftlp">@Julcraftlp</a>|WIEntwicklung,Feature16|				
 |		                |           |Entwickler       |<a href="https://github.com/murii74">@ray</a>|Feature17             |		
 |		                |	          |Entwickler       |<a href="https://github.com/romeohodeifa">@romeohodaifa</a>|Feature18             |		
-|		                |	          |Entwickler       |<a href="https://github.com/demkodim">@Dmytro Demko</a>|Feature19             |	
+|		                |	          |Entwickler       |<a href="https://github.com/demkodim">@Dmytro Demko</a>|Feature19             |
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
-|**Mathematik**	    |Menü MT    |Teamkoordinator  |         |MAEntwicklung,Feature21|				
-|		                |           |Entwickler       |         |Feature22             |		
-|		                |           |Entwickler       |         |Feature23             |		
-|		                |           |Entwickler       |  	      |Feature24             |
+|**Mathematik**	    |Menü MT    |Teamkoordinator  | @EmirCGN        |MAEntwicklung,Feature21|				
+|		                |           |Entwickler       | @Selo05        |Feature22             |		
+|		                |           |Entwickler       | @ErayAlish        |Feature23             |		
+|		                |           |Entwickler       | @aliaaalmustafa 	      |Feature24             |
 |		                |           |Entwickler	      |       	|Feature25             |
 
 
