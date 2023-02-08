@@ -1,4 +1,6 @@
-﻿namespace WIBFTKlassenBibliothek
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace WIBFTKlassenBibliothek
 {
     public class WIMenue
     {
@@ -17,6 +19,12 @@
             Console.WriteLine(@"    \  \::/        \__\/      \  \:\           \__\/     /__/:/       \  \::/       \  \:\        \  \:\        \  \:\         \__\/");
             Console.WriteLine(@"     \__\/                     \__\/                     \__\/         \__\/         \__\/         \__\/         \__\/             ");
         }
-        public int[] ints;
+        public class Saves
+        {
+            public static void save(decimal data)
+            {
+
+            }
+        }
     }
 }
