@@ -46,10 +46,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |                   |           |Entwickler       |@Nilsbrocki Nils Brockert        |Feature4              |
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
-|**Physik**	        |Menü PY 	  |Teamkoordinator  |         |PHEntwicklung	,Feature6|
-|		                |           |Entwickler	      |         |Feature7              |		
-|		                |	          |Entwickler	      |         |Feature8              |
-|		                |           |Entwickler	      |         |Feature9              |
+|**Physik**	        |Menü PY 	  |Teamkoordinator  |@BerkayyI|PHEntwicklung	,Feature6|
+|		                |           |Entwickler	      |@SeannPr |Feature7              |		
+|		                |	          |Entwickler	      |@Talhak06|Feature8              |
+|		                |           |Entwickler	      |@Sedatz52|Feature9              |
 |		                |           |Entwickler       |         |Feature10             |		
 |		                |	          |                 |         |                      |				
 |**Informatik**	    |Menü IT    |Teamkoordinator  | Nuri    |ITEntwicklung,Feature11|				
