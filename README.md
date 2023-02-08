@@ -40,10 +40,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 | --------------- 	| -------- 	|------		        |--------	|-----------	         |
 |**Administration**	|Release    |Administrator		|@AI-Assistant|Release, main         |
 |		                |	          |		              |      		|		                   |		
-|**Elektrotechnik**	|Menü ET    |Teamkoordinator  |         |ETEntwicklung,Feature1|
-|                   |           |Entwickler       |         |Feature2              |
-|                   |           |Entwickler       |         |Feature3              |
-|                   |           |Entwickler       |         |Feature4              |
+|**Elektrotechnik**	|Menü ET    |Teamkoordinator  |@alex030406 Alexander Skibbe         |ETEntwicklung,Feature1|
+|                   |           |Entwickler       |@Baran-Aydin05 Baran Aydin         |Feature2              |
+|                   |           |Entwickler       |@ZFNico Nico Feil         |Feature3              |
+|                   |           |Entwickler       |@Nilsbrocki Nils Brockert        |Feature4              |
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
 |**Physik**	        |Menü PY 	  |Teamkoordinator  |         |PHEntwicklung	,Feature6|
