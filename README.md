@@ -64,7 +64,7 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |	          |Entwickler       |         |Feature19             |	
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
-|**Mathematik**	    |Menü MT    |Teamkoordinator  |         |MAEntwicklung,Feature21|				
+|**Mathematik**	    |Menü MT    |Teamkoordinator  | @EmirCGN        |MAEntwicklung,Feature21|				
 |		                |           |Entwickler       |         |Feature22             |		
 |		                |           |Entwickler       |         |Feature23             |		
 |		                |           |Entwickler       |  	      |Feature24             |
