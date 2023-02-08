@@ -58,10 +58,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |	          |Entwickler       | Rahim   |Feature14             |			
 |		                |	          |Entwickler       |         |Feature15             |			
 |		                |	          |	                |		      |		                   |
-|**Wirtschaft**	    |Menü WI    |Teamkoordinator  |<a href="https://github.com/Julcraftlp">@Julcraftlp</a>|WIEntwicklung,Feature16|				
-|		                |           |Entwickler       |<a href="https://github.com/murii74">@ray</a>|Feature17             |		
-|		                |	          |Entwickler       |<a href="https://github.com/romeohodeifa">@romeohodaifa</a>|Feature18             |		
-|		                |	          |Entwickler       |<a href="https://github.com/demkodim">@Dmytro Demko</a>|Feature19             |
+|**Wirtschaft**	    |Menü WI Währungsrechner|Teamkoordinator  |<a href="https://github.com/Julcraftlp">@Julcraftlp</a>|WIEntwicklung,Feature16|				
+|		                |ZinsRechner|Entwickler       |<a href="https://github.com/murii74">@ray</a>|Feature17             |		
+|		                |LohnSteuer|Entwickler       |<a href="https://github.com/romeohodeifa">@romeohodaifa</a>|Feature18             |		
+|		                |Immobilien|Entwickler       |<a href="https://github.com/demkodim">@Dmytro Demko</a>|Feature19             |
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
 |**Mathematik**	    |Menü MT    |Teamkoordinator  | @EmirCGN        |MAEntwicklung,Feature21|				
