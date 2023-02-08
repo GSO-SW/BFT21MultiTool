@@ -57,11 +57,11 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |	          |Entwickler       | Raphael |Feature13             |	
 |		                |	          |Entwickler       | Rahim   |Feature14             |			
 |		                |	          |Entwickler       |         |Feature15             |			
-|		                |	          |	                |		      |		                   |				
-|**Wirtschaft**	    |Menü WI    |Teamkoordinator  |	        |WIEntwicklung,Feature16|				
-|		                |           |Entwickler       | @murii74        |Feature17             |		
-|		                |	          |Entwickler       |		      |Feature18             |		
-|		                |	          |Entwickler       |         |Feature19             |	
+|		                |	          |	                |		      |		                   |
+|**Wirtschaft**	    |Menü WI    |Teamkoordinator  |<a href="github.com/Julcraftlp">@Julcraftlp</a>|WIEntwicklung,Feature16|				
+|		                |           |Entwickler       |<a href="https://github.com/murii74">@ray</a>|Feature17             |		
+|		                |	          |Entwickler       |<a href="https://github.com/romeohodeifa">@romeohodaifa</a>|Feature18             |		
+|		                |	          |Entwickler       |<a href="https://github.com/demkodim">@Dmytro Demko</a>|Feature19             |
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
 |**Mathematik**	    |Menü MT    |Teamkoordinator  | @EmirCGN        |MAEntwicklung,Feature21|				
