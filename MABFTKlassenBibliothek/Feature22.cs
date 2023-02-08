@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MABFTKlassenBibliothek
 {
-    internal class Feature22
+    class Feature22
     {
+        public static void flaechenberechnung()
+        {
+            Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Flächenberechnung <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+        }
     }
 }

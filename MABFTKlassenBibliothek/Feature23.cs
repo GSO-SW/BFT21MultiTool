@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MABFTKlassenBibliothek
 {
-    internal class Feature23
+    class Feature23
     {
+        public static void quadratischefunktionen()
+        {
+            Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Quadratische Funktionen <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+        }
     }
 }

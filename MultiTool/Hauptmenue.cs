@@ -25,7 +25,7 @@ namespace MultiTool
                     (FiggleFonts.Slant.Render("BFTMultiTool"));
 
                 //Konsolentitel wird geändert.
-                Console.Title = "BFTMultiTool";
+                Console.Title = "BFTMultiTool"; 
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Hauptmenü <<<\n" +

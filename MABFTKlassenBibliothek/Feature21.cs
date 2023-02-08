@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace MABFTKlassenBibliothek
 {
-    internal class Feature21
+    class Feature21
     {
+        public static void Polynom()
+        {
+            Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Polynom <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+
+        }
     }
 }

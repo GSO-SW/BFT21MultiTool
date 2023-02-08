@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MABFTKlassenBibliothek
 {
-    internal class Feature24
+    class Feature24
     {
+        public static void linearefunktionen()
+        {
+            Console.WriteLine("------------------------------------------------------------------------------------\n" +
+                                  "                              >>> Lineare Funktionen <<<\n" +
+                                  "------------------------------------------------------------------------------------\n\n");
+        }
     }
 }
