@@ -59,7 +59,7 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |	          |Entwickler       |         |Feature15             |			
 |		                |	          |	                |		      |		                   |				
 |**Wirtschaft**	    |Menü WI    |Teamkoordinator  |	        |WIEntwicklung,Feature16|				
-|		                |           |Entwickler       |         |Feature17             |		
+|		                |           |Entwickler       | @murii74        |Feature17             |		
 |		                |	          |Entwickler       |		      |Feature18             |		
 |		                |	          |Entwickler       |         |Feature19             |	
 |		                |	          |Entwickler       |	        |Feature20             |	
