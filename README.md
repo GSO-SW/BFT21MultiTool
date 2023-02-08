@@ -58,10 +58,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |	          |Entwickler       |  	      |Feature14             |			
 |		                |	          |Entwickler       |         |Feature15             |			
 |		                |	          |	                |		      |		                   |				
-|**Wirtschaft**	    |Menü WI    |Teamkoordinator  |	        |WIEntwicklung,Feature16|				
-|		                |           |Entwickler       |         |Feature17             |		
-|		                |	          |Entwickler       |		      |Feature18             |		
-|		                |	          |Entwickler       |         |Feature19             |	
+|**Wirtschaft**	    |Menü WI    |Teamkoordinator  |<a href="github.com/Julcraftlp">@Julcraftlp</a>|WIEntwicklung,Feature16|				
+|		                |           |Entwickler       |<a href="https://github.com/murii74">@ray</a>|Feature17             |		
+|		                |	          |Entwickler       |<a href="https://github.com/romeohodeifa">@romeohodaifa</a>|Feature18             |		
+|		                |	          |Entwickler       |<a href="https://github.com/demkodim">@Dmytro Demko</a>|Feature19             |	
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
 |**Mathematik**	    |Menü MT    |Teamkoordinator  |         |MAEntwicklung,Feature21|				
