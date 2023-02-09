@@ -32,7 +32,7 @@ namespace MultiTool
                                   "                              >>> Hauptmenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
-                Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");s
+                Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
 
                 //Beschreibung der Software.
                 Console.WriteLine("\n\nMit der Software 'BFTMulti-Tool' sollen wiederkehrende oder besonders aufwendige\n" +
