@@ -13,8 +13,7 @@ namespace MABFTKlassenBibliothek
             Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Quadratische Funktionen <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
-            static void Main(string[] args)
-            {
+
                 double linearity;
                 double x1;
                 double y1;
@@ -95,7 +94,7 @@ namespace MABFTKlassenBibliothek
 
 
                 } while (true);
-            }
+            
         }
     }
 }
