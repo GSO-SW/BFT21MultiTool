@@ -7,6 +7,8 @@ namespace WIBFTKlassenBibliothek
     {
         public static void WISubMenue()
         {
+            bool Exit = false;
+            while (Exit = false)
             Console.Clear();
             //ASCII art Logo wird erzeugt.
             Console.WriteLine
@@ -19,7 +21,7 @@ namespace WIBFTKlassenBibliothek
                               "                          >>> Submenü Wirtschaft <<<\n" +
                               "------------------------------------------------------------------------------------\n\n");
 
-            Console.WriteLine("esc\t->\tbeendet das Programm");
+            Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
 
             //Beschreibung der Software.
             Console.WriteLine("\n\nDas Submenü Wirtschaft soll verschiedene Rechner zur Verfügung stellen,\n" +
@@ -28,46 +30,47 @@ namespace WIBFTKlassenBibliothek
                                " in zusammenhang miteinander, erleichtern.\n\n");
 
 
-            ConsoleKeyInfo HauptAusw;
+            string HauptAusw;
 
 
             //Eingabeaufforderung 
             Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-            Console.WriteLine("\te - Elektrotechnik");
-            Console.WriteLine("\ti - Informatik");
-            Console.WriteLine("\tm - Mathematik");
-            Console.WriteLine("\tp - Physik");
-            Console.WriteLine("\tw - Wirtschaft");
-            HauptAusw = Console.ReadKey(true);
+            Console.WriteLine("\t1 - EinheitenUmrechner");
+            Console.WriteLine("\t2 - Lohnsteuerberrechnung");
+            Console.WriteLine("\t3 - ZinsBerrechnung");
+            Console.WriteLine("\t4 - ImmobilienBerrechnung");
+            Console.WriteLine("\t5 - Zwischenspeicher Bearbeiten\n");
+            Console.Write("Eingabe:");
+            HauptAusw = Console.ReadLine().ToLower();
 
-            switch (HauptAusw.Key)
+            switch (HauptAusw)
             {
-                case ConsoleKey.E:
+                case "1":
                     Console.Clear();
                     //Hier das Etechnikmenü aufrufen
                     break;
 
-                case ConsoleKey.I:
+                case "2":
                     Console.Clear();
                     //Hier das Informationstechnikmenü aufrufen
                     break;
 
-                case ConsoleKey.M:
+                case "3":
                     Console.Clear();
                     //Hier das Mathematikmenü aufrufen
                     break;
 
-                case ConsoleKey.P:
+                case "4":
                     Console.Clear();
                     //Hier das Physikmenü aufrufen
                     break;
 
-                case ConsoleKey.W:
+                case "5":
                     Console.Clear();
                     //Hier das Wirtschaftsmenü aufrufen
                     break;
 
-                case ConsoleKey.Escape:
+                case "":
                     Exit = true;
                     break;
                 default:
@@ -78,11 +81,11 @@ namespace WIBFTKlassenBibliothek
         public class Saves
         {
             double[] doubles;
-            public static void save(decimal data)
+            public static void save(float data)
             {
 
             }
-            public static decimal load()
+            public static float load()
             {
                 return 0;
             }

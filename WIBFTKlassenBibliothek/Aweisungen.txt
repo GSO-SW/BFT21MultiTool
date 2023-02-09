@@ -1,19 +1,5 @@
 ﻿
 
-//Projekterstellung\\
-1.Projekt in Visual Studio öffnen.
-2.Unten rechts auf WIEntwickelung klicken.
-3.Neuer Branch klicken
-4.Euer projektname als Branchname eingeben
-5.Sicherstellen das der auswahlpunkt "Basierend Auf:" auf WIEntwickelung gestellt ist
-6.Erstellen Bestätigen.
-7.Erstellt im projektmappenexplorer unter der kategorie WIBFTKlassenBibliothek eine .cs datei mit eurem Projektnamen.
-8.Bestätigt das popup
-9.Öffnet die datei und fügt in di innerste klammer folgenden code ein: public static void run() { }
-10. Schreibt euren code in die gerade erstellten geschweiften kalmmern.
-
-
-
 //DatenspeicherNutzung\\
 speichern eines errechneten wertes:
 WIMenue.Saves.save(NumberVariable)
