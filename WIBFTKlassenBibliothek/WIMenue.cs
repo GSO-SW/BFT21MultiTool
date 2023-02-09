@@ -77,9 +77,14 @@ namespace WIBFTKlassenBibliothek
         }
         public class Saves
         {
+            double[] doubles;
             public static void save(decimal data)
             {
 
+            }
+            public static decimal load()
+            {
+                return 0;
             }
         }
     }
