@@ -47,9 +47,9 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
 |**Physik**	        |Menü PY(Dynamik und Wechselwirkungen)|Teamkoordinator  |@BerkayyI|PHEntwicklung	,Feature6|
-|		                |           |Entwickler	 (Realismus und Ästhetik) |@SeannPr |Feature7              |		
+|		                |  Realismus und Ästhetik   |Entwickler |@SeannPr |Feature7              |		
 |		                |(Berechnen und umrechnen von Volumen und Oberflache)|Entwickler	      |@Talhak06|Feature8              |
-|		                |           |Entwickler (Physikalische Phänomene)  |@Sedatz52|Feature9              |
+|		                | Physikalische Phänomene   |Entwickler  |@Sedatz52|Feature9              |
 |		                |           |Entwickler       |         |Feature10             |		
 |		                |	          |                 |         |                      |				
 |**Informatik**	    |Menü IT    |Teamkoordinator  | Nuri    |ITEntwicklung,Feature11|				
