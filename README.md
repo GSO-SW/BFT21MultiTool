@@ -46,10 +46,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |                   |Spannungsfall & Leitungsquerschnitt berechnen           |Entwickler       |@Nilsbrocki Nils Brockert        |Feature4              |
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
-|**Physik**	        |Menü PY(Dynamik und Wechselwirkungen)|Teamkoordinator  |@BerkayyI|PHEntwicklung	,Feature6|
-|		                |  Realismus und Ästhetik   |Entwickler |@SeannPr |Feature7              |		
+|**Physik**	        |Menü PY(Optik)|Teamkoordinator  |@BerkayyI|PHEntwicklung	,Feature6|
+|		                |  (Einfache harmonische Bewegung)   |Entwickler |@SeannPr |Feature7              |		
 |		                |(Berechnen und umrechnen von Volumen und Oberflache)|Entwickler	      |@Talhak06|Feature8              |
-|		                | Physikalische Phänomene   |Entwickler  |@Sedatz52|Feature9              |
+|		                | (Einfache Schaltungen)   |Entwickler  |@Sedatz52|Feature9              |
 |		                |           |Entwickler       |         |Feature10             |		
 |		                |	          |                 |         |                      |				
 |**Informatik**	    |Menü IT    |Teamkoordinator  | Nuri    |ITEntwicklung,Feature11|				
