@@ -10,10 +10,17 @@ namespace MABFTKlassenBibliothek
     {
         public static void Polynom()
         {
+            string menu;
             Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Polynom <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
+            Console.WriteLine("1. Programm starten");
+            Console.WriteLine("2. Zurück zum Mathemenü");
+            Console.Write(">");
+            menu = Console.ReadLine();
+
+            if(menu == "1") { 
             Console.WriteLine("Geben Sie die Koeffizienten des Polynoms in aufsteigender Reihenfolge des Grades an: ");
             string[] coefficients = Console.ReadLine().Split();
             int[] polynomialCoefficients = new int[coefficients.Length];
@@ -31,7 +38,16 @@ namespace MABFTKlassenBibliothek
             Console.WriteLine("\nDarstellung des Polynomgraphen:");
             DrawCoordinateSystem();
             DrawPolynomialGraph(polynomialCoefficients, x);
-            Console.ReadKey(true); 
+            Console.ReadKey(true);
+            }
+            else if(menu == "2")
+            {
+                Console.Clear();
+                Console.WriteLine("\n\n\n\tSie werden nun zum Mathemenü geleitet!");
+                Thread.Sleep(1000);
+                Console.Clear();
+                MABFTKlassenBibliothek.MAMenue.MASubMenue();
+            }
         }
 
         static int CalculatePolynomialValue(int[] coefficients, int x)
