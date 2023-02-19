@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,93 +11,232 @@ namespace MABFTKlassenBibliothek
     {
         public static void Polynom()
         {
+            int wrongAttempts = 0;
             string menu;
             Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Polynom <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
-
-            Console.WriteLine("1. Programm starten");
-            Console.WriteLine("2. Zurück zum Mathemenü");
-            Console.Write(">");
-            menu = Console.ReadLine();
-
-            if(menu == "1") { 
-            Console.WriteLine("Geben Sie die Koeffizienten des Polynoms in aufsteigender Reihenfolge des Grades an: ");
-            string[] coefficients = Console.ReadLine().Split();
-            int[] polynomialCoefficients = new int[coefficients.Length];
-            for (int i = 0; i < coefficients.Length; i++)
+            while (true)
             {
-                polynomialCoefficients[i] = int.Parse(coefficients[i]);
-            }
 
-            Console.WriteLine("Geben Sie den Wert von x ein: ");
-            int x = int.Parse(Console.ReadLine());
 
-            int result = CalculatePolynomialValue(polynomialCoefficients, x);
-            Console.WriteLine("Der Wert des Polynoms ist: " + result);
+                Console.WriteLine("1. Programm starten");
+                Console.WriteLine("2. Zurück zum Mathemenü");
+                Console.Write("> ");
+                menu = Console.ReadLine();
 
-            Console.WriteLine("\nDarstellung des Polynomgraphen:");
-            DrawCoordinateSystem();
-            DrawPolynomialGraph(polynomialCoefficients, x);
-            Console.ReadKey(true);
-            }
-            else if(menu == "2")
-            {
-                Console.Clear();
-                Console.WriteLine("\n\n\n\tSie werden nun zum Mathemenü geleitet!");
-                Thread.Sleep(1000);
-                Console.Clear();
-                MABFTKlassenBibliothek.MAMenue.MASubMenue();
-            }
-        }
-
-        static int CalculatePolynomialValue(int[] coefficients, int x)
-        {
-            int result = 0;
-            for (int i = 0; i < coefficients.Length; i++)
-            {
-                result += (int)Math.Pow(x, i) * coefficients[i];
-            }
-            return result;
-        }
-
-        static void DrawCoordinateSystem()
-        {
-            Console.WriteLine("+-------------+");
-            for (int i = 10; i >= -10; i--)
-            {
-                Console.Write("|");
-                for (int j = -10; j <= 10; j++)
+                if (menu == "1")
                 {
-                    if (i == 0 && j == 0)
+                    Console.Clear();
+                    Console.WriteLine("Geben Sie die Koeffizienten des Polynoms in aufsteigender Reihenfolge des Grades an, separiert durch Leerzeichen:");
+                    string[] coefficients = Console.ReadLine().Split();
+                    double[] polynomialCoefficients = new double[coefficients.Length];
+                    for (int i = 0; i < coefficients.Length; i++)
                     {
-                        Console.Write("+");
+                        if (coefficients[i].Contains("sqrt"))
+                        {
+                            int sqrtStartIndex = coefficients[i].IndexOf("sqrt(") + 5;
+                            int sqrtLength = coefficients[i].Length - sqrtStartIndex - 1;
+                            double sqrtValue = double.Parse(coefficients[i].Substring(sqrtStartIndex, sqrtLength));
+                            polynomialCoefficients[i] = Math.Sqrt(sqrtValue);
+                        }
+                        else
+                        {
+                            polynomialCoefficients[i] = double.Parse(coefficients[i]);
+                        }
                     }
-                    else if (i == 0)
+                    Console.WriteLine("Geben Sie den Wert von x ein:");
+                    double x;
+                    while (!double.TryParse(Console.ReadLine(), out x))
                     {
-                        Console.Write("-");
+                        Console.WriteLine("Fehler: Ungültige Eingabe. Bitte geben Sie eine gültige Zahl ein.");
+                        wrongAttempts++;
+                        if (wrongAttempts == 18)
+                        {
+                            Console.WriteLine("Wenn du nochmal eine falsche Eingabe machst, explodiert dein Computer!");
+                        }
+                        else if (wrongAttempts == 19)
+                        {
+                            Console.WriteLine("Ich habe dir gesagt, dass dein Computer explodiert, wenn du nochmal eine falsche Eingabe machst! Du wurdest gewarnt...");
+                        }
+                        else if (wrongAttempts == 20)
+                        {
+                            Console.WriteLine("Tut mir leid, aber jetzt ist es zu spät. Dein Computer wird in \n3...");
+                            System.Threading.Thread.Sleep(1000);
+                            Console.WriteLine("2...");
+                            System.Threading.Thread.Sleep(1000);
+                            Console.WriteLine("1...");
+                            System.Threading.Thread.Sleep(1000);
+                            Console.WriteLine("BOOM!");
+                            Environment.Exit(0);
+                        }
+                        else if (wrongAttempts >= 10 && wrongAttempts % 2 == 0)
+                        {
+                            Console.WriteLine("Hey, du scheinst Schwierigkeiten zu haben. Brauchst du Hilfe?");
+                            string abfrage_hilfe = Console.ReadLine();
+                            if (abfrage_hilfe.Contains("ja"))
+                            {
+                                Console.WriteLine("Also... Wenn ich dir ehrlich bin, kann dir nur noch Gott helfen oder wenn du wen Menschliches brauchst, dann kann dir vielleicht aber auch nur vielleicht ein Therapeut helfen weiterhelfen...");
+                                Console.ReadLine();
+                            }
+                            else
+                            {
+                                Console.WriteLine("Okaayyy!");
+                                Thread.Sleep(1000);
+                                Console.ReadLine();
+                            }
+                        }
                     }
-                    else if (j == 0)
+                    Console.Clear();
+                    DrawPolynomialGraph(polynomialCoefficients, x);
+                    Console.ReadLine();
+                }
+
+                else if (menu == "2")
+                {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\nSie werden nun zum Mathemenü geleitet!");
+                    Thread.Sleep(1000);
+                    Console.Clear();
+                    return;
+                }
+
+                if (menu == "iamlost")
+                {
+                    if (wrongAttempts <= 1)
                     {
-                        Console.Write("|");
+                        Console.WriteLine("Herzlichen Glückwunsch, du hast einen geheimen Command gefunden, welcher zeigt wie viele Fehlversuche du schon hier im Programm hattest  :D");
+                        Console.WriteLine("Möchtest du sehen wie viele Fehlverusche du hattest?(y=yes/n=no)");
+                        string fehlversuche = Console.ReadLine();
+                        if (fehlversuche.ToLower() == "y")
+                        {
+                            Console.WriteLine("\nDu hast bis jetzt keine einzigen Fehlversuche im Programm gehabt! :)");
+                        }
+                        else if (fehlversuche.ToLower() == "n")
+                        {
+                            Console.WriteLine("\nOkay, kein Problem.");
+                            Console.ReadLine();
+                        }
                     }
                     else
                     {
-                        Console.Write(" ");
+                        Console.WriteLine("Meine Augen bluten, wenn ich so sehe wie oft du schon versucht hast hier im Programm was richtig einzugeben...");
+                        Thread.Sleep(4000);
+                        Console.WriteLine("Achso und du hast " + wrongAttempts + " versucht was richtig einzugeben...");
+                        Console.ReadLine();
                     }
                 }
-                Console.WriteLine("");
-            }
-            Console.WriteLine("+-------------+");
-        }
 
-        static void DrawPolynomialGraph(int[] coefficients, int x)
-        {
-            for (int i = -10; i <= 10; i++)
-            {
-                int y = CalculatePolynomialValue(coefficients, i);
-                Console.SetCursorPosition(10 + i, 10 - y);
-                Console.Write("*");
+                static double CalculatePolynomialValue(double[] coefficients, double x)
+                {
+                    double result = 0;
+                    for (int i = 0; i < coefficients.Length; i++)
+                    {
+                        result += Math.Pow(x, i) * coefficients[i];
+                    }
+                    return result;
+                }
+
+                static void DrawCoordinateSystem()
+                {
+                    Console.WriteLine("+-------------+");
+                    for (int i = 10; i >= -10; i--)
+                    {
+                        Console.Write("|");
+                        for (int j = -10; j <= 10; j++)
+                        {
+                            if (i == 0 && j == 0)
+                            {
+                                Console.Write("+");
+                            }
+                            else if (i == 0)
+                            {
+                                Console.Write("-");
+                            }
+                            else if (j == 0)
+                            {
+                                Console.Write("|");
+                            }
+                            else
+                            {
+                                Console.Write(" ");
+                            }
+                        }
+                        Console.WriteLine("");
+                    }
+                    Console.WriteLine("+-------------+");
+                }
+
+                static void DrawPolynomialGraph(double[] coefficients, double x)
+                {
+                    int width = Console.WindowWidth - 1;
+                    int height = Console.WindowHeight - 1;
+
+                    char[,] graph = new char[width, height];
+
+                    for (int i = 0; i < width; i++)
+                    {
+                        for (int j = 0; j < height; j++)
+                        {
+                            graph[i, j] = ' ';
+                        }
+                    }
+
+                    //(Orientierung) Zeichnung der X und Y-Achse
+                    int xAxisPos = (int)Math.Round(height / 2.0);
+                    int yAxisPos = (int)Math.Round(width / 2.0);
+
+                    for (int i = 0; i < width; i++)
+                    {
+                        graph[i, xAxisPos] = '-';
+                    }
+
+                    for (int i = 0; i < height; i++)
+                    {
+                        graph[yAxisPos, i] = '|';
+                    }
+
+                    //(Orientierung) Zeichnet hier den Graphen
+                    double minValue = double.MaxValue;
+                    double maxValue = double.MinValue;
+
+                    for (int i = -yAxisPos; i < width - yAxisPos; i++)
+                    {
+                        double y = CalculatePolynomialValue(coefficients, i + x);
+                        if (y < minValue)
+                        {
+                            minValue = y;
+                        }
+                        if (y > maxValue)
+                        {
+                            maxValue = y;
+                        }
+                    }
+
+                    double valueRange = maxValue - minValue;
+                    double heightPerUnit = height / valueRange;
+
+                    for (int i = -yAxisPos; i < width - yAxisPos; i++)
+                    {
+                        double y = CalculatePolynomialValue(coefficients, i + x);
+                        int yPos = xAxisPos - (int)Math.Round(y * heightPerUnit);
+
+                        if (yPos >= 0 && yPos < height)
+                        {
+                            graph[i + yAxisPos, yPos] = '*';
+                        }
+                    }
+
+                    Console.WriteLine();
+                    for (int i = 0; i < height; i++)
+                    {
+                        for (int j = 0; j < width; j++)
+                        {
+                            Console.Write(graph[j, i]);
+                        }
+                        Console.WriteLine();
+                    }
+                }
             }
         }
     }

@@ -57,6 +57,7 @@ namespace MABFTKlassenBibliothek
                 else
                 {
                     Console.WriteLine("Guten Abend! Es ist jetzt grade " + DateTime.Now.ToString("HH:mm") + " Uhr!\n");
+                    Thread.Sleep(1000);
 
                 }
 
