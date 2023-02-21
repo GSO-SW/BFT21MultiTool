@@ -32,19 +32,38 @@ namespace MABFTKlassenBibliothek
                     Console.WriteLine("Geben Sie die Koeffizienten des Polynoms in aufsteigender Reihenfolge des Grades an, separiert durch Leerzeichen:");
                     string[] coefficients = Console.ReadLine().Split();
                     double[] polynomialCoefficients = new double[coefficients.Length];
-                    for (int i = 0; i < coefficients.Length; i++)
+                    bool validInput = false;
+                    while (!validInput)
                     {
-                        if (coefficients[i].Contains("sqrt"))
+                        validInput = true;
+                        for (int i = 0; i < coefficients.Length; i++)
                         {
-                            int sqrtStartIndex = coefficients[i].IndexOf("sqrt(") + 5;
-                            int sqrtLength = coefficients[i].Length - sqrtStartIndex - 1;
-                            double sqrtValue = double.Parse(coefficients[i].Substring(sqrtStartIndex, sqrtLength));
-                            polynomialCoefficients[i] = Math.Sqrt(sqrtValue);
+                            if (coefficients[i].Contains("sqrt"))
+                            {
+                                int sqrtStartIndex = coefficients[i].IndexOf("sqrt(") + 5;
+                                int sqrtLength = coefficients[i].Length - sqrtStartIndex - 1;
+                                double sqrtValue = double.Parse(coefficients[i].Substring(sqrtStartIndex, sqrtLength));
+                                polynomialCoefficients[i] = Math.Sqrt(sqrtValue);
+                            }
+                            else if (!double.TryParse(coefficients[i], out polynomialCoefficients[i]))
+                            {
+                                Console.WriteLine("Ungültige Eingabe: Bitte geben Sie nur Zahlen ein.");
+                                validInput = false;
+                                wrongAttempts++;
+                                Console.WriteLine("\nBitte drücken sie die ENTER-Taste!");
+                                Console.ReadLine();
+                                Console.Clear();
+                                break;
+                            }
                         }
-                        else
+                        if (!validInput)
                         {
-                            polynomialCoefficients[i] = double.Parse(coefficients[i]);
+                            Console.WriteLine("\nBitte geben Sie die Koeffizienten des Polynoms in aufsteigender Reihenfolge des Grades erneut ein:");
+                            coefficients = Console.ReadLine().Split();
+                            polynomialCoefficients = new double[coefficients.Length];
                         }
+
+
                     }
                     Console.WriteLine("Geben Sie den Wert von x ein:");
                     double x;
@@ -63,11 +82,11 @@ namespace MABFTKlassenBibliothek
                         else if (wrongAttempts == 20)
                         {
                             Console.WriteLine("Tut mir leid, aber jetzt ist es zu spät. Dein Computer wird in \n3...");
-                            System.Threading.Thread.Sleep(1000);
+                            Thread.Sleep(1000);
                             Console.WriteLine("2...");
-                            System.Threading.Thread.Sleep(1000);
+                            Thread.Sleep(1000);
                             Console.WriteLine("1...");
-                            System.Threading.Thread.Sleep(1000);
+                            Thread.Sleep(1000);
                             Console.WriteLine("BOOM!");
 
                             Environment.Exit(0);
@@ -125,7 +144,7 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("\nOkay, kein Problem.\n");
                             Console.WriteLine("Bitte drücken sie die ENTER-Taste!");
                             Console.ReadLine();
-                            Console.Clear(); 
+                            Console.Clear();
                         }
                     }
                     else
@@ -133,7 +152,9 @@ namespace MABFTKlassenBibliothek
                         Console.WriteLine("Meine Augen bluten, wenn ich so sehe, wie oft du schon versucht hast, hier im Programm was richtig einzugeben...");
                         Thread.Sleep(4000);
                         Console.WriteLine("Achso und du hast " + wrongAttempts + " mal versucht was richtiges einzugeben...");
+                        Console.WriteLine("\nBitte drücken sie die ENTER-Taste!");
                         Console.ReadLine();
+                        Console.Clear();
                     }
                 }
                 else if (menu == "resetiamlost")
@@ -148,7 +169,7 @@ namespace MABFTKlassenBibliothek
                         Console.ReadLine();
                         Console.Clear();
                     }
-                    else if(wrongAttempts < 1) 
+                    else if (wrongAttempts < 1)
                     {
                         Console.WriteLine("Du hast bis jetzt keinen einzigen Fehlversuch gehabt! ");
                         Thread.Sleep(1000);
@@ -272,4 +293,3 @@ namespace MABFTKlassenBibliothek
         }
     }
 }
-
