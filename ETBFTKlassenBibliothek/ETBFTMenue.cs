@@ -11,7 +11,6 @@ namespace ETBFTKlassenBibliothek
 
             do
             {
-                Console.SetCursorPosition(0, 0);
                 (int, int) cPosBM = Console.GetCursorPosition();
 
                 Console.WriteLine();
@@ -42,8 +41,8 @@ namespace ETBFTKlassenBibliothek
                 Console.WriteLine("\t1 - Spannung als Energieaufteilung & Strom aus Ladungen je Zeit");
                 Console.WriteLine("\t2 - Ohm'schesGesetz / Leistungsgesetz");
                 Console.WriteLine("\t3 - Widerstand, Kondensator & Spule Berechnung");
-                Console.WriteLine("\t4 - Physik");
-                Console.WriteLine("\t5 - Spannungsfall & Leitungsquerschnitt berechnen\n");
+                Console.WriteLine("\t4 - Spannungsfall & Leitungsquerschnitt berechnen\n");
+                Console.WriteLine("");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
