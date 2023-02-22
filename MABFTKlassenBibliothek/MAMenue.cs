@@ -55,8 +55,6 @@ namespace MABFTKlassenBibliothek
 
                 }
                       
-
-                Console.ForegroundColor = ConsoleColor.Green;
                 while (!exit)
                 {
                     Console.Clear();
@@ -101,6 +99,7 @@ namespace MABFTKlassenBibliothek
                         if (selectedItem == 0)
                         {
                             Console.Clear();
+                            Feature21.Polynom();
 
                         }
                         else if (selectedItem == 1)
