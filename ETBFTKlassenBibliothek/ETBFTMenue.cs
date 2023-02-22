@@ -60,12 +60,12 @@ namespace ETBFTKlassenBibliothek
                         break;
 
                     case "3":
-                        Feature3.Feature_3();
                         Console.Clear();
                         
                         break;
 
                     case "4":
+                        Feature4.Feature_4();
                         Console.Clear();
                         
                         break;

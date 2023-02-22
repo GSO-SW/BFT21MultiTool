@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ETBFTKlassenBibliothek
 {
-    internal class Feature3
+    internal class Feature4
     {
-        public static void Feature_3() 
+        public static void Feature_4() 
         {
             
 
