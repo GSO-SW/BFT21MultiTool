@@ -80,7 +80,7 @@ namespace ETBFTKlassenBibliothek
 
                         Console.WriteLine("Ungültige Eingabe");
                         Console.ReadKey();
-
+                        Console.SetCursorPosition(0, 0);
                         (int, int) cPosAM = Console.GetCursorPosition();
 
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
