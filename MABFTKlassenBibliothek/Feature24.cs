@@ -13,7 +13,11 @@ namespace MABFTKlassenBibliothek
             Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Lineare Funktionen <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
+            {
+                Console.WriteLine("1. Programm starten");
+                Console.WriteLine("2. Programm beenden");
 
+            }
         }
     }
 }
