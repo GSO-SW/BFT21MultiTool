@@ -52,10 +52,10 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                | (Einfache Schaltungen)   |Entwickler  |@Sedatz52|Feature9              |
 |		                |           |Entwickler       |         |Feature10             |		
 |		                |	          |                 |         |                      |				
-|**Informatik**	    |Menü IT    |Teamkoordinator  | Nuri    |ITEntwicklung,Feature11|				
-|		                |	          |Entwickler       |	Alend	  |Feature12             |		
-|		                |	          |Entwickler       | Raphael |Feature13             |	
-|		                |	          |Entwickler       | Rahim   |Feature14             |			
+|**Informatik**	    |Menü IT &Speicherberechnung von Sounddateien und Videodateien|Teamkoordinator  | Nuri    |ITEntwicklung,Feature11|				
+|		                |Bit und Byte Rechner |Entwickler       |@LordAlendAita|Feature12             |		
+|		                |Binärer Rechner|Entwickler       |@Raphael2005H|Feature13             |	
+|		                |DPi Rechner|Entwickler       |@TheRaim22|Feature14             |			
 |		                |	          |Entwickler       |         |Feature15             |			
 |		                |	          |	                |		      |		                   |
 |**Wirtschaft**	    |Menü WI Währungsrechner|Teamkoordinator  |<a href="https://github.com/Julcraftlp">@Julcraftlp</a>|WIEntwicklung,Feature16|				
