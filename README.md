@@ -40,16 +40,16 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 | --------------- 	| -------- 	|------		        |--------	|-----------	         |
 |**Administration**	|Release    |Administrator		|@AI-Assistant|Release, main         |
 |		                |	          |		              |      		|		                   |		
-|**Elektrotechnik**	|Menü ET    |Teamkoordinator  |@alex030406 Alexander Skibbe         |ETEntwicklung,Feature1|
-|                   |           |Entwickler       |@Baran-Aydin05 Baran Aydin         |Feature2              |
-|                   |           |Entwickler       |@ZFNico Nico Feil         |Feature3              |
-|                   |           |Entwickler       |@Nilsbrocki Nils Brockert        |Feature4              |
+|**Elektrotechnik**	|Menü ET /   |Teamkoordinator  |@alex030406 Alexander Skibbe         |ETEntwicklung,Feature1|
+|                   |Ohm'schesGesetz / Leistungsgesetz           |Entwickler       |@Baran-Aydin05 Baran Aydin         |Feature2              |
+|                   |Widerstand, Kondensator & Spule Berechnung           |Entwickler       |@ZFNico Nico Feil         |Feature3              |
+|                   |Spannungsfall & Leitungsquerschnitt berechnen           |Entwickler       |@Nilsbrocki Nils Brockert        |Feature4              |
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
-|**Physik**	        |Menü PY 	  |Teamkoordinator  |@BerkayyI|PHEntwicklung	,Feature6|
-|		                |           |Entwickler	      |@SeannPr |Feature7              |		
-|		                |	          |Entwickler	      |@Talhak06|Feature8              |
-|		                |           |Entwickler	      |@Sedatz52|Feature9              |
+|**Physik**	        |Menü PY(Dynamik und Wechselwirkungen)|Teamkoordinator  |@BerkayyI|PHEntwicklung	,Feature6|
+|		                |  Realismus und Ästhetik   |Entwickler |@SeannPr |Feature7              |		
+|		                |(Berechnen und umrechnen von Volumen und Oberflache)|Entwickler	      |@Talhak06|Feature8              |
+|		                | Physikalische Phänomene   |Entwickler  |@Sedatz52|Feature9              |
 |		                |           |Entwickler       |         |Feature10             |		
 |		                |	          |                 |         |                      |				
 |**Informatik**	    |Menü IT    |Teamkoordinator  | Nuri    |ITEntwicklung,Feature11|				
@@ -64,7 +64,7 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |Immobilien|Entwickler       |<a href="https://github.com/demkodim">@Dmytro Demko</a>|Feature19             |
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
-|**Mathematik**	    |Menü MT    |Teamkoordinator  | <a href="https://github.com/EmirCGN">@EmirCGN<a/>        |MAEntwicklung,Feature21|				
+|**Mathematik**	    |Menü MT & Polynom|Teamkoordinator  | <a href="https://github.com/EmirCGN">@EmirCGN<a/>        |MAEntwicklung,Feature21|				
 |		                |Flächenberechnung           |Entwickler       | <a href="https://github.com/Selo05">@Selo05<a/>        |Feature22             |		
 |		                | Quadratische Funktionen          |Entwickler       | <a href="https://github.com/ErayAlish">@ErayAlish<a/>        |Feature23             |		
 |		                |  Lineare Funktionen         |Entwickler       | <a href="https://github.com/aliaaalmustafa">@aliaaalmustafa<a/> 	      |Feature24             |
