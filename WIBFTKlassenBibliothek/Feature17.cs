@@ -11,13 +11,20 @@ namespace WIBFTKlassenBibliothek
     
     public static void run()
         {
+            bool Exit = false; 
+            Exit= true;
+
+
+            if (Exit)
+             Environment.Exit(0);
             double Kapitel = 0;
             double zinssatz = 0;
             double jahr = 0;
             double gewinn = 0;
             double kontostand = 0;
             Console.WriteLine("Bitte geben sie ihr kapital ein");
-            Kapitel  = Convert .ToDouble(Console.ReadLine());
+
+            Kapitel = Convert .ToDouble(Console.ReadLine());
             Console.WriteLine("Bitte geben sie ihr Zinssatz ein");
             zinssatz = Convert .ToDouble(Console.ReadLine());
             Console.WriteLine("Bitte geben sie ihr anlagedauer ein");
@@ -27,7 +34,10 @@ namespace WIBFTKlassenBibliothek
 
             Console.WriteLine($"Ihr Gewinn beträgt:{gewinn}");
             Console.ReadKey();
-
+            
+            
+            
+            
 
 
         }
