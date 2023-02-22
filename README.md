@@ -40,7 +40,7 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 | --------------- 	| -------- 	|------		        |--------	|-----------	         |
 |**Administration**	|Release    |Administrator		|@AI-Assistant|Release, main         |
 |		                |	          |		              |      		|		                   |		
-|**Elektrotechnik**	|Menü ET /   |Teamkoordinator  |@alex030406 Alexander Skibbe         |ETEntwicklung,Feature1|
+|**Elektrotechnik**	|Menü ET /  Spannung als Energieaufteilung & Strom aus Ladungen je Zeit   |Teamkoordinator  |@alex030406 Alexander Skibbe         |ETEntwicklung,Feature1|
 |                   |Ohm'schesGesetz / Leistungsgesetz           |Entwickler       |@Baran-Aydin05 Baran Aydin         |Feature2              |
 |                   |Widerstand, Kondensator & Spule Berechnung           |Entwickler       |@ZFNico Nico Feil         |Feature3              |
 |                   |Spannungsfall & Leitungsquerschnitt berechnen           |Entwickler       |@Nilsbrocki Nils Brockert        |Feature4              |
