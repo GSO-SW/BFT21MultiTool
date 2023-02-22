@@ -47,30 +47,25 @@ namespace WIBFTKlassenBibliothek
             {
                 case "1":
                     Console.Clear();
-                    //Hier das Etechnikmenü aufrufen
                     break;
 
                 case "2":
                     Console.Clear();
-                    //Hier das Informationstechnikmenü aufrufen
                     break;
 
                 case "3":
                     Console.Clear();
-                    //Hier das Mathematikmenü aufrufen
                     break;
 
                 case "4":
                     Console.Clear();
-                    //Hier das Physikmenü aufrufen
                     break;
 
                 case "5":
                     Console.Clear();
-                    //Hier das Wirtschaftsmenü aufrufen
                     break;
 
-                case "":
+                case "exit":
                     Exit = true;
                     break;
                 default:
