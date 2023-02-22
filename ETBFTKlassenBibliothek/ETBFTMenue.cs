@@ -68,11 +68,6 @@ namespace ETBFTKlassenBibliothek
                         
                         break;
 
-                    case "5":
-                        Console.Clear();
-                        
-                        break;
-
                     case "exit":
                         Exit = true;
                         break;
