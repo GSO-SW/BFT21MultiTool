@@ -11,7 +11,8 @@ namespace MABFTKlassenBibliothek
         public static void MASubMenue()
         {
             bool quit = false;
-            while (!quit) { 
+            while (!quit)
+            {
 
                 int time = DateTime.Now.Hour;
                 Console.Title = "Mathematik";
@@ -53,8 +54,9 @@ namespace MABFTKlassenBibliothek
                     Thread.Sleep(1000);
 
                 }
+                      
 
-
+                Console.ForegroundColor = ConsoleColor.Green;
                 while (!exit)
                 {
                     Console.Clear();
@@ -72,7 +74,7 @@ namespace MABFTKlassenBibliothek
                         Console.ResetColor();
                     }
 
-                    
+
                     ConsoleKeyInfo keyInfo = Console.ReadKey();
 
                     if (keyInfo.Key == ConsoleKey.UpArrow)
@@ -125,7 +127,7 @@ namespace MABFTKlassenBibliothek
                     }
                 }
 
-            } 
+            }
         }
     }
 }
