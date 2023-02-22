@@ -60,6 +60,7 @@ namespace ITBFTKlassenBibliothek
 
                     case "3":
                         Console.Clear();
+                        Feature11.Feature_11();
                         //Hier das Mathematikmenü aufrufen
                         break;
 
