@@ -112,6 +112,9 @@ namespace PHBFTKlassenBibliothek
                     PHBFTKlassenBibliothek.PHMenue.PHSubMenue();
 
                     break;
+                default:
+                    Optik();
+                    break;
 
 
 
