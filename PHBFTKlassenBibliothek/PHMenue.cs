@@ -48,12 +48,12 @@ namespace PHBFTKlassenBibliothek
                     {
                         case "1":
                             Console.Clear();
-                            Feature6.Optik();
+                            
                             break;
 
                         case "2":
                             Console.Clear();
-                            //Hier das Informationstechnikmenü aufrufen
+                            Feature7.Einfache_harmonische_Bewegung();
                             break;
 
                         case "3":
