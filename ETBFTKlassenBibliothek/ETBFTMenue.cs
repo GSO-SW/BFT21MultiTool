@@ -25,14 +25,12 @@ namespace ETBFTKlassenBibliothek
                 Console.Title = "Elektrotechink";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Elektrotechink <<<\n" +
+                                  "                              >>> Hauptmenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\nMit der Software 'BFTMulti-Tool' sollen wiederkehrende oder besonders aufwendige\n" +
-                                  "Aufgabenaus dem schulischen Kontext erleichtert oder gelöst werden. Diese Aufgaben\n" +
-                                  "ergeben sich aus den Problemstellungen aus dem Unterricht der Berufsfachschule für Technik.\n\n");
+                Console.WriteLine("");
 
                 string HauptAusw;
 
