@@ -58,11 +58,11 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 |		                |DPi Rechner|Entwickler       |@TheRaim22|Feature14             |			
 |		                |	          |Entwickler       |         |Feature15             |			
 |		                |	          |	                |		      |		                   |
-|**Wirtschaft**	    |Menü WI Währungsrechner|Teamkoordinator  |<a href="https://github.com/Julcraftlp">@Julcraftlp</a>|WIEntwicklung,Feature16|				
+|**Wirtschaft**	    |Menü WI Datenspeicherung|Teamkoordinator  |<a href="https://github.com/Julcraftlp">@Julcraftlp</a>|WIEntwicklung,Feature16|				
 |		                |ZinsRechner|Entwickler       |<a href="https://github.com/murii74">@ray</a>|Feature17             |		
 |		                |LohnSteuer|Entwickler       |<a href="https://github.com/romeohodeifa">@romeohodaifa</a>|Feature18             |		
 |		                |Immobilien|Entwickler       |<a href="https://github.com/demkodim">@Dmytro Demko</a>|Feature19             |
-|		                |	          |Entwickler       |	        |Feature20             |	
+|		                |Geldumrechner|Entwickler       |<a href="https://github.com/Julcraftlp">@Julcraftlp</a>|Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
 |**Mathematik**	    |Menü MT & Polynom|Teamkoordinator  | <a href="https://github.com/EmirCGN">@EmirCGN<a/>        |MAEntwicklung,Feature21|				
 |		                |Flächenberechnung           |Entwickler       | <a href="https://github.com/Selo05">@Selo05<a/>        |Feature22             |		
