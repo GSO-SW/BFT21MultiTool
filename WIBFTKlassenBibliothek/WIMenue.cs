@@ -60,6 +60,7 @@ namespace WIBFTKlassenBibliothek
 
                     case "4":
                         Console.Clear();
+                        Feature19();
                         break;
 
                     case "5":
