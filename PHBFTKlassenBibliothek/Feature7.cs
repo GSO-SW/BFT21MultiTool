@@ -76,7 +76,7 @@ namespace PHBFTKlassenBibliothek
                 case "2":
 
                     Console.Clear();
-                    Console.WriteLine(FiggleFonts.Slant.Render("Mass on a Spring"));
+                    Console.WriteLine(FiggleFonts.Slant.Render("Masse auf einer Feder"));
                     Console.WriteLine("====================================================================");
 
                     // Eingabeaufforderungen
