@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Figgle;
+using System;
 using Figgle;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PHBFTKlassenBibliothek
 {
-    public class Feature6
+    internal class Feature6
     {
         public static void Optik()
         {
@@ -113,11 +114,13 @@ namespace PHBFTKlassenBibliothek
                     PHBFTKlassenBibliothek.PHMenue.PHSubMenue();
 
                     break;
+                default:
+                    Optik();
+                    break;
 
 
 
             }
         }
-
     }
 }
