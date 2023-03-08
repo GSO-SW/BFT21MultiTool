@@ -99,12 +99,12 @@ namespace MABFTKlassenBibliothek
                         if (selectedItem == 0)
                         {
                             Console.Clear();
-                            Feature21.Polynom();
+                           
                         }
                         else if (selectedItem == 1)
                         {
                             Console.Clear();
-                            Feature22.flaechenberechnung();
+                       
                         }
                         else if (selectedItem == 2)
                         {
@@ -114,7 +114,7 @@ namespace MABFTKlassenBibliothek
                         else if (selectedItem == 3)
                         {
                             Console.Clear();
-                            Feature24.linearefunktionen();
+                           
                         }
                         else if (selectedItem == 4)
                         {
