@@ -41,17 +41,17 @@ namespace MABFTKlassenBibliothek
                 if (time >= 0 && time < 12)
                 {
                     Console.WriteLine("Guten Morgen! Es ist jetzt grade " + DateTime.Now.ToString("HH:mm") + " Uhr!\n");
-                    Thread.Sleep(1000);
+                    Thread.Sleep(6000);
                 }
                 else if (time >= 12 && time < 18)
                 {
                     Console.WriteLine("Guten Nachmittag! Es ist jetzt grade " + DateTime.Now.ToString("HH:mm") + " Uhr!\n");
-                    Thread.Sleep(1000);
+                    Thread.Sleep(6000);
                 }
                 else
                 {
                     Console.WriteLine("Guten Abend! Es ist jetzt grade " + DateTime.Now.ToString("HH:mm") + " Uhr!\n");
-                    Thread.Sleep(1000);
+                    Thread.Sleep(6000);
 
                 }
                       
@@ -61,32 +61,34 @@ namespace MABFTKlassenBibliothek
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Bitte wähle ein Thema:");
 
-                    for (int i = 0; i < menuItems.Length; i++)
+                    for (int i = 0; i < menuItems.Length; i++)// Die Schleife durchläuft alle Menüpunkte und gibt sie in der Konsole aus
                     {
-                        if (i == selectedItem)
+                        if (i == selectedItem) // Wenn der aktuelle Menüpunkt ausgewählt ist, wird die Textfarbe grün und die Hintergrundfarbe weiß gesetzt
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.BackgroundColor = ConsoleColor.White;
                         }
+                        // Menüpunkt ausgeben und Farben zurücksetzen
                         Console.WriteLine(menuItems[i]);
                         Console.ResetColor();
                     }
 
-
+                    // Warten auf eine Benutzereingabe
                     ConsoleKeyInfo keyInfo = Console.ReadKey();
 
+                    // Verarbeiten der Benutzereingabe
                     if (keyInfo.Key == ConsoleKey.UpArrow)
                     {
-                        selectedItem--;
-                        if (selectedItem < 0)
+                        selectedItem--;// Menüpunkt-Auswahl nach oben verschieben
+                        if (selectedItem < 0)// Wenn das Ende des Menüs erreicht wurde, zum Anfang zurückspringen
                         {
                             selectedItem = menuItems.Length - 1;
                         }
                     }
                     else if (keyInfo.Key == ConsoleKey.DownArrow)
                     {
-                        selectedItem++;
-                        if (selectedItem >= menuItems.Length)
+                        selectedItem++;// Menüpunkt-Auswahl nach unten verschieben
+                        if (selectedItem >= menuItems.Length)// Wenn das Ende des Menüs erreicht wurde, zum Anfang zurückspringen
                         {
                             selectedItem = 0;
                         }
@@ -96,26 +98,27 @@ namespace MABFTKlassenBibliothek
                         Console.Clear();
                         Console.WriteLine($"Du hast: {menuItems[selectedItem]} gewählt");
 
-                        if (selectedItem == 0)
+                        // Je nach gewähltem Menüpunkt entsprechende Aktion ausführen
+                        if (selectedItem == 0) // Wenn der erste Menüpunkt ausgewählt wurde
                         {
                             Console.Clear();
                             Feature21.Polynom();
 
                         }
-                        else if (selectedItem == 1)
+                        else if (selectedItem == 1) // Wenn der zweite Menüpunkt ausgewählt wurde
                         {
                             Console.Clear();
 
                         }
-                        else if (selectedItem == 2)
+                        else if (selectedItem == 2) // Wenn der dritte Menüpunkt ausgewählt wurde
                         {
                             Console.Clear();
                         }
-                        else if (selectedItem == 3)
+                        else if (selectedItem == 3) // Wenn der vierte Menüpunkt ausgewählt wurde
                         {
                             Console.Clear();
                         }
-                        else if (selectedItem == 4)
+                        else if (selectedItem == 4) // Wenn der fünfte Menüpunkt ausgewählt wurde
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.Clear();

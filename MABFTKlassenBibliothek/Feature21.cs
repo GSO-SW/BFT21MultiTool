@@ -30,28 +30,29 @@ namespace MABFTKlassenBibliothek
                 {
                     Console.Clear();
 
-                    string[] coefficients;
-                    double[] polynomialCoefficients;
+                    // Deklaration und Initialisierung von Variablen
+                    string[] coefficients; // Array erstellt
+                    double[] polynomialCoefficients; // Array erstellt
                     bool validInput = false;
 
-                    do
+                    do// Eine Schleife, die solange ausgeführt wird, bis der Benutzer eine gültige Eingabe gemacht hat
                     {
                         Console.WriteLine("Geben Sie die Koeffizienten des Polynoms in aufsteigender Reihenfolge des Grades an, separiert durch Leerzeichen:");
                         Thread.Sleep(1000);
                         Console.WriteLine("Beispiel Aufgabe: -1 5 -2 3*sqrt(4)");
-                        coefficients = Console.ReadLine().Split();
-                        polynomialCoefficients = new double[coefficients.Length];
+                        coefficients = Console.ReadLine().Split(); // Eingabe des Benutzers wird gelesen und in einzelnen Strings aufgeteilt
+                        polynomialCoefficients = new double[coefficients.Length];// Array für Koeffizienten werden erstellen
                         validInput = true;
 
-                        for (int i = 0; i < coefficients.Length; i++)
+                        for (int i = 0; i < coefficients.Length; i++)  // Eine Schleife, die jedes Element des Eingabearrays durchläuft
                         {
                             if (coefficients[i].Contains("sqrt"))
                             {
-                                int sqrtStartIndex = coefficients[i].IndexOf("sqrt(") + 5;
-                                int sqrtLength = coefficients[i].Length - sqrtStartIndex - 1;
+                                int sqrtStartIndex = coefficients[i].IndexOf("sqrt(") + 5;  // Ermittelt den Startindex der Zahl innerhalb der Klammern
+                                int sqrtLength = coefficients[i].Length - sqrtStartIndex - 1; // Ermittelt die Länge der Zahl innerhalb der Klammern
                                 double sqrtValue;
 
-                                if (!double.TryParse(coefficients[i].Substring(sqrtStartIndex, sqrtLength), out sqrtValue))
+                                if (!double.TryParse(coefficients[i].Substring(sqrtStartIndex, sqrtLength), out sqrtValue)) // Überprüft, ob der Wert in der Wurzel ein gültiger numerischer Wert ist
                                 {
                                     Console.WriteLine("Ungültige Eingabe: Bitte geben Sie nur Zahlen ein.");
                                     validInput = false;
@@ -59,25 +60,29 @@ namespace MABFTKlassenBibliothek
                                 }
                                 else
                                 {
-                                    polynomialCoefficients[i] = Math.Sqrt(sqrtValue);
+                                    polynomialCoefficients[i] = Math.Sqrt(sqrtValue);  // Berechnen des Wurzelwertes und Speichern in einem Array
                                 }
                             }
-                            else if (!double.TryParse(coefficients[i], out polynomialCoefficients[i]))
+                            else if (!double.TryParse(coefficients[i], out polynomialCoefficients[i])) // Überprüft, ob das Element eine gültige Zahl ist
                             {
                                 Console.WriteLine("Ungültige Eingabe: Bitte geben Sie nur Zahlen ein.");
                                 validInput = false;
                                 break;
                             }
                         }
-
                     } while (!validInput);
-
+                    // Variable für Eingabe des Benutzers deklarieren
                     double x;
 
                     Console.WriteLine("Geben Sie den Wert von x ein:");
                     Thread.Sleep(1000);
                     Console.WriteLine("Beispiel Aufgabe: 2.5");
-                    while (!double.TryParse(Console.ReadLine(), out x))
+                    string input = Console.ReadLine();
+                    if (input.ToLower() == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    while (!double.TryParse(input, out x)) // Solange der Benutzer keine gültige Zahl eingegeben hat, wird weiterhin die Eingabeaufforderung angezeigt
                     {
                         Console.WriteLine("Fehler: Ungültige Eingabe. Bitte geben Sie eine gültige Zahl ein.");
                         wrongAttempts++;
@@ -206,21 +211,23 @@ namespace MABFTKlassenBibliothek
             static double CalculatePolynomialValue(double[] coefficients, double x)
             {
                 double result = 0;
-                for (int i = 0; i < coefficients.Length; i++)
+                for (int i = 0; i < coefficients.Length; i++) // Es wird solange inkrementiert, bis es den Wert coefficients.Length-1 erreicht hat
                 {
-                    result += Math.Pow(x, i) * coefficients[i];
+                    double termValue = Math.Pow(x, i) * coefficients[i]; // Berechnet den Wert des Terms für den aktuellen Koeffizienten und x
+                    result += termValue;// Addiert den berechneten Wert zum Gesamtergebnis
                 }
-                return result;
+                return result;  // Gibt das Gesamtergebnis zurück
             }
 
             static void DrawPolynomialGraph(double[] coefficients, double x)
             {
-                int width = Console.WindowWidth - 1;
-                int height = Console.WindowHeight - 1;
+                // Bestimmt die Breite und Höhe des Konsolenfensters
+                int width = Console.WindowWidth - 1; 
+                int height = Console.WindowHeight - 1; 
 
-                char[,] graph = new char[width, height];
+                char[,] graph = new char[width, height]; //  Erstellt in der Konsole mit der Breite und Höhe des Konsolenfensters, um den Graphen darin zu zeichnen.
 
-                for (int i = 0; i < width; i++)
+                for (int i = 0; i < width; i++) // Setzt alle Einträge der Konsole auf Leerzeichen, um sie zu löschen
                 {
                     for (int j = 0; j < height; j++)
                     {
@@ -231,25 +238,25 @@ namespace MABFTKlassenBibliothek
                 //(Orientierung) Zeichnung der X und Y-Achse
                 int xAxisPos = (int)Math.Round(height / 2.0);
                 int yAxisPos = (int)Math.Round(width / 2.0);
-
-                for (int i = 0; i < width; i++)
+               
+                for (int i = 0; i < width; i++) // Zeichnet die X-Achse mit '-' Symbolen in die Konsole ein
                 {
                     graph[i, xAxisPos] = '-';
                 }
 
-                for (int i = 0; i < height; i++)
+                for (int i = 0; i < height; i++) // Zeichnet die Y-Achse mit '|' Symbolen in die Konsole ein
                 {
                     graph[yAxisPos, i] = '|';
                 }
 
-                //(Orientierung) Zeichnet hier den Graphen
+                // Bestimmt den maximalen und minimalen Funktionswert
                 double minValue = double.MaxValue;
                 double maxValue = double.MinValue;
 
-                for (int i = -yAxisPos; i < width - yAxisPos; i++)
+                for (int i = -yAxisPos; i < width - yAxisPos; i++) // Durchläuft alle X-Werte im Bereich der Breite des Konsolenfensters und berechnet die Y-Werte des Polynoms an diesen X-Werten.
                 {
                     double y = CalculatePolynomialValue(coefficients, i + x);
-                    if (y < minValue)
+                    if (y < minValue)  // Aktualisiert den minimalen und maximalen y-Wert, die auf der Konsole dargestellt werden.
                     {
                         minValue = y;
                     }
@@ -258,29 +265,29 @@ namespace MABFTKlassenBibliothek
                         maxValue = y;
                     }
                 }
-
+                // Bestimmt den Skalierungsfaktoren, um den Funktionsverlauf auf die Höhe des Konsolenfensters anzupassen
                 double valueRange = maxValue - minValue;
-                double heightPerUnit = height / valueRange;
+                double heightPerUnit = height / valueRange; 
 
                 for (int i = -yAxisPos; i < width - yAxisPos; i++)
                 {
                     double y = CalculatePolynomialValue(coefficients, i + x);
                     int yPos = xAxisPos - (int)Math.Round(y * heightPerUnit);
 
-                    if (yPos >= 0 && yPos < height)
+                    if (yPos >= 0 && yPos < height)  // Prüft ob die Y-Position innerhalb des Konsolenfensters liegt
                     {
                         graph[i + yAxisPos, yPos] = '*';
                     }
                 }
 
                 Console.WriteLine();
-                for (int i = 0; i < height; i++)
+                for (int i = 0; i < height; i++) // Ausgabe des Graphen-Zeichnungsarrays in der Konsole
                 {
                     for (int j = 0; j < width; j++)
                     {
-                        Console.Write(graph[j, i]);
+                        Console.Write(graph[j, i]); // Gib das Zeichen an den Koordinaten (j, i) des Graphenarrays aus
                     }
-                    Console.WriteLine();
+                    Console.WriteLine(); // Geht zur nächsten Zeile
                 }
             }
         }
