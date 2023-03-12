@@ -31,11 +31,11 @@ namespace MABFTKlassenBibliothek
                     Console.Clear();
 
                     // Deklaration und Initialisierung von Variablen
-                    string[] coefficients; // Array erstellt
-                    double[] polynomialCoefficients; // Array erstellt
+                    string[] coefficients; 
+                    double[] polynomialCoefficients;
                     bool validInput = false;
 
-                    do// Eine Schleife, die solange ausgeführt wird, bis der Benutzer eine gültige Eingabe gemacht hat
+                    do // Eine Schleife, die solange ausgeführt wird, bis der Benutzer eine gültige Eingabe gemacht hat
                     {
                         Console.WriteLine("Geben Sie die Koeffizienten des Polynoms in aufsteigender Reihenfolge des Grades an, separiert durch Leerzeichen:");
                         Thread.Sleep(1000);
@@ -141,6 +141,7 @@ namespace MABFTKlassenBibliothek
 
                 else if (menu.ToLower() == "exit")
                 {
+                    Console.Clear();
                     Environment.Exit(0);
                 }
 

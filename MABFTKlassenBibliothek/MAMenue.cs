@@ -54,7 +54,7 @@ namespace MABFTKlassenBibliothek
                     Thread.Sleep(6000);
 
                 }
-                      
+
                 while (!exit)
                 {
                     Console.Clear();
@@ -126,7 +126,6 @@ namespace MABFTKlassenBibliothek
                         }
                     }
                 }
-
             }
         }
     }
