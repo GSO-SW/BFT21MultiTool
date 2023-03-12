@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTool", "MultiTool\Mult
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KonsolenExtrasBibliothek", "KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj", "{1430939F-89DE-4A48-AE68-12C82E1DD471}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MABFTKlassenBibliothek", "MABFTKlassenBibliothek\MABFTKlassenBibliothek.csproj", "{F72B598F-22AC-4F85-9686-17898F3242ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MABFTKlassenBibliothek", "MABFTKlassenBibliothek\MABFTKlassenBibliothek.csproj", "{F72B598F-22AC-4F85-9686-17898F3242ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CF2ED407-07DA-4B06-9B94-64949A5C2A47}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

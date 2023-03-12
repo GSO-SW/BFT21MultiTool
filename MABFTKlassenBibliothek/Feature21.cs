@@ -24,6 +24,7 @@ namespace MABFTKlassenBibliothek
                 Console.WriteLine("1. Programm starten");
                 Console.WriteLine("2. Zurück zum Mathemenü");
                 Console.Write("> ");
+                #pragma warning disable CS8602
                 menu = Console.ReadLine();
 
                 if (menu == "1")
@@ -31,7 +32,7 @@ namespace MABFTKlassenBibliothek
                     Console.Clear();
 
                     // Deklaration und Initialisierung von Variablen
-                    string[] coefficients; 
+                    string[] coefficients;
                     double[] polynomialCoefficients;
                     bool validInput = false;
 
@@ -166,13 +167,13 @@ namespace MABFTKlassenBibliothek
                                 Console.WriteLine($"\nDu hast {0} Fehlversuche im Programm gehabt! :)\n", wrongAttempts);
                                 Thread.Sleep(1000);
                                 Console.WriteLine("Bitte drücken sie die ENTER-Taste!");
-                               
+
                             }
                             else if (fehlversuche.ToLower() == "n")
                             {
                                 Console.WriteLine("\nOkay, kein Problem.\n");
                                 Console.WriteLine("Bitte drücken sie die ENTER-Taste!");
-                                
+
                             }
 
                         }
@@ -223,8 +224,8 @@ namespace MABFTKlassenBibliothek
             static void DrawPolynomialGraph(double[] coefficients, double x)
             {
                 // Bestimmt die Breite und Höhe des Konsolenfensters
-                int width = Console.WindowWidth - 1; 
-                int height = Console.WindowHeight - 1; 
+                int width = Console.WindowWidth - 1;
+                int height = Console.WindowHeight - 1;
 
                 char[,] graph = new char[width, height]; //  Erstellt in der Konsole mit der Breite und Höhe des Konsolenfensters, um den Graphen darin zu zeichnen.
 
@@ -239,7 +240,7 @@ namespace MABFTKlassenBibliothek
                 //(Orientierung) Zeichnung der X und Y-Achse
                 int xAxisPos = (int)Math.Round(height / 2.0);
                 int yAxisPos = (int)Math.Round(width / 2.0);
-               
+
                 for (int i = 0; i < width; i++) // Zeichnet die X-Achse mit '-' Symbolen in die Konsole ein
                 {
                     graph[i, xAxisPos] = '-';
@@ -268,7 +269,7 @@ namespace MABFTKlassenBibliothek
                 }
                 // Bestimmt den Skalierungsfaktoren, um den Funktionsverlauf auf die Höhe des Konsolenfensters anzupassen
                 double valueRange = maxValue - minValue;
-                double heightPerUnit = height / valueRange; 
+                double heightPerUnit = height / valueRange;
 
                 for (int i = -yAxisPos; i < width - yAxisPos; i++)
                 {
