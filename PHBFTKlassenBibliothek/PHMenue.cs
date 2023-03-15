@@ -48,7 +48,7 @@ namespace PHBFTKlassenBibliothek
                     {
                         case "1":
                             Console.Clear();
-                            
+                            Feature6.Optik();
                             break;
 
                         case "2":
