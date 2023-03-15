@@ -141,16 +141,8 @@ namespace MABFTKlassenBibliothek
                     return;
                 }
 
-                else if (menu.ToLower() == "exit")
-                {
-                    Console.Clear();
-                    Environment.Exit(0);
-                }
-
                 else
                 {
-                    Console.WriteLine("Ungültige Eingabe: Bitte geben Sie entweder '1' oder '2' ein!");
-                    Console.WriteLine("\nBitte drücken sie irgendeine Taste, um zurück ins Polynomen-Menü zu gelangen!");
                     if (menu.ToLower() == "exit")
                     {
                         Environment.Exit(0);
@@ -203,6 +195,8 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("\nBitte drücken sie die ENTER-Taste!");
                         }
                     }
+                    Console.WriteLine("Ungültige Eingabe: Bitte geben Sie entweder '1' oder '2' ein!");
+                    Console.WriteLine("\nBitte drücken sie irgendeine Taste, um zurück ins Polynomen-Menü zu gelangen!");
                     Console.ReadKey(true);
                     Console.Clear();
                 }

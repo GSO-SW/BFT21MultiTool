@@ -16,4 +16,8 @@
     <Content Remove="C:\Users\muhammedem.k.SCHULE.000\.nuget\packages\accord\3.8.0\build\Accord.dll.config" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
+  </ItemGroup>
+
 </Project>
