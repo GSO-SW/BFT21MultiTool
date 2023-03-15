@@ -71,7 +71,7 @@ namespace PHBFTKlassenBibliothek
                             //Hier das Wirtschaftsmenü aufrufen
                             break;
 
-                        case "":
+                        case "exit":
                             Exit = true;
                             break;
                         default:
