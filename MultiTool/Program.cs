@@ -1,14 +1,33 @@
 ﻿using System;
 
 
-//Die Größe des Konsolenfensters wird an den Bildschirm angepasst.
-Console.SetWindowSize(Console.LargestWindowWidth, Console.LargestWindowHeight);
+string binäreZahl = "";
+bool incorrectInput = false;
+int sum = 0;
+int stellenwert = 1;
 
-//Schriftfarbe wird auf Grün gesetzt.
-Console.ForegroundColor = ConsoleColor.Green;
 
-//Der Schrifthintergrund kann geändert werden.
-//Console.BackgroundColor = ConsoleColor.DarkRed;
+while (!incorrectInput)
+{
+    Console.Write("Geben Sie Bitte eine Binärzahl ein:    ");
+    binäreZahl = Console.ReadLine();
+    incorrectInput = true;
 
-//Aufruf des Hauptmenüs.
-MultiTool.Hauptmenue.HauptmenueAufruf();
+
+    for (int i = binäreZahl.Length - 1; i >= 0; i--)
+    {
+        if (binäreZahl[i] != '0' && binäreZahl[i] != '1')
+        {
+            Console.WriteLine(binäreZahl + "ist keine gültige Binärzahl!");
+            incorrectInput = false;
+            break;
+        }
+        else
+        {
+            sum = sum + binäreZahl[i] * stellenwert;
+            stellenwert = stellenwert * 2;
+        }
+    }
+}
+Console.WriteLine(binäreZahl + " ist eine gültige Binärzahl!");
+Console.WriteLine(stellenwert);
