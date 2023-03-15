@@ -55,7 +55,7 @@ namespace ITBFTKlassenBibliothek
 
                     case "2":
                         Console.Clear();
-                        //Hier das Informationstechnikmenü aufrufen
+                        feat14.dpi();
                         break;
 
                     case "3":
@@ -65,7 +65,7 @@ namespace ITBFTKlassenBibliothek
 
                     case "4":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
+                        //Hier das Mathematikmenü aufrufen
                         break;
 
 
