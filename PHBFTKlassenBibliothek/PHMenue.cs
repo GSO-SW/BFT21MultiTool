@@ -78,7 +78,7 @@ namespace PHBFTKlassenBibliothek
                             Console.Clear();
                             break;
                     }
-            }while(Exit);
+            }while(!Exit);
         }
     }
 }
