@@ -23,9 +23,10 @@ namespace MABFTKlassenBibliothek
 
                 Console.WriteLine("1. Programm starten");
                 Console.WriteLine("2. Zurück zum Mathemenü");
+                Console.WriteLine("3. exit");
                 Console.Write("> ");
                 #pragma warning disable CS8602
-                menu = Console.ReadLine();
+                menu = Console.ReadLine(); 
 
                 if (menu == "1")
                 {
@@ -167,15 +168,12 @@ namespace MABFTKlassenBibliothek
                                 Console.WriteLine($"\nDu hast {0} Fehlversuche im Programm gehabt! :)\n", wrongAttempts);
                                 Thread.Sleep(1000);
                                 Console.WriteLine("Bitte drücken sie die ENTER-Taste!");
-
                             }
                             else if (fehlversuche.ToLower() == "n")
                             {
                                 Console.WriteLine("\nOkay, kein Problem.\n");
                                 Console.WriteLine("Bitte drücken sie die ENTER-Taste!");
-
                             }
-
                         }
                         else
                         {
