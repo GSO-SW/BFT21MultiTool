@@ -75,9 +75,9 @@ namespace WIBFTKlassenBibliothek
                 }
             }
         }
-        public class Saves
+        internal class Saves
         {
-            double[] doubles;
+            float[] saves;
             public static void save(float data)
             {
 
