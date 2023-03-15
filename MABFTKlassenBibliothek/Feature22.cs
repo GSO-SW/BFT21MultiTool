@@ -46,27 +46,53 @@ namespace MABFTKlassenBibliothek
             }
             if (menu == 2)
             {
-
+                Console.WriteLine("Geben sie die Länge ein.");
+                string two = Console.ReadLine();
+                if (two == "exit")
+                {
+                    Environment.Exit(0);
+                }
+                int twoQ = Convert.ToInt32(two);
             }
             if (menu == 3)
             {
-
+                string three = Console.ReadLine();
+                if (three == "exit")
+                {
+                    Environment.Exit(0);
+                }
+                int threeQ = Convert.ToInt32(three);
             }
             if (menu == 4)
             {
-
+                string four = Console.ReadLine();
+                if (four == "exit")
+                {
+                    Environment.Exit(0);
+                }
+                int fourQ = Convert.ToInt32(four);
             }
             if (menu == 5)
             {
-
+                string five = Console.ReadLine();
+                if (five == "exit")
+                {
+                    Environment.Exit(0);
+                }
+                int fiveQ = Convert.ToInt32(five);
             }
             if (menu == 6)
             {
-
+                string six = Console.ReadLine();
+                if (six == "exit")
+                {
+                    Environment.Exit(0);
+                }
+                int sixQ = Convert.ToInt32(six);
             }
             if (menu == 7)
             {
-
+                
             }
             if (menu == 8)
             {
