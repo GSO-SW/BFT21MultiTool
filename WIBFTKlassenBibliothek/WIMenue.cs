@@ -77,14 +77,14 @@ namespace WIBFTKlassenBibliothek
         }
         internal class Saves
         {
-            float[] saves;
+            public static float savee;
             public static void save(float data)
             {
-
+                Saves.savee = data;
             }
             public static float load()
             {
-                return 0;
+                return savee;
             }
         }
     }
