@@ -9,24 +9,15 @@ namespace MABFTKlassenBibliothek
 {
     class Feature23
     {
+#pragma warning disable 
         public static void quadratischefunktionen()
         {
             Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Quadratische Funktionen <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
-            double linearity;
-            double x1;
-            double y1;
-            double x2;
-            double y2;
-            double x3;
-            double y3;
-            double a;
-            double b;
-            double c;
-            double y;
-            double x;
+           
+            double x1, y1, x2, y2, x3, y3, a, b, c, y, x, linearity;
             bool flag1;
             bool flag2;
             int option;
@@ -66,28 +57,76 @@ namespace MABFTKlassenBibliothek
                 {
                     do
                     {
-
+                       
+                       
                         Console.WriteLine("Gib den erste x Koordinat ein : ");
-                        x1 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Gib den erste y Koordinat ein : ");
-                        y1 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Gib den zweite x Koordinat ein : ");
-                        x2 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Gib den zweite y Koordinat ein : ");
-                        y2 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Gib den dritten x Koordinat ein : ");
-                        x3 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Gib den dritten z Koordinat ein:");
-                        y3 = int.Parse(Console.ReadLine());
-
-                        // Linearity Test
-                        linearity = x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2);
-
-                        if (linearity == 0)
+                        string input1 = Console.ReadLine();
+                        if (input1.ToLower() == "Exit")
                         {
-                            Console.WriteLine("Die 3 punkte sind linear.");
+                            Environment.Exit(0);
+
+                        }while (!double.TryParse(input1, out x1)) {
+                            Console.WriteLine("Falsche Eingabe");
+                            Console.WriteLine("Drücken um neu einzugeben");
+                            Console.ReadKey();
+                            Console.Clear();
+                        }
+                        Console.WriteLine("Gib den erste y Koordinat ein : ");
+                        string input2 = Console.ReadLine();
+                        if (input2.ToLower() == "Exit")
+                        {
+                            Environment.Exit(0);
+                        }
+                        } while (!double.TryParse(input2, out x2)) {
+                          Console.WriteLine("Falsche Eingabe");
+                          Console.WriteLine("Drücken um neu einzugeben");
+                          Console.ReadKey();
+                          Console.Clear();
                         }
 
+
+
+
+
+
+
+
+                    Console.WriteLine("Falsche Eingabe");
+                             Console.WriteLine("Du wirst zu Menü geleitet");
+                             Thread.Sleep(2000);
+                               
+                             Console.WriteLine("Gib den zweite x Koordinat ein : ");
+                             flag1 = double.TryParse(Console.ReadLine(), out x2);
+                                 
+                             Console.WriteLine("Falsche Eingabe");
+                             Console.WriteLine("Du wirst zu Menü geleitet");
+                             Thread.Sleep(2000);
+                                   
+                               
+                             Console.WriteLine("Gib den zweite y Koordinat ein : ");
+                             flag1 = double.TryParse(Console.ReadLine(), out y2);
+                                     
+                             Console.WriteLine("Falsche Eingabe");
+                             Console.WriteLine("Du wirst zu Menü geleitet");
+                             Thread.Sleep(2000);
+                             Console.Clear();
+                                    
+                             Console.WriteLine("Gib den dritten x Koordinat ein : ");
+                             flag1 = double.TryParse(Console.ReadLine(), out x3); if (flag1 == false)
+                                         
+                             Console.WriteLine("Falsche Eingabe");
+                             Console.WriteLine("Du wirst zu Menü geleitet");
+                             Thread.Sleep(2000);
+                                          
+                             Console.WriteLine("Gib den dritten z Koordinat ein:");
+                             flag1 = double.TryParse(Console.ReadLine(), out y3); if (flag1 == false)
+                                          
+                             Console.WriteLine("Falsche Eingabe");
+                             Console.WriteLine("Du wirst zu Menü geleitet");
+                             Thread.Sleep(2000);
+                             Console.Clear();
+                                             
+                                                   
                     } while (linearity == 0);
 
                     if (linearity != 0)
@@ -99,22 +138,7 @@ namespace MABFTKlassenBibliothek
 
                         Console.WriteLine("The quadratic function is: y = " + a + "x^2 + " + b + "x + " + c);
 
-                        // Table of solutions
-                        Console.WriteLine("Enter the starting value of x: ");
-                        int start = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Enter the ending value of x: ");
-                        int end = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Enter the increment value of x: ");
-                        int increment = int.Parse(Console.ReadLine());
-                        Console.WriteLine("x\ty");
-                        for (x = start; x <= end; x += increment)
-                        {
-                            y = a * x * x + b * x + c;
-                            Console.WriteLine(x + "\t" + y);
-                        }
-
-
-
+                        
 
                     }
                 }
@@ -122,7 +146,6 @@ namespace MABFTKlassenBibliothek
                 {
                     break;
                 }
-
 
             } while (true);
         }
