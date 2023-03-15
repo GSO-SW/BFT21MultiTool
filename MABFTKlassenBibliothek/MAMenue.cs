@@ -99,11 +99,11 @@ namespace MABFTKlassenBibliothek
                         if (selectedItem == 0)
                         {
                             Console.Clear();
-                            Feature21.Polynom();
 
                         }
                         else if (selectedItem == 1)
                         {
+                            Feature22.flachenberechnung();
                             Console.Clear();
 
                         }
