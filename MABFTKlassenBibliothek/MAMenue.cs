@@ -61,7 +61,7 @@ namespace MABFTKlassenBibliothek
                     //Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Bitte wähle ein Thema:");
-                    
+
 
                     for (int i = 0; i < menuItems.Length; i++)// Die Schleife durchläuft alle Menüpunkte und gibt sie in der Konsole aus
                     {
@@ -74,7 +74,11 @@ namespace MABFTKlassenBibliothek
                         }
                         // Menüpunkt ausgeben und Farben zurücksetzen
                         Console.WriteLine(menuItems[i]);
+                        Console.ResetColor();
+
                     }
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("(Um das Menü bedienen zu können müssen sie ihre Pfeiltasten benutzen! '↑' oder '↓')");
 
                     // Warten auf eine Benutzereingabe
                     ConsoleKeyInfo keyInfo = Console.ReadKey();
