@@ -62,13 +62,15 @@ namespace MABFTKlassenBibliothek
                         if (input1.ToLower() == "Exit")
                         {
                             Environment.Exit(0);
+                            break;
 
                         } while (!double.TryParse(input1, out x1))
                         {
                             Console.WriteLine("Falsche Eingabe");
                             Console.WriteLine("Drücken um neu einzugeben");
                             Console.ReadKey();
-                            Console.Clear();
+                            Console.Clear ();
+                            break;
                         }
                         Console.WriteLine("Gib den erste y Koordinat ein : ");
                         string input2 = Console.ReadLine();
@@ -83,6 +85,7 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("Drücken um neu einzugeben");
                             Console.ReadKey();
                             Console.Clear();
+                            break;
 
                         }
                         Console.WriteLine("Gib den zweite x Koordinat ein : ");
@@ -98,6 +101,7 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("Drücken um neu einzugeben");
                             Console.ReadKey();
                             Console.Clear();
+                            break;
 
                         }
                         Console.WriteLine("Gib den zweite y Koordinat ein : ");
@@ -112,6 +116,7 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("Drücken um neu einzugeben");
                             Console.ReadKey();
                             Console.Clear();
+                            break;
 
                         }
                         Console.WriteLine("Gib den Dritte x Koordinat ein : ");
@@ -126,9 +131,10 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("Drücken um neu einzugeben");
                             Console.ReadKey();
                             Console.Clear();
+                            break;
 
                         }
-                        Console.WriteLine("Gib den dritten z Koordinat ein:");
+                        Console.WriteLine("Gib den dritten y Koordinat ein:");
                         string input6 = Console.ReadLine();
                         if (input6.ToLower() == "Exit")
                         {
@@ -140,28 +146,29 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("Drücken um neu einzugeben");
                             Console.ReadKey();
                             Console.Clear();
+                            break;
 
                         }
 
                         
-                        // Linearity s
+                        // Linearity test
                         linearity = x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2);
 
                         if (linearity == 0)
                         {
                             Console.WriteLine("Die 3 punkte sind linear.");
                             Console.WriteLine("Drücken um neu einzugeben.");
-                            Console.ReadKey(0);
-
+                            Console.ReadKey();
+                           
                         }
 
 
                         if (linearity != 0)
                         {
                             // Calculation of the function
-                            a = (x1 * (y2 - y3) + x2 * (y1 - y3) + x3 * (y3 - y1)) / linearity;
-                            b = (x1 * x1 * (y3 - y2) + x2 * x2 * (y1 - y3) + x3 * x3 * (y2 - y1)) / linearity;
-                            c = (x1 * x1 * (x2 * y3 - x3 * y2) + x2 * x2 * (x3 * y1 - x1 * y3) + x3 * x3 * (x1 * y2 - x2 * y1)) / linearity;
+                            a = (x1 * (y2 - y3) * x1 * (y3 - y2) + x2 * x2 * (y1 - y3) + x3 * x3 * (y2 - y1)) / linearity;
+                            c = (x1 *  + x2 * (y1 - y3) + x3 * (y3 - y1)) / linearity;
+                            b = (x1 * x1 * (x2 * y3 - x3 * y2) + x2 * x2 * (x3 * y1 - x1 * y3) + x3 * x3 * (x1 * y2 - x2 * y1)) / linearity;
 
                             Console.WriteLine("Der Quadratische Funktion ist: y = " + a + "x^2 + " + b + "x + " + c);
                             Thread.Sleep(3500);
