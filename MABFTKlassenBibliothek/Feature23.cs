@@ -29,30 +29,19 @@ namespace MABFTKlassenBibliothek
                 Console.WriteLine("1. Start");
                 Console.WriteLine("2. Exit");
                 Console.WriteLine("Choose an option (1 or 2): ");
-                flag1 = (int.TryParse(Console.ReadLine(), out option));
-                if (flag1 == true && option < 0)
+                string inputA = Console.ReadLine();
+                if (inputA.ToLower() == "exit")
                 {
-                    Console.WriteLine("Falsche Eingabe");
-                    Console.WriteLine("Du wirst zu Menü geleitet");
-                    Thread.Sleep(2000);
-                    Console.Clear();
+                    Environment.Exit(0);
+                    break;
                 }
-                else if (flag1 == true && option > 2)
+                else if (inputA.ToLower() == "exit") ;
                 {
-                    Console.WriteLine("Falsche Eingabe");
-                    Console.WriteLine("Du wirst zu Menü geleitet");
-                    Thread.Sleep(2000);
-                    Console.Clear();
+                    Environment.Exit(0);
+                    break;
                 }
-                else if (flag1 == false)
-                {
-                    Console.WriteLine("Falsche Eingabe");
-                    Console.WriteLine("Du wirst zu Menü geleitet");
-                    Thread.Sleep(2000);
-                    Console.Clear();
-                }
-
-                if (option == 1)
+               
+                if (inputA.ToLower() == "Start")
                 {
                     do
                     {
@@ -69,6 +58,7 @@ namespace MABFTKlassenBibliothek
                         {
                             Environment.Exit(0);
                             break;
+
                         }
                         while (!double.TryParse(input1, out x1))
                         {
@@ -77,17 +67,20 @@ namespace MABFTKlassenBibliothek
                             Console.ReadKey();
                             Console.Clear ();
                             break;
+
                         }
                         Console.WriteLine("Gib den erste y Koordinat ein : ");
                         string input2 = Console.ReadLine();
                         if (input2.ToLower() == "Exit")
                         {
                             Environment.Exit(0);
+
                         }
                         else if (input2.ToLower() == "exit") ;
                         {
                             Environment.Exit(0);
                             break;
+
                         }
                         while (!double.TryParse(input2, out y1))
                         {
@@ -109,6 +102,7 @@ namespace MABFTKlassenBibliothek
                         {
                             Environment.Exit(0);
                             break;
+
                         }
                         while (!double.TryParse(input3, out x2))
                         {
@@ -130,6 +124,7 @@ namespace MABFTKlassenBibliothek
                         {
                             Environment.Exit(0);
                             break;
+
                         } while (!double.TryParse(input4, out y2))
                         {
 
@@ -145,11 +140,14 @@ namespace MABFTKlassenBibliothek
                         if (input5.ToLower() == "Exit")
                         {
                             Environment.Exit(0);
+                            break;
+
                         }
                         else if (input5.ToLower() == "exit") ;
                         {
                             Environment.Exit(0);
                             break;
+
                         } while (!double.TryParse(input5, out x3))
                         {
 
@@ -165,11 +163,13 @@ namespace MABFTKlassenBibliothek
                         if (input6.ToLower() == "Exit")
                         {
                             Environment.Exit(0);
+
                         }
                         else if (input6.ToLower() == "exit") ;
                         {
                             Environment.Exit(0);
                             break;
+
                         } while (!double.TryParse(input6, out y3))
                         {
 
@@ -208,12 +208,21 @@ namespace MABFTKlassenBibliothek
 
                     } while (linearity == 0);
 
-                }  else if (option == 2)
+                }  else if (inputA.ToLower() == "Info")
+                {
+                    
+                }
                 {
                    break;
-                }
 
+                } 
+  
             } while (true);
+
+            static void DrawQuadraticGraph(Double[] coefficients, double x)
+            {
+
+            }
         }
     }
 }
