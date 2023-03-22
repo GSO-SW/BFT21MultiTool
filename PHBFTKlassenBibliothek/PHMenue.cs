@@ -48,7 +48,7 @@ namespace PHBFTKlassenBibliothek
                     {
                         case "1":
                             Console.Clear();
-                            Feature6.Optik();
+                            
                             break;
 
                         case "2":
@@ -63,7 +63,7 @@ namespace PHBFTKlassenBibliothek
 
                         case "4":
                             Console.Clear();
-                            //Hier das Physikmenü aufrufen
+                            Feature9.PhysicFeature9();
                             break;
 
                         case "5":
