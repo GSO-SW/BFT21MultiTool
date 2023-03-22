@@ -64,7 +64,13 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                             break;
 
-                        } while (!double.TryParse(input1, out x1))
+                        }
+                        else if (input1.ToLower() == "exit"); 
+                        {
+                            Environment.Exit(0);
+                            break;
+                        }
+                        while (!double.TryParse(input1, out x1))
                         {
                             Console.WriteLine("Falsche Eingabe");
                             Console.WriteLine("Drücken um neu einzugeben");
@@ -77,6 +83,11 @@ namespace MABFTKlassenBibliothek
                         if (input2.ToLower() == "Exit")
                         {
                             Environment.Exit(0);
+                        }
+                        else if (input2.ToLower() == "exit") ;
+                        {
+                            Environment.Exit(0);
+                            break;
                         }
                         while (!double.TryParse(input2, out y1))
                         {
@@ -94,6 +105,11 @@ namespace MABFTKlassenBibliothek
                         {
                             Environment.Exit(0);
                         }
+                        else if (input3.ToLower() == "exit") ;
+                        {
+                            Environment.Exit(0);
+                            break;
+                        }
                         while (!double.TryParse(input3, out x2))
                         {
 
@@ -109,6 +125,11 @@ namespace MABFTKlassenBibliothek
                         if (input4.ToLower() == "Exit")
                         {
                             Environment.Exit(0);
+                        }
+                        else if (input4.ToLower() == "exit") ;
+                        {
+                            Environment.Exit(0);
+                            break;
                         } while (!double.TryParse(input4, out y2))
                         {
 
@@ -124,6 +145,11 @@ namespace MABFTKlassenBibliothek
                         if (input5.ToLower() == "Exit")
                         {
                             Environment.Exit(0);
+                        }
+                        else if (input5.ToLower() == "exit") ;
+                        {
+                            Environment.Exit(0);
+                            break;
                         } while (!double.TryParse(input5, out x3))
                         {
 
@@ -139,6 +165,11 @@ namespace MABFTKlassenBibliothek
                         if (input6.ToLower() == "Exit")
                         {
                             Environment.Exit(0);
+                        }
+                        else if (input6.ToLower() == "exit") ;
+                        {
+                            Environment.Exit(0);
+                            break;
                         } while (!double.TryParse(input6, out y3))
                         {
 
