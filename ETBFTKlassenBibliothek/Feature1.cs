@@ -19,9 +19,9 @@ namespace ETBFTKlassenBibliothek
             {
                 Console.Clear();
                 Console.WriteLine("Was möchtest du berechnen? Gib eine der folgenden Optionen ein:\n\n" +
-                                  "1. Strom\n\n" +
-                                  "2. Energie\n\n" +
-                                  "3. Ladung\n\n" +
+                                  "1. Stromstärke\n\n" +
+                                  "2. Energieverbrauch\n\n" +
+                                  "3. Ladungsmenge in Zeit\n\n" +
                                   "Oder gib 'exit' zum Beenden ein.");
 
                 string auswahl = Console.ReadLine();
