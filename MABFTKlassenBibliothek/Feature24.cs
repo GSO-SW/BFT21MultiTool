@@ -44,7 +44,7 @@ namespace MABFTKlassenBibliothek
                 }
                 else if (menu == "2")
                 {
-                    Environment.ExitCode = 0;
+                    Environment.Exit(0);
                 }
             }
         }
