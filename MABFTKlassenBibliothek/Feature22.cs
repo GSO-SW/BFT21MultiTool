@@ -44,9 +44,8 @@ namespace MABFTKlassenBibliothek
                         Environment.Exit(0);
                     }
                     int oneQ = Convert.ToInt32(one);
-                    Console.WriteLine($"Die Fläche beträgt {oneQ * oneQ}__²\n" +
+                    Console.WriteLine($"Die Fläche beträgt{oneQ * oneQ}__²\n" +
                         $"Der Umfang beträgt {oneQ + oneQ}__²");
-                    Console.WriteLine("Drücken sie Enter, um ins Untermenü zu kommen.");
                 }
                 if (menu == 2)
                 {
@@ -64,15 +63,31 @@ namespace MABFTKlassenBibliothek
                         Environment.Exit(0);
                     }
                     int BtwoR = Convert.ToInt32(Btwo);
+                    Console.WriteLine($"Die Fläche beträgt: {twoR * BtwoR}__²\n" +
+                        $"Der Umfang beträgt: {twoR + twoR + BtwoR + BtwoR}__");
+                    if (twoR == BtwoR)
+                    {
+                        Console.WriteLine("HINWEIS: Sie haben ein Quadrat berechnet");
+                    }
                 }
                 if (menu == 3)
                 {
+                    Console.WriteLine("Geben sie die Länge ein");
                     string three = Console.ReadLine();
                     if (three == "exit")
                     {
                         Environment.Exit(0);
                     }
                     int threeP = Convert.ToInt32(three);
+                    Console.WriteLine("Geben sie die Höhe ein");
+                    string threeH = Console.ReadLine();
+                    if (threeH == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
+                    int threeQH = Convert.ToInt32(threeH);
+
+
                 }
                 if (menu == 4)
                 {
@@ -138,7 +153,7 @@ namespace MABFTKlassenBibliothek
 
 
                 Console.ReadLine();
-            } while(true);
+            } while (true);
 
 
         }
