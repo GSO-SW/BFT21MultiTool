@@ -44,8 +44,9 @@ namespace MABFTKlassenBibliothek
                         Environment.Exit(0);
                     }
                     int oneQ = Convert.ToInt32(one);
-                    Console.WriteLine($"Die Fläche beträgt{oneQ * oneQ}__²\n" +
-                        $"Der Umfang beträgt {oneQ+oneQ}__²");
+                    Console.WriteLine($"Die Fläche beträgt {oneQ * oneQ}__²\n" +
+                        $"Der Umfang beträgt {oneQ + oneQ}__²");
+                    Console.WriteLine("Drücken sie Enter, um ins Untermenü zu kommen.");
                 }
                 if (menu == 2)
                 {
