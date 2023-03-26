@@ -11,34 +11,78 @@ namespace ITBFTKlassenBibliothek
     {
         public static void dpi()
         {
-            Console.WriteLine("WIllkommen zum DPI Reschner");
-            Console.WriteLine("Beliebige Taste zum fortfahren");
-            Console.ReadKey();
-            Console.Clear();
-
-            Console.WriteLine("Mit Hilfe des DPI Reschner, können Sie die Auflösung eines Bildes Bereschnen.");
-            Console.WriteLine("Dies Funktioniert in dem Sie die Anzahl der Pixel einmal in der Höhe und der Breite Angeben.");
-            Console.WriteLine("Beliebige Taste zum fortfahren");
-            Console.ReadKey();
-            Console.Clear();
-
-            Console.WriteLine("Sie Können nun die Pixel in Höhe und Breite Angeben");
-            Console.WriteLine("Beliebige Taste zum fortfahren");
-            Console.ReadKey();
-            Console.Clear();
-
-            Console.WriteLine("Geben Sie nun bitte die Höhe in Pixel an");
-             int Höhe = Convert.ToInt32(Console.ReadLine());
+            
 
 
-            Console.WriteLine("Geben Sie nun bitte die Breite in Pixel an");
-            int Breite = Convert.ToInt32(Console.ReadLine());
+        {
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Willkommen beim DPI-Rechner!");
+                Console.WriteLine();
 
-            int DPI = Höhe * Breite;
+                while (true)
+                {
+                    int Breite = GetIntegerInput("Gib die Breite deines Bildschirms in Pixeln ein:");
+                    if (Breite == -1) continue;
 
-            Console.WriteLine($"Ihre DPI betragen {DPI}");
+                    int Höhe = GetIntegerInput("Gib die Höhe deines Bildschirms in Pixeln ein:");
+                    if (Höhe == -1) continue;
+
+                    double size = GetDoubleInput("Gib die Größe deines Bildschirms in Zoll ein:");
+                    if (size == -1) continue;
+
+                    double dpi = Math.Sqrt(Breite * Breite + Höhe * Höhe) / size;
+                    Console.WriteLine();
+                    Console.WriteLine("Deine DPI sind: " + dpi);
+                    Console.WriteLine();
+
+                    Console.WriteLine("Möchtest du eine weitere Berechnung durchführen? (ja/nein)");
+                    string input = Console.ReadLine().ToLower();
+                    if (input == "nein")
+                    {
+                        break;
+                    }
+                    Console.WriteLine();
+                }
+
+                Console.WriteLine("Vielen Dank, dass du den DPI-Rechner benutzt hast!");
+            }
+
+            static int GetIntegerInput(string prompt)
+            {
+                int value;
+                while (true)
+                {
+                    Console.Write(prompt + " ");
+                    string input = Console.ReadLine();
+                    if (!int.TryParse(input, out value))
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte gib eine ganze Zahl ein.");
+                        continue;
+                    }
+                    return value;
+                }
+            }
+
+            static double GetDoubleInput(string prompt)
+            {
+                double value;
+                while (true)
+                {
+                    Console.Write(prompt + " ");
+                    string input = Console.ReadLine();
+                    if (!double.TryParse(input, out value))
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte gib eine Zahl ein.");
+                        continue;
+                    }
+                    return value;
+                }
+            }
         }
+    }
     }
 }
 
 
+ 
