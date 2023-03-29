@@ -79,52 +79,62 @@ namespace MABFTKlassenBibliothek
                     Console.WriteLine("Geben Sie den Wert von x ein:");
                     Thread.Sleep(1000);
                     Console.WriteLine("Beispiel Aufgabe: 2.5");
-                    string input = Console.ReadLine();
-                    if (input.ToLower() == "exit")
+                    //here
+                    string input = "";
+                    do // Solange der Benutzer keine gültige Zahl eingegeben hat, wird weiterhin die Eingabeaufforderung angezeigt
                     {
-                        Environment.Exit(0);
-                    }
-                    while (!double.TryParse(input, out x)) // Solange der Benutzer keine gültige Zahl eingegeben hat, wird weiterhin die Eingabeaufforderung angezeigt
-                    {
-                        Console.WriteLine("Fehler: Ungültige Eingabe. Bitte geben Sie eine gültige Zahl ein.");
-                        wrongAttempts++;
-                        if (wrongAttempts == 18)
+                        input = Console.ReadLine();
+                        if (input.ToLower() == "exit")
                         {
-                            Console.WriteLine("Wenn du nochmal eine falsche Eingabe machst, explodiert dein Computer!");
-                        }
-                        else if (wrongAttempts == 19)
-                        {
-                            Console.WriteLine("Ich habe dir gesagt, dass dein Computer explodiert, wenn du nochmal eine falsche Eingabe machst! Du wurdest gewarnt...");
-                        }
-                        else if (wrongAttempts == 20)
-                        {
-                            Console.WriteLine("Tut mir leid, aber jetzt ist es zu spät. Dein Computer wird in \n3...");
-                            Thread.Sleep(1000);
-                            Console.WriteLine("2...");
-                            Thread.Sleep(1000);
-                            Console.WriteLine("1...");
-                            Thread.Sleep(1000);
-                            Console.WriteLine("BOOM!");
-
                             Environment.Exit(0);
                         }
-                        else if (wrongAttempts >= 10 && wrongAttempts % 2 == 0)
+                        else if (!double.TryParse(input, out x))
                         {
-                            Console.WriteLine("Hey, du scheinst Schwierigkeiten zu haben. Brauchst du Hilfe?");
-                            string abfrage_hilfe = Console.ReadLine();
-                            if (abfrage_hilfe.Contains("ja"))
+                            Console.WriteLine("Fehler: Ungültige Eingabe. Bitte geben Sie eine gültige Zahl ein.");
+                            Thread.Sleep(1000);
+                            Console.WriteLine("\nBitte drücken sie die ENTER-Taste!");
+                            Console.ReadLine();
+                            Console.Clear();
+                            Console.WriteLine("Geben Sie den Wert von x ein:");
+                            wrongAttempts++;
+                            if (wrongAttempts == 18)
                             {
-                                Console.WriteLine("Also... Wenn ich dir ehrlich bin, kann dir nur noch Gott helfen oder wenn du wen Menschliches brauchst, dann kann dir vielleicht aber auch nur vielleicht ein Therapeut weiterhelfen...");
-                                Console.ReadLine();
+                                Console.WriteLine("Wenn du nochmal eine falsche Eingabe machst, explodiert dein Computer!");
                             }
-                            else
+                            else if (wrongAttempts == 19)
                             {
-                                Console.WriteLine("Okaayyy! Lezzzzz gooooooo");
+                                Console.WriteLine("Ich habe dir gesagt, dass dein Computer explodiert, wenn du nochmal eine falsche Eingabe machst! Du wurdest gewarnt...");
+                            }
+                            else if (wrongAttempts == 20)
+                            {
+                                Console.WriteLine("Tut mir leid, aber jetzt ist es zu spät. Dein Computer wird in \n3...");
                                 Thread.Sleep(1000);
-                                Console.ReadLine();
+                                Console.WriteLine("2...");
+                                Thread.Sleep(1000);
+                                Console.WriteLine("1...");
+                                Thread.Sleep(1000);
+                                Console.WriteLine("BOOM!");
+
+                                Environment.Exit(0);
+                            }
+                            else if (wrongAttempts >= 10 && wrongAttempts % 2 == 0)
+                            {
+                                Console.WriteLine("Hey, du scheinst Schwierigkeiten zu haben. Brauchst du Hilfe?");
+                                string abfrage_hilfe = Console.ReadLine();
+                                if (abfrage_hilfe.Contains("ja"))
+                                {
+                                    Console.WriteLine("Also... Wenn ich dir ehrlich bin, kann dir nur noch Gott helfen oder wenn du wen Menschliches brauchst, dann kann dir vielleicht aber auch nur vielleicht ein Therapeut weiterhelfen...");
+                                    Console.ReadLine();
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Okaayyy! Lezzzzz gooooooo");
+                                    Thread.Sleep(1000);
+                                    Console.ReadLine();
+                                }
                             }
                         }
-                    }
+                    } while (!double.TryParse(input, out x));
                     Console.Clear();
                     DrawPolynomialGraph(polynomialCoefficients, x);
                     Console.WriteLine("\nBitte drücken sie die ENTER-Taste!");
