@@ -36,7 +36,7 @@ namespace ITBFTKlassenBibliothek
                 Console.WriteLine("(Byte = a) (KiByte = l) (MiByte = e) (GiByte = n) (TiByte = d)");
 
 
-
+                
 
 
             }
