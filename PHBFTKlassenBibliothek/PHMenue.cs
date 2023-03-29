@@ -48,7 +48,7 @@ namespace PHBFTKlassenBibliothek
                     {
                         case "1":
                             Console.Clear();
-                            Feature6.Optik();
+                            
                             break;
 
                         case "2":
@@ -58,7 +58,7 @@ namespace PHBFTKlassenBibliothek
 
                         case "3":
                             Console.Clear();
-                            //Hier das Mathematikmenü aufrufen
+                            Feature8.Volumrechner();
                             break;
 
                         case "4":
@@ -78,7 +78,7 @@ namespace PHBFTKlassenBibliothek
                             Console.Clear();
                             break;
                     }
-            }while(Exit);
+            }while(!Exit);
         }
     }
 }
