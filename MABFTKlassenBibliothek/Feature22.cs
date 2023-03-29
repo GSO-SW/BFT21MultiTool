@@ -72,6 +72,7 @@ namespace MABFTKlassenBibliothek
                 }
                 if (menu == 3)
                 {
+                    int a;
                     Console.WriteLine("Geben sie die Länge ein");
                     string three = Console.ReadLine();
                     if (three == "exit")
@@ -86,8 +87,20 @@ namespace MABFTKlassenBibliothek
                         Environment.Exit(0);
                     }
                     int threeQH = Convert.ToInt32(threeH);
-
-
+                    Console.WriteLine($"Ihre Fläche beträgt: {threeP * threeQH}__²");
+                    Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder das Programm beenden [exit]?");
+                    string threeU = Console.ReadLine();
+                    if (threeU == "ja")
+                    {
+                        Console.WriteLine("Geben sie die Breite ein.");
+                        string threeUm = Console.ReadLine();
+                        int threeUI = Convert.ToInt32(threeUm);
+                        Console.WriteLine($"Der Umfang beträgt: {threeUI + threeUI + three + three}__");
+                    }
+                    if (threeU == "exit")
+                    {
+                        Environment.Exit(0);
+                    }
                 }
                 if (menu == 4)
                 {
