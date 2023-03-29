@@ -30,7 +30,7 @@ namespace ITBFTKlassenBibliothek
 
                         Console.WriteLine("Gib die Höhe deines Bildschirms in Pixeln ein:");
                         int Höhe = Convert.ToInt32(Console.ReadLine());
-                    if (Höhe == -1) continue;
+                     if (Höhe == -1) continue;
 
                         Console.WriteLine("Gib die Größe deines Bildschirms in Zoll ein:");
                         double size = Convert.ToInt32(Console.ReadLine());
@@ -53,7 +53,37 @@ namespace ITBFTKlassenBibliothek
                 Console.WriteLine("Vielen Dank, dass du den DPI-Rechner benutzt hast!");
             }
 
-           
+            static int GetIntegerInput(string prompt)
+            {
+                int value;
+                while (true)
+                {
+                    Console.Write(prompt + " ");
+                    string input = Console.ReadLine();
+                    if (!int.TryParse(input, out value))
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte gib eine ganze Zahl ein.");
+                        continue;
+                    }
+                    return value;
+                }
+            }
+
+            static double GetDoubleInput(string prompt)
+            {
+                double value;
+                while (true)
+                {
+                    Console.Write(prompt + " ");
+                    string input = Console.ReadLine();
+                    if (!double.TryParse(input, out value))
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte gib eine Zahl ein.");
+                        continue;
+                    }
+                    return value;
+                }
+            }
         }
     }
     }
