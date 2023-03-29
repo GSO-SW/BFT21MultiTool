@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
@@ -60,7 +60,6 @@ namespace MABFTKlassenBibliothek
                                     validInput = false;
                                     break;
                                 }
-                                else
                                 {
                                     polynomialCoefficients[i] = Math.Sqrt(sqrtValue);  // Berechnen des Wurzelwertes und Speichern in einem Array
                                 }
@@ -153,8 +152,9 @@ namespace MABFTKlassenBibliothek
 
                 else
                 {
-                    if (menu.ToLower() == "exit")
+                    if (menu.ToLower() == "3" || menu.ToLower() == "exit")
                     {
+                        Console.WriteLine("Programm wird beendet!");
                         Environment.Exit(0);
                     }
                     if (menu == "iamlost")
