@@ -14,7 +14,7 @@ namespace WIBFTKlassenBibliothek
         {
             //Define Array
             var currencies = new[]
-{
+            {
                 new { Name = "US Dollar", Code = "USD", Rate = 1.00 },
                 new { Name = "Euro", Code = "EUR", Rate = 1.17 },
                 new { Name = "Japanese Yen", Code = "JPY", Rate = 0.0091 },
@@ -57,32 +57,79 @@ namespace WIBFTKlassenBibliothek
             }
             return Rate;
         }
-    
+
         public static void run()
         {
-        start:
-            Console.Clear();
-            Console.WriteLine("Enter Starting Currncy Code [xyz]:");
-            string input = Console.ReadLine().ToUpper()1;
-            double op = -2;
-            if (input.Length == 3)
+            bool conf = false;
+            double op1 = 0, op2 = 0, w1 = 0;
+            string ip1 = "", ip2 = "";
+            //currency 1 select
+            do
             {
-                op = Feature20.ArrayAnalyze(input);
-                if(op == -1)
+                Console.Clear();
+                Console.WriteLine("Enter Starting Currncy Code [xyz]:");
+                ip1 = Console.ReadLine().ToUpper();
+                op1 = -2;
+                if (ip1.Length == 3)
                 {
-                    Console.WriteLine("Die Währung konnte nicht gefunden. Bitte überprüfen sie ihre rechtschreibung\nSollte der fehler weiterhin bestehen ist die währung vom programm leider nicht unterstützt\nEingabe Drücken un fortzufahren");
+                    op1 = Feature20.ArrayAnalyze(ip1);
+                    if (op1 == -1)
+                    {
+                        Console.WriteLine("Die Währung konnte nicht gefunden. Bitte überprüfen sie ihre rechtschreibung\nSollte der fehler weiterhin bestehen ist die währung vom programm leider nicht unterstützt\nEingabe Drücken un fortzufahren");
+                        Console.ReadLine();
+                    }
+                    else conf = true;
+
+                    Console.WriteLine("Faktor ist 1" + ip1 + "=" + op1 + "USD");
                     Console.ReadLine();
-                    goto start;
                 }
-            }
-            else
+                else
+                {
+                    Console.WriteLine("Format Fehler. der currency code muss aus exakt 3 zeichen bestehen\nDrücke Eingabe um fortzufahren");
+                    Console.ReadLine();
+                }
+            } while (!conf);
+            conf = false;
+            //currency 2 select
+            do
             {
-                Console.WriteLine("Format Fehler. der currency code muss aus exakt 3 zeichen bestehen\nDrücke Eingabe um fortzufahren");
-                Console.ReadLine();
-                goto start;
+                Console.Clear();
+                Console.WriteLine("Enter Aiming Currncy Code [xyz]:");
+                ip2 = Console.ReadLine().ToUpper();
+                op2 = -2;
+                if (ip2.Length == 3)
+                {
+                    op2 = Feature20.ArrayAnalyze(ip2);
+                    if (op2 == -1)
+                    {
+                        Console.WriteLine("Die Währung konnte nicht gefunden. Bitte überprüfen sie ihre rechtschreibung\nSollte der fehler weiterhin bestehen ist die währung vom programm leider nicht unterstützt\nEingabe Drücken un fortzufahren");
+                        Console.ReadLine();
+                    }
+                    else conf = true;
+
+                    Console.WriteLine("Faktor ist 1" + ip2 + "=" + op2 + "USD");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("Format Fehler. der currency code muss aus exakt 3 zeichen bestehen\nDrücke Eingabe um fortzufahren");
+                    Console.ReadLine();
+                }
+            } while (!conf);
+            //currency calculations
+            {
+                conf = false;
+                do
+                {
+                    Console.Clear();
+                    Console.WriteLine("Bitte zuletzt geldbetrag eingeben:");
+                    conf = double.TryParse(Console.ReadLine(), out w1);
+                } while (!conf);
+                Console.Clear();
+                Console.WriteLine("Conversion rate is 1{2} -> {3}USD -> {0}{1}",(op1 * (op2 / 1)), ip2, ip1,op1);
+                Console.WriteLine("Resulting in:{0}",(w1*op1*(op2/1)));
+
             }
-            Console.WriteLine("Faktor ist 1"+input+"="+op+"USD");
-            Console.ReadLine();
         }
 
     }
