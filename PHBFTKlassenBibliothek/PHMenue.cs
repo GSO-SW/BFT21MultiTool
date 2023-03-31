@@ -6,16 +6,18 @@ namespace PHBFTKlassenBibliothek
     {
         public static void PHSubMenue()
         {
-            Console.ForegroundColor= ConsoleColor.Red;
-            
-            
+            Console.ForegroundColor = ConsoleColor.Red;
+
+
 
             bool Exit = false;
-            do { 
+            
+            do
+            {
                 Console.Clear();
                 var LogoName = "\tPhysik";
                 var LogoDisplay = FiggleFonts.Slant.Render(LogoName);
-                
+
                 Console.WriteLine(LogoDisplay);
 
                 //Konsolentitel wird geändert.
@@ -25,10 +27,10 @@ namespace PHBFTKlassenBibliothek
                                   "                            Physik Engine 1.0\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
-                Console.WriteLine("Zu das Programm beendet schreiben sie:\t 'exit'\t");
+                Console.WriteLine("Sie können \"exit\" eingeben, um das gesamte Programm zu beenden, oder \n\nSie können \"mainmenu\" eingeben, um jederzeit zum Untermenü zurückzukehren!");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\n To do.\n\n");
+                Console.WriteLine("\n\nDiese Software ist ein umfassender Physik- und Ingenieur-Rechner, der Benutzern ermöglicht, eine Vielzahl von Berechnungen im \nZusammenhang mit Optik, einfacher harmonischer Bewegung, Volumen- und Oberflächenberechnungen sowie grundlegender \nSchaltkreisanalyse durchzuführen. \n\n");
 
 
                 string HauptAusw;
@@ -40,45 +42,48 @@ namespace PHBFTKlassenBibliothek
                 Console.WriteLine("\t2 <-> Einfache harmonische Bewegung");
                 Console.WriteLine("\t3 <-> Berechnen und umrechnen von Volumen und Oberflache");
                 Console.WriteLine("\t4 <-> Einfache Schaltungen\n");
-                
+
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
-                    switch (HauptAusw)
-                    {
-                        case "1":
-                            Console.Clear();
-                            
-                            break;
+                switch (HauptAusw)
+                {
+                    case "1":
+                        Console.Clear();
+                        Feature6.Optik();
+                        break;
 
-                        case "2":
-                            Console.Clear();
-                            Feature7.Einfache_harmonische_Bewegung();
-                            break;
+                    case "2":
+                        Console.Clear();
+                        Feature7.Einfache_harmonische_Bewegung();
+                        break;
 
-                        case "3":
-                            Console.Clear();
-                            Feature8.Volumrechner();
-                            break;
+                    case "3":
+                        Console.Clear();
+                        Feature8.Volumrechner();
+                        break;
 
-                        case "4":
-                            Console.Clear();
-                            //Hier das Physikmenü aufrufen
-                            break;
+                    case "4":
+                        Console.Clear();
+                        //Feature9
+                        break;
+                    case "mainmenu":
+                        Console.Clear();
+                        return;
 
-                        case "5":
-                            Console.Clear();
-                            //Hier das Wirtschaftsmenü aufrufen
-                            break;
-
-                        case "exit":
-                            Exit = true;
-                            break;
-                        default:
-                            Console.Clear();
-                            break;
-                    }
-            }while(!Exit);
+                    case "exit":
+                        Console.Clear();
+                        Exit = true;
+                        Environment.Exit(0);
+                        break;
+                   
+                    default:
+                        Console.Clear();
+                        break;
+                }
+               
+                
+            } while (!Exit);
         }
     }
 }
