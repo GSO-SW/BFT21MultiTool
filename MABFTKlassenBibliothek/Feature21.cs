@@ -5,15 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Media;
+using System.Diagnostics;
 
 namespace MABFTKlassenBibliothek
 {
     class Feature21
     {
-        public static void Polynom()
+        public static async void Polynom()
         {
             int wrongAttempts = 0;
-            string menu;
+            string menuOptions;
             Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Polynom <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
@@ -26,9 +27,9 @@ namespace MABFTKlassenBibliothek
                 Console.WriteLine("3. exit");
                 Console.Write("> ");
                 #pragma warning disable CS8602
-                menu = Console.ReadLine(); 
+                menuOptions = Console.ReadLine(); 
 
-                if (menu == "1")
+                if (menuOptions == "1")
                 {
                     Console.Clear();
 
@@ -141,7 +142,7 @@ namespace MABFTKlassenBibliothek
                     Console.Clear();
                 }
 
-                else if (menu == "2")
+                else if (menuOptions == "2")
                 {
                     Console.Clear();
                     Console.WriteLine("\n\n\nSie werden nun zum Mathemenü geleitet!");
@@ -152,12 +153,12 @@ namespace MABFTKlassenBibliothek
 
                 else
                 {
-                    if (menu.ToLower() == "3" || menu.ToLower() == "exit")
+                    if (menuOptions.ToLower() == "3" || menuOptions.ToLower() == "exit")
                     {
                         Console.WriteLine("Programm wird beendet!");
                         Environment.Exit(0);
                     }
-                    if (menu == "iamlost")
+                    if (menuOptions == "iamlost")
                     {
                         if (wrongAttempts <= 1)
                         {
@@ -186,7 +187,12 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("\nBitte drücken sie die ENTER-Taste!");
                         }
                     }
-                    else if (menu == "resetiamlost")
+                    else if(menuOptions == "rickroll")
+                    {
+                        string url = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+                        Process.Start("https://www.youtube.com/watch?v=xvFZjo5PgG0");
+                    }
+                    else if (menuOptions == "resetiamlost")
                     {
                         if (wrongAttempts > 1)
                         {
@@ -205,8 +211,11 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("\nBitte drücken sie die ENTER-Taste!");
                         }
                     }
-                    Console.WriteLine("Ungültige Eingabe: Bitte geben Sie entweder '1' oder '2' ein!");
-                    Console.WriteLine("\nBitte drücken sie irgendeine Taste, um zurück ins Polynomen-Menü zu gelangen!");
+                    else
+                    {
+                        Console.WriteLine("Ungültige Eingabe: Bitte geben Sie entweder '1' , '2' oder '3' ein!");
+                        Console.WriteLine("\nBitte drücken sie irgendeine Taste, um zurück ins Polynomen-Menü zu gelangen!");
+                    }
                     Console.ReadKey(true);
                     Console.Clear();
                 }
