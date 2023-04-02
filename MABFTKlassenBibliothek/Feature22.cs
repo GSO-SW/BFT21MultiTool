@@ -9,7 +9,7 @@ namespace MABFTKlassenBibliothek
     class Feature22
     {
         public static void flachenberechnung()
-        {   
+        {
             string s1;
             int i1;
             double d1;
@@ -30,9 +30,6 @@ namespace MABFTKlassenBibliothek
 
             //Es gibt für jede Eingabe einen string sowohl einen integer, da ich das Wort "exit" nicht mit einem integer erkennen kann, das Programm würde abstürzen.
 
-            //Flächenformeln(A):Quadrat=a*a | Rechteck=a*b | Parallelogramm=a*h | Trapez=(a+c)*h/2 | Dreieck=0,5*g*h | Drachen(-viereck)/Raute=0,5*e*f | Kreis=pi*r²
-            //Spezielle Umfangsformel U für Kreis= 2*r*pi
-
             //menu
             bool tryparseout;
             bool tryparseoutmenu;
@@ -42,12 +39,13 @@ namespace MABFTKlassenBibliothek
             string Thema = "Fehler";
             int Fsum = 0000;
             int Usum = 0000;
+            double fdsum = 0000;
+            double fusum = 0000;
 
             int zsum1;
             int zsum;
             double dsum;
-            double fdsum;
-            double fusum;
+            bool Uf = true;
 
             do
             {
@@ -93,7 +91,7 @@ namespace MABFTKlassenBibliothek
                     } while (tryparseout == false);
                     Thema = "Quadrat";
                     Fsum = i1 * i1;
-                    Usum = i1 + i1 + i1 +i1;
+                    Usum = i1 + i1 + i1 + i1;
                     Console.WriteLine($"Die Fläche beträgt{Fsum}__²\n" +
                             $"Der Umfang beträgt {Usum}__²");
                 }
@@ -112,6 +110,9 @@ namespace MABFTKlassenBibliothek
                         {
                             Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
                         }
+                    } while (tryparseout == false);
+                    do
+                    {
                         Console.WriteLine("Bitte geben sie die Länge der Seite b ein und drücken sie anschließen ENTER.");
                         s2 = Console.ReadLine();
                         if (s2 == "exit")
@@ -141,6 +142,13 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                         }
                         tryparseout = int.TryParse(s1, out i1);
+                        if (tryparseout == false)
+                        {
+                            Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                        }
+                    } while (tryparseout == false);
+                    do
+                    {
                         Console.WriteLine("Geben sie die Höhe ein");
                         s2 = Console.ReadLine();
                         if (s2 == "exit")
@@ -148,15 +156,29 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                         }
                         tryparseout = int.TryParse(s2, out i2);
-                        Thema = "Parallelogramm";
-                        Fsum = i1 * i2;
+                        if (tryparseout == false)
+                        {
+                            Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                        }
+                    } while (tryparseout == false);
+                    Thema = "Parallelogramm";
+                    Fsum = i1 * i2;
+                    do
+                    {
                         Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder den Flächeninhalt wissen und das Programm beenden [exit]?");
                         U = Console.ReadLine();
                         if (U == "ja")
                         {
-                            Console.WriteLine("Geben sie die Länge der Seite b ein.");
-                            u1 = Console.ReadLine();
-                            tryparseout = int.TryParse(u1, out u1i);
+                            do
+                            {
+                                Console.WriteLine("Geben sie die Länge der Seite b ein.");
+                                u1 = Console.ReadLine();
+                                tryparseout = int.TryParse(u1, out u1i);
+                                if (tryparseout == false)
+                                {
+                                    Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                                }
+                            } while (tryparseout == false);
                             Usum = i1 + i1 + u1i + u1i;
                             Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²");
                             Console.WriteLine($"Der Umfang beträgt: {Usum}__");
@@ -169,7 +191,13 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
 
                         }
-                    } while (tryparseout == false);
+                        else
+                        {
+                            Console.WriteLine("Fehler, versuchen sie es erneut.");
+                            Uf = false;
+                        }
+                    } while (Uf = false);
+                    
                 }
                 if (menu == 4)
                 {
@@ -182,6 +210,13 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                         }
                         tryparseout = int.TryParse(s1, out i1);
+                        if (tryparseout == false)
+                        {
+                            Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                        }
+                    } while (tryparseout == false);
+                    do
+                    {
                         Console.WriteLine("Geben sie die Länge für die Seite C ein");
                         s2 = Console.ReadLine();
                         if (s2 == "exit")
@@ -189,6 +224,13 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                         }
                         tryparseout = int.TryParse(s2, out i2);
+                        if (tryparseout == false)
+                        {
+                            Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                        }
+                    } while (tryparseout == false);
+                    do
+                    {
                         Console.WriteLine("Geben sie die Höhe ein");
                         s3 = Console.ReadLine();
                         if (s3 == "exit")
@@ -196,20 +238,43 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                         }
                         tryparseout = int.TryParse(s3, out i3);
-                        Thema = "Trapez";
-                        zsum1 = i1 + i2;
-                        zsum = zsum1 * i3;
-                        Fsum = zsum / 2;
+                        if (tryparseout == false)
+                        {
+                            Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                        }
+                    } while (tryparseout == false);
+                    Thema = "Trapez";
+                    zsum1 = i1 + i2;
+                    zsum = zsum1 * i3;
+                    Fsum = zsum / 2;
+                    do
+                    {
                         Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder den Flächeninhalt wissen und das Programm beenden [exit]?");
                         U = Console.ReadLine();
                         if (U == "ja")
                         {
-                            Console.WriteLine("Geben sie die Länge der Seite b ein.");
-                            u1 = Console.ReadLine();
-                            tryparseout = int.TryParse(u1, out u1i);
-                            Console.WriteLine("Geben sie die Länge der Seite d ein.");
-                            u2 = Console.ReadLine();
-                            tryparseout = int.TryParse(u2, out u2i);
+                            do
+                            {
+
+                                Console.WriteLine("Geben sie die Länge der Seite b ein.");
+                                u1 = Console.ReadLine();
+                                tryparseout = int.TryParse(u1, out u1i);
+                                if (tryparseout == false)
+                                {
+                                    Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                                }
+                            } while (tryparseout == false);
+                            do
+                            {
+                                Console.WriteLine("Geben sie die Länge der Seite d ein.");
+                                u2 = Console.ReadLine();
+                                tryparseout = int.TryParse(u2, out u2i);
+                                if (tryparseout == false)
+                                {
+                                    Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                                }
+                            } while (tryparseout == false);
+
                             Usum = i1 + u1i + i2 + u2i;
                             Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²");
                             Console.WriteLine($"Der Umfang beträgt: {Usum}__");
@@ -221,7 +286,13 @@ namespace MABFTKlassenBibliothek
                             Console.ReadKey();
                             Environment.Exit(0);
                         }
-                    } while (tryparseout == false);
+                        else
+                        {
+                            Console.WriteLine("Fehler, versuchen siew es erneut.");
+                            Uf = false;
+                        }
+                    } while (Uf == false);
+
                 }
                 if (menu == 5)
                 {
@@ -234,6 +305,13 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                         }
                         tryparseout = int.TryParse(s1, out i1);
+                        if (tryparseout == false)
+                        {
+                            Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                        }
+                    } while (tryparseout == false);
+                    do
+                    {
                         Console.WriteLine("Geben sie die Höhe ein");
                         s2 = Console.ReadLine();
                         if (s2 == "exit")
@@ -241,19 +319,41 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                         }
                         tryparseout = int.TryParse(s2, out i2);
-                        Thema = "Dreieck";
-                        zsum = 1 / 2;
-                        Fsum = zsum * i1 * i2;
+                        if (tryparseout == false)
+                        {
+                            Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                        }
+                    } while (tryparseout == false);
+                    Thema = "Dreieck";
+                    zsum = 1 / 2;
+                    Fsum = zsum * i1 * i2;
+                    do
+                    {
+
                         Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder den Flächeninhalt wissen und das Programm beenden [exit]?");
                         U = Console.ReadLine();
                         if (U == "ja")
                         {
-                            Console.WriteLine("Geben sie die Länge der Seite b ein.");
-                            u1 = Console.ReadLine();
-                            tryparseout = int.TryParse(u1, out u1i);
-                            Console.WriteLine("Geben sie die Länge der Seite c ein.");
-                            u2 = Console.ReadLine();
-                            tryparseout = int.TryParse(u2, out u2i);
+                            do
+                            {
+                                Console.WriteLine("Geben sie die Länge der Seite b ein.");
+                                u1 = Console.ReadLine();
+                                tryparseout = int.TryParse(u1, out u1i);
+                                if (tryparseout == false)
+                                {
+                                    Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                                }
+                            } while (tryparseout == false);
+                            do
+                            {
+                                Console.WriteLine("Geben sie die Länge der Seite c ein.");
+                                u2 = Console.ReadLine();
+                                tryparseout = int.TryParse(u2, out u2i);
+                                if (tryparseout == false)
+                                {
+                                    Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                                }
+                            } while (tryparseout == false);
                             Usum = i1 + u1i + u2i;
                             Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²");
                             Console.WriteLine($"Der Umfang beträgt: {Usum}__");
@@ -265,7 +365,11 @@ namespace MABFTKlassenBibliothek
                             Console.ReadKey();
                             Environment.Exit(0);
                         }
-                    } while (tryparseout == false);
+                        else
+                        {
+                            Console.WriteLine("Fehler, bitte versuchen sie es erneut.");
+                        }
+                    } while (Uf == false);
                 }
                 if (menu == 6)
                 {
@@ -278,6 +382,13 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                         }
                         tryparseout = int.TryParse(s1, out i1);
+                        if (tryparseout == false)
+                        {
+                            Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                        }
+                    } while (tryparseout == false);
+                    do
+                    {
                         Console.WriteLine("Geben sie die Länge der Diagonale f ein");
                         s2 = Console.ReadLine();
                         if (s2 == "exit")
@@ -285,25 +396,60 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                         }
                         tryparseout = int.TryParse(s2, out i2);
-                        Thema = "Drachen (-viereck)/Raute";
-                        zsum = 1 / 2;
-                        Fsum = zsum * i1 * i2;
+                        if (tryparseout == false)
+                        {
+                            Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                        }
+                    } while (tryparseout == false);
+                    Thema = "Drachen (-viereck)/Raute";
+                    zsum = 1 / 2;
+                    Fsum = zsum * i1 * i2;
+                    do
+                    {
                         Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder den Flächeninhalt wissen und das Programm beenden [exit]?");
                         U = Console.ReadLine();
                         if (U == "ja")
                         {
-                            Console.WriteLine("Geben sie die Länge der Seite a ein.");
-                            u1 = Console.ReadLine();
-                            tryparseout = int.TryParse(u1, out u1i);
-                            Console.WriteLine("Geben sie die Länge der Seite b ein.");
-                            u2 = Console.ReadLine();
-                            tryparseout = int.TryParse(u2, out u2i);
-                            Console.WriteLine("Geben sie die Länge der Seite c ein.");
-                            u3 = Console.ReadLine();
-                            tryparseout = int.TryParse(u3, out u3i);
-                            Console.WriteLine("Geben sie die Länge der Seite d ein.");
-                            u4 = Console.ReadLine();
-                            tryparseout = int.TryParse(u4, out u4i);
+                            do
+                            {
+                                Console.WriteLine("Geben sie die Länge der Seite a ein.");
+                                u1 = Console.ReadLine();
+                                tryparseout = int.TryParse(u1, out u1i);
+                                if (tryparseout == false)
+                                {
+                                    Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                                }
+                            } while (tryparseout == false);
+                            do
+                            {
+                                Console.WriteLine("Geben sie die Länge der Seite b ein.");
+                                u2 = Console.ReadLine();
+                                tryparseout = int.TryParse(u2, out u2i);
+                                if (tryparseout == false)
+                                {
+                                    Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                                }
+                            } while (tryparseout == false);
+                            do
+                            {
+                                Console.WriteLine("Geben sie die Länge der Seite c ein.");
+                                u3 = Console.ReadLine();
+                                tryparseout = int.TryParse(u3, out u3i);
+                                if (tryparseout == false)
+                                {
+                                    Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                                }
+                            } while (tryparseout == false);
+                            do
+                            {
+                                Console.WriteLine("Geben sie die Länge der Seite d ein.");
+                                u4 = Console.ReadLine();
+                                tryparseout = int.TryParse(u4, out u4i);
+                                if (tryparseout == false)
+                                {
+                                    Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                                }
+                            } while (tryparseout == false);
                             Usum = u1i + u2i + u3i + u4i;
                             Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²");
                             Console.WriteLine($"Der Umfang beträgt: {Usum}__");
@@ -315,7 +461,12 @@ namespace MABFTKlassenBibliothek
                             Console.ReadKey();
                             Environment.Exit(0);
                         }
-                    } while (tryparseout == false);
+                        else
+                        {
+                            Console.WriteLine("Fehler, bitte verscuhen sie es erneut.");
+                            Uf = false;
+                        }
+                    } while (Uf == false);
                 }
                 if (menu == 7)
                 {
@@ -328,16 +479,17 @@ namespace MABFTKlassenBibliothek
                             Environment.Exit(0);
                         }
                         tryparseout = double.TryParse(s1, out d1);
+                        if (tryparseout == false)
+                        {
+                            Console.WriteLine("Fehler, machen sie erneut eine Eingabe.");
+                        }
+                    } while (tryparseout == false);
                         dsum = d1 * 2;
                         Thema = "Kreis";
                         fdsum = 3.14159 * dsum;
                         fusum = dsum * 3.14159;
-                        Fsum = Convert.ToInt32(fdsum);
-                        Usum = Convert.ToInt32(fusum);
-                        Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²");
-                        Console.WriteLine($"Der Umfang beträgt: {Usum}__");
-
-                    } while (tryparseout == false);
+                        Console.WriteLine($"Ihre Fläche beträgt: {fdsum}__²");
+                        Console.WriteLine($"Der Umfang beträgt: {fusum}__");
                 }
                 if (menu == 8)
                 {
@@ -346,9 +498,17 @@ namespace MABFTKlassenBibliothek
                 }
                 if (menu == 9)
                 {
-                    Console.WriteLine($"Ihr letztes Ergebnis war im Themenbereich {Thema} und es kam\n" +
-                        $"{Fsum}__² als Summe des Flächeninhalts raus und\n" +
+                    Console.WriteLine($"Ihr letztes Ergebnis war im Themenbereich {Thema} und es kam");
+                    if (Thema != "Kreis")
+                    {
+                        Console.WriteLine($"{Fsum}__² als Summe des Flächeninhalts raus und\n" +
                         $"{Usum}__ als Summe des Umfangs heraus.");
+                    }
+                    if (Thema == "Kreis")
+                    {
+                        Console.WriteLine($"{fdsum}__² als Summe des Flächeninhalts raus und\n" +
+                        $"{fusum}__ als Summe des Umfangs heraus.");
+                    }
                 }
                 else if (menu < 1 || menu > 9 || tryparseoutmenu == false)
                 {
