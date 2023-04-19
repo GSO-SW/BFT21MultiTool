@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ITBFTKlassenBibliothek
 {
-    class feat14
+    internal class Feature14
     {
-        public static void dpi()
+        ínternal static void Feature14()
         {
             
 
