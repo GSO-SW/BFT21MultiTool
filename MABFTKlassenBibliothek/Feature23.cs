@@ -70,7 +70,7 @@ namespace MABFTKlassenBibliothek
                                 Thread.Sleep(2300);
                                 Environment.Exit(0);
                                 break;
-
+                                 
                             }
 
                             while (!double.TryParse(input1, out x1))  // Überprüfung ob die Eingabe eine Zahl ist
