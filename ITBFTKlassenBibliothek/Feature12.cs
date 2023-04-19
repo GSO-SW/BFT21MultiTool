@@ -38,12 +38,12 @@ namespace ITBFTKlassenBibliothek
                     continue;
                 }
 
-                Console.WriteLine("Bitte wählen Sie die Basis (2 für Windows oder 10 für Normal):");
+                Console.WriteLine("Bitte wählen Sie die Basis (2 für Windows oder 1 für Normal):");
                 string basisInput = Console.ReadLine();
 
-                if (!int.TryParse(basisInput, out int basis) || (basis != 2 && basis != 10))
+                if (!int.TryParse(basisInput, out int basis) || (basis != 2 && basis != 1))
                 {
-                    Console.WriteLine("Ungültige Basis, bitte geben Sie entweder 2 (für Windows) oder 10 (für Normal) ein.");
+                    Console.WriteLine("Ungültige Basis, bitte geben Sie entweder 2 (für Windows) oder 1 (für Normal) ein.");
                     continue;
                 }
 
