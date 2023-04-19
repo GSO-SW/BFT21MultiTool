@@ -28,7 +28,7 @@ namespace PHBFTKlassenBibliothek
                 Console.WriteLine("Zu das Programm beendet schreiben sie:\t 'exit'\t");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\n To do.\n\n");
+                Console.WriteLine("\n\nDieses Programm umfasst Optik, einfache harmonische Bewegung, Berechnungen und Umrechnungen von Volumen und Oberfläche\nsowie einfache Schaltungen und vermittelt diese Themen auf eine unterhaltsame und benutzerfreundliche Weise.\n\n");
 
 
                 string HauptAusw;
