@@ -83,7 +83,9 @@ namespace MABFTKlassenBibliothek
                                 break;
 
                             }
-                        } while (!Validinput1) ;
+
+                        } while (!Validinput1);
+
                         do{
                             Console.WriteLine("Gib den erste y Koordinat ein : "); // Benutzereingabe für y1
                             input2 = Console.ReadLine();
@@ -106,7 +108,8 @@ namespace MABFTKlassenBibliothek
 
                             }
 
-                        } while (!Validinput2) ;
+                        } while (!Validinput2);
+
                        do {
                             Console.WriteLine("Gib den zweite x Koordinat ein : "); // Benutzereingabe für x2
                             input3 = Console.ReadLine();
@@ -129,7 +132,8 @@ namespace MABFTKlassenBibliothek
                             }
 
                        } while (!Validinput3);
-                       do { 
+
+                       do{ 
                            Console.WriteLine("Gib den zweite y Koordinat ein : "); // Benutzereingabe für y2
                            input4 = Console.ReadLine();
                            if (input4.ToLower() == "exit")   // Überprüfung ob die Benutzereingabe "exit" ist
@@ -148,29 +152,33 @@ namespace MABFTKlassenBibliothek
                                break;
 
                            }
+
                        } while (!Validinput4) ;
+
                        do{
-                           Console.WriteLine("Gib den Dritte x Koordinat ein : "); // Benutzereingabe für x3
-                           input5 = Console.ReadLine();
-                           if (input5.ToLower() == "exit")  // Überprüfung ob die Benutzereingabe "exit" ist
-                           {
-                               Console.WriteLine("Konsole wird Beedndet.");
-                               Thread.Sleep(2300);
-                               Environment.Exit(0);
-                               break;
+                            Console.WriteLine("Gib den Dritte x Koordinat ein : "); // Benutzereingabe für x3
+                            input5 = Console.ReadLine();
+                            if (input5.ToLower() == "exit")  // Überprüfung ob die Benutzereingabe "exit" ist
+                            {
+                                Console.WriteLine("Konsole wird Beedndet.");
+                                Thread.Sleep(2300);
+                                Environment.Exit(0);
+                                break;
 
-                           }
-                           while (!double.TryParse(input5, out x3))  // Überprüfung ob die Eingabe eine Zahl ist 
-                           {
+                            }
+                            while (!double.TryParse(input5, out x3))  // Überprüfung ob die Eingabe eine Zahl ist 
+                            {
                                 Validinput5 = false;
-                               Console.WriteLine("Falsche Eingabe");
-                               Console.WriteLine("Drücken um neu einzugeben");
-                               Console.ReadKey();
-                               Console.Clear();
-                               break;
+                                Console.WriteLine("Falsche Eingabe");
+                                Console.WriteLine("Drücken um neu einzugeben");
+                                Console.ReadKey();
+                                Console.Clear();
+                                break;
 
-                           }
-                       } while (!Validinput5) ;
+                            }
+
+                       } while (!Validinput5);
+
                        do{
                            Console.WriteLine("Gib den dritten y Koordinat ein:"); // Benutzereingabe für y3
                            input6 = Console.ReadLine();
