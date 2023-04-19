@@ -7,9 +7,12 @@ namespace ITBFTKlassenBibliothek
         public static void SubmenueAufruf()
         {
             bool Exit = false;
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
 
             do
             {
+
 
                 (int, int) cPosBM = Console.GetCursorPosition();
 
@@ -17,21 +20,21 @@ namespace ITBFTKlassenBibliothek
 
                 //ASCII art Logo wird erzeugt.
                 Console.WriteLine
-                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                    (FiggleFonts.Slant.Render("BFTMultiTool | INFORMATIK"));
 
                 //Konsolentitel wird geändert.
-                Console.Title = "BFTMultiTool";
+                Console.Title = "BFTMultiTool | INFORMATIK";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> IT submenü <<<\n" +
-                                  "------------------------------------------------------------------------------------\n\n");
+                                    "                              >>> IT submenü <<<\n" +
+                                    "------------------------------------------------------------------------------------\n\n");
 
-                Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
+
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\nMit der Software 'BFTMulti-Tool' sollen wiederkehrende oder besonders aufwendige\n" +
-                                  "Aufgabenaus dem schulischen Kontext erleichtert oder gelöst werden. Diese Aufgaben\n" +
-                                  "ergeben sich aus den Problemstellungen aus dem Unterricht der Berufsfachschule für Technik.\n\n");
+                //Console.WriteLine("\n\nMit der Software 'BFTMulti-Tool' sollen wiederkehrende oder besonders aufwendige\n" +
+                //                 "Aufgabenaus dem schulischen Kontext erleichtert oder gelöst werden. Diese Aufgaben\n" +
+                //                "ergeben sich aus den Problemstellungen aus dem Unterricht der Berufsfachschule für Technik.\n\n");
 
                 string HauptAusw;
 
@@ -40,7 +43,7 @@ namespace ITBFTKlassenBibliothek
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\t1 - Bit und Byte Rechner");
                 Console.WriteLine("\t2 - DPi Rechner");
-                Console.WriteLine("\t3 - Speicherberechnung von Sounddateien und Videodateien");
+                Console.WriteLine("\t3 - Sound- und Video Speicherrechner");
                 Console.WriteLine("\t4 - Binärer Rechner");
                 Console.WriteLine("\texit - Beendung des Programmes\n");
                 Console.Write("Eingabe:");
@@ -50,31 +53,30 @@ namespace ITBFTKlassenBibliothek
                 {
                     case "1":
                         Console.Clear();
-                        //Hier das Etechnikmenü aufrufen
+                        //Feature12.Feature_12();
                         break;
 
                     case "2":
                         Console.Clear();
-                        //Hier das Informationstechnikmenü aufrufen
+                        //Feature14.Feature_14();
                         break;
 
                     case "3":
                         Console.Clear();
                         Feature11.Feature_11();
-                        //Hier das Mathematikmenü aufrufen
                         break;
 
                     case "4":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
+                        //sFeature13.Feature_13();
                         break;
 
 
                     case "exit":
                         Exit = true;
                         break;
-                    default:
 
+                    default:
                         Console.WriteLine("Ungültige Eingabe");
                         Console.ReadKey();
 
@@ -86,7 +88,6 @@ namespace ITBFTKlassenBibliothek
                 }
 
             } while (!Exit);
-
 
         }
     }
