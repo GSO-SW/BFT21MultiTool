@@ -187,10 +187,19 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("\nBitte drücken sie die ENTER-Taste!");
                         }
                     }
-                    else if(menuOptions == "rickroll")
+                    else if (menuOptions == "rickroll")
                     {
                         string url = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
-                        Process.Start("https://www.youtube.com/watch?v=xvFZjo5PgG0");
+                        ProcessStartInfo psi = new ProcessStartInfo
+                        {
+                            FileName = url,
+                            UseShellExecute = true
+                        };
+                        Process.Start(psi);
+                        Console.WriteLine("Video: Rick Roll (Different link + no ads)\nAccount: Duran\n");
+                        Thread.Sleep(2000);
+                        Console.WriteLine("\nBitte drücken sie die ENTER-Taste!");
+                        Console.ReadLine();
                     }
                     else if (menuOptions == "resetiamlost")
                     {
