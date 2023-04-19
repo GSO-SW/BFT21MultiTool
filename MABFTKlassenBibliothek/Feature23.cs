@@ -17,11 +17,12 @@ namespace MABFTKlassenBibliothek
                                   "------------------------------------------------------------------------------------\n\n");
 
             // Variablendeklaration
-            double x1, y1, x2, y2, x3, y3, a, b, c, y, x, linearity;
-            bool flag1;
+            double x1 = 0, y1 = 0, x2 = 0, y2 = 0, x3 = 0, y3 = 0, a, b, c, y, x, linearity;
+            bool flag1, Validinput1 = true, Validinput2 = true, Validinput3 = true, Validinput4 = true, Validinput5 = true, Validinput6 = true, Validinput7 = true;
             int menu;
+            string input1, input2, input3, input4, input5, input6;
 
-              
+
 
 
             do
@@ -60,122 +61,137 @@ namespace MABFTKlassenBibliothek
                 {
                     do
                     {
+                        do{
+                            Console.WriteLine("Gib den erste x Koordinat ein : "); // Benutzereingabe für x1
+                            input1 = Console.ReadLine();
+                            if (input1.ToLower() == "exit")   // Überprüfung ob die Benutzereingabe "exit" ist
+                            {
+                                Console.WriteLine("Konsole wird Beedndet.");
+                                Thread.Sleep(2300);
+                                Environment.Exit(0);
+                                break;
 
-                        Console.WriteLine("Gib den erste x Koordinat ein : "); // Benutzereingabe für x1
-                        string input1 = Console.ReadLine();
-                        if (input1.ToLower() == "exit")   // Überprüfung ob die Benutzereingabe "exit" ist
-                        {
-                            Console.WriteLine("Konsole wird Beedndet.");
-                            Thread.Sleep(2300);
-                            Environment.Exit(0);
-                            break;
+                            }
 
-                        }
+                            while (!double.TryParse(input1, out x1))  // Überprüfung ob die Eingabe eine Zahl ist
+                            {
+                                Validinput1 = false;
+                                Console.WriteLine("Falsche Eingabe");
+                                Console.WriteLine("Drücken um neu einzugeben");
+                                Console.ReadKey();
+                                Console.Clear();
+                                break;
 
-                        while (!double.TryParse(input1, out x1))  // Überprüfung ob die Eingabe eine Zahl ist
-                        { 
-                            Console.WriteLine("Falsche Eingabe");
-                            Console.WriteLine("Drücken um neu einzugeben");
-                            Console.ReadKey();
-                            Console.Clear();
-                            break;
+                            }
+                        } while (!Validinput1) ;
+                        do{
+                            Console.WriteLine("Gib den erste y Koordinat ein : "); // Benutzereingabe für y1
+                            input2 = Console.ReadLine();
+                            if (input2.ToLower() == "exit")  // Überprüfung ob die Benutzereingabe "exit" ist
+                            {
+                                Console.WriteLine("Konsole wird Beedndet.");
+                                Thread.Sleep(2300);
+                                Environment.Exit(0);
 
-                        }
-                        Console.WriteLine("Gib den erste y Koordinat ein : "); // Benutzereingabe für y1
-                        string input2 = Console.ReadLine();
-                        if (input2.ToLower() == "exit")  // Überprüfung ob die Benutzereingabe "exit" ist
-                        {
-                            Console.WriteLine("Konsole wird Beedndet.");
-                            Thread.Sleep(2300);
-                            Environment.Exit(0);
+                            }
 
-                        }
+                            while (!double.TryParse(input2, out y1))  // Überprüfung ob die Eingabe eine Zahl ist
+                            {
+                                Validinput2 = false;
+                                Console.WriteLine("Falsche Eingabe");
+                                Console.WriteLine("Drücken um neu einzugeben");
+                                Console.ReadKey();
+                                Console.Clear();
+                                break;
 
-                        while (!double.TryParse(input2, out y1))  // Überprüfung ob die Eingabe eine Zahl ist
-                        {
+                            }
 
-                            Console.WriteLine("Falsche Eingabe");
-                            Console.WriteLine("Drücken um neu einzugeben");
-                            Console.ReadKey();
-                            Console.Clear();
-                            break;
+                        } while (!Validinput2) ;
+                       do {
+                            Console.WriteLine("Gib den zweite x Koordinat ein : "); // Benutzereingabe für x2
+                            input3 = Console.ReadLine();
+                            if (input3.ToLower() == "exit")   // Überprüfung ob die Benutzereingabe "exit" ist
+                            {
+                                Console.WriteLine("Konsole wird Beedndet.");
+                                Thread.Sleep(2300);
+                                Environment.Exit(0);
+                            }
 
-                        }
-                        Console.WriteLine("Gib den zweite x Koordinat ein : "); // Benutzereingabe für x2
-                        string input3 = Console.ReadLine();
-                        if (input3.ToLower() == "exit")   // Überprüfung ob die Benutzereingabe "exit" ist
-                        {
-                            Console.WriteLine("Konsole wird Beedndet.");
-                            Thread.Sleep(2300);
-                            Environment.Exit(0);
-                        }
+                            while (!double.TryParse(input3, out x2))  // Überprüfung ob die Eingabe eine Zahl ist
+                            {
+                                Validinput3 = false;
+                                Console.WriteLine("Falsche Eingabe");
+                                Console.WriteLine("Drücken um neu einzugeben");
+                                Console.ReadKey();
+                                Console.Clear();
+                                break;
 
-                        while (!double.TryParse(input3, out x2))  // Überprüfung ob die Eingabe eine Zahl ist
-                        {
+                            }
 
-                            Console.WriteLine("Falsche Eingabe");   
-                            Console.WriteLine("Drücken um neu einzugeben");
-                            Console.ReadKey();
-                            Console.Clear();
-                            break;
+                       } while (!Validinput3);
+                       do { 
+                           Console.WriteLine("Gib den zweite y Koordinat ein : "); // Benutzereingabe für y2
+                           input4 = Console.ReadLine();
+                           if (input4.ToLower() == "exit")   // Überprüfung ob die Benutzereingabe "exit" ist
+                           {
+                               Console.WriteLine("Konsole wird Beedndet.");
+                               Thread.Sleep(2300);
+                               Environment.Exit(0);
+                           }
+                           while (!double.TryParse(input4, out y2))  // Überprüfung ob die Eingabe eine Zahl ist
+                           {
+                                Validinput4 = false;
+                                Console.WriteLine("Falsche Eingabe");
+                               Console.WriteLine("Drücken um neu einzugeben");
+                               Console.ReadKey();
+                               Console.Clear();
+                               break;
 
-                        }
-                        Console.WriteLine("Gib den zweite y Koordinat ein : "); // Benutzereingabe für y2
-                        string input4 = Console.ReadLine();
-                        if (input4.ToLower() == "exit")   // Überprüfung ob die Benutzereingabe "exit" ist
-                        {
-                            Console.WriteLine("Konsole wird Beedndet.");
-                            Thread.Sleep(2300);
-                            Environment.Exit(0);
-                        }
+                           }
+                       } while (!Validinput4) ;
+                       do{
+                           Console.WriteLine("Gib den Dritte x Koordinat ein : "); // Benutzereingabe für x3
+                           input5 = Console.ReadLine();
+                           if (input5.ToLower() == "exit")  // Überprüfung ob die Benutzereingabe "exit" ist
+                           {
+                               Console.WriteLine("Konsole wird Beedndet.");
+                               Thread.Sleep(2300);
+                               Environment.Exit(0);
+                               break;
 
-                        while (!double.TryParse(input4, out y2))  // Überprüfung ob die Eingabe eine Zahl ist
-                        {
+                           }
+                           while (!double.TryParse(input5, out x3))  // Überprüfung ob die Eingabe eine Zahl ist 
+                           {
+                                Validinput5 = false;
+                               Console.WriteLine("Falsche Eingabe");
+                               Console.WriteLine("Drücken um neu einzugeben");
+                               Console.ReadKey();
+                               Console.Clear();
+                               break;
 
-                            Console.WriteLine("Falsche Eingabe");   
-                            Console.WriteLine("Drücken um neu einzugeben");
-                            Console.ReadKey();
-                            Console.Clear();
-                            break;
+                           }
+                       } while (!Validinput5) ;
+                       do{
+                           Console.WriteLine("Gib den dritten y Koordinat ein:"); // Benutzereingabe für y3
+                           input6 = Console.ReadLine();
 
-                        }
-                        Console.WriteLine("Gib den Dritte x Koordinat ein : "); // Benutzereingabe für x3
-                        string input5 = Console.ReadLine(); 
-                        if (input5.ToLower() == "exit") ;  // Überprüfung ob die Benutzereingabe "exit" ist
-                        {
-                            Console.WriteLine("Konsole wird Beedndet.");
-                            Thread.Sleep(2300);
-                            Environment.Exit(0);
-                            break;
+                           if (input6.ToLower() == "exit") ;   // Überprüfung ob die Benutzereingabe "exit" ist
+                           {
+                               Environment.Exit(0);
+                               break;
 
-                        } while (!double.TryParse(input5, out x3))  // Überprüfung ob die Eingabe eine Zahl ist 
-                        {
-
-                            Console.WriteLine("Falsche Eingabe"); 
-                            Console.WriteLine("Drücken um neu einzugeben");
-                            Console.ReadKey();
-                            Console.Clear();
-                            break;
-
-                        }
-                        Console.WriteLine("Gib den dritten y Koordinat ein:"); // Benutzereingabe für y3
-                        string input6 = Console.ReadLine();
-                       
-                        if (input6.ToLower() == "exit") ;   // Überprüfung ob die Benutzereingabe "exit" ist
-                        {
-                            Environment.Exit(0);
-                            break;
-
-                        } while (!double.TryParse(input6, out y3))  // Überprüfung ob die Eingabe eine Zahl ist
-                        {
-
-                            Console.WriteLine("Falsche Eingabe");   
-                            Console.WriteLine("Drücken um neu einzugeben");
-                            Console.ReadKey();
-                            Console.Clear();
-                            break;
-
-                        }
+                           }
+                           while (!double.TryParse(input6, out y3))  // Überprüfung ob die Eingabe eine Zahl ist
+                           {
+                               Validinput6 = false;
+                               Console.WriteLine("Falsche Eingabe");
+                               Console.WriteLine("Drücken um neu einzugeben");
+                               Console.ReadKey();
+                               Console.Clear();
+                               break;
+                           }   
+                            
+                       } while (!Validinput6);
 
 
                         // Linearlität test
