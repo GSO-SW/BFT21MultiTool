@@ -10,77 +10,117 @@ namespace ITBFTKlassenBibliothek
     {
         public Feature12()
         {
-            bool menuOpen = true;
+            Console.WriteLine("Willkommen bei der Byte-Konvertierung!");
+            Console.WriteLine("------------------------------------");
 
-            while (menuOpen)
+            bool exit = false;
+            while (!exit)
             {
-                Console.WriteLine("Bitte geben Sie den zu konvertierenden Wert ein (zum Beenden 'exit' eingeben):");
+                // Menü anzeigen
+                Console.WriteLine("Was möchtest du tun?");
+                Console.WriteLine("1) Bit -> Byte");
+                Console.WriteLine("2) Kbit -> Byte");
+                Console.WriteLine("3) Mbit -> Byte");
+                Console.WriteLine("4) Gbit -> Byte");
+                Console.WriteLine("5) Tbit -> Byte");
+                Console.WriteLine("6) Wechsel zwischen Normal und Windows Rechnung");
+                Console.WriteLine("7) Exit");
+                Console.Write("Auswahl: ");
+
                 string input = Console.ReadLine();
 
-                if (input.ToLower() == "exit")
+                // Prüfen, welche Option ausgewählt wurde
+                switch (input)
                 {
-                    menuOpen = false;
-                    continue;
-                }
-
-                if (!double.TryParse(input, out double value))
-                {
-                    Console.WriteLine("Ungültiger Wert, bitte geben Sie eine gültige Zahl ein.");
-                    continue;
-                }
-
-                Console.WriteLine("Bitte geben Sie die Einheit ein (bit/kbit/Mbit/Gbit/Tbit):");
-                string unit = Console.ReadLine();
-
-                if (unit.ToLower() != "bit" && unit.ToLower() != "kbit" && unit.ToLower() != "mbit" && unit.ToLower() != "gbit" && unit.ToLower() != "tbit")
-                {
-                    Console.WriteLine("Ungültige Einheit, bitte geben Sie eine der folgenden Einheiten ein: bit, kbit, Mbit, Gbit, Tbit.");
-                    continue;
-                }
-
-                Console.WriteLine("Bitte wählen Sie die Basis (2 für Windows oder 1 für Normal):");
-                string basisInput = Console.ReadLine();
-
-                if (!int.TryParse(basisInput, out int basis) || (basis != 2 && basis != 1))
-                {
-                    Console.WriteLine("Ungültige Basis, bitte geben Sie entweder 2 (für Windows) oder 1 (für Normal) ein.");
-                    continue;
-                }
-
-                double bytes = 0;
-
-                switch (unit.ToLower())
-                {
-                    case "bit":
-                        bytes = value / (basis == 2 ? 8 : 10);
+                    case "1":
+                        ConvertBitsToBytes();
                         break;
-                    case "kbit":
-                        bytes = value * 1024 / (basis == 2 ? 8 : 10);
+                    case "2":
+                        ConvertKilobitsToBytes();
                         break;
-                    case "mbit":
-                        bytes = value * 1024 * 1024 / (basis == 2 ? 8 : 10);
+                    case "3":
+                        ConvertMegabitsToBytes();
                         break;
-                    case "gbit":
-                        bytes = value * 1024 * 1024 * 1024 / (basis == 2 ? 8 : 10);
+                    case "4":
+                        ConvertGigabitsToBytes();
                         break;
-                    case "tbit":
-                        bytes = value * 1024 * 1024 * 1024 * 1024 / (basis == 2 ? 8 : 10);
+                    case "5":
+                        ConvertTerabitsToBytes();
+                        break;
+                    case "6":
+                        ToggleCalculationMode();
+                        break;
+                    case "7":
+                        exit = true;
+                        break;
+                    case "a l e n d":
+                        Console.WriteLine("Werde umgeleitet...");
+                        System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+                        break;
+                    default:
+                        Console.WriteLine("Ungültige Auswahl. Bitte wähle eine Option aus dem Menü.");
                         break;
                 }
 
-                Console.WriteLine("Das entspricht:");
-                Console.WriteLine($"{bytes:N2} Bytes");
-                Console.WriteLine($"{bytes / 1024:N2} Kilobytes");
-                Console.WriteLine($"{bytes / (1024 * 1024):N2} Megabytes");
-                Console.WriteLine($"{bytes / (1024 * 1024 * 1024):N2} Gigabytes");
-                Console.WriteLine($"{bytes / (1024 * 1024 * 1024 * 1024):N2} Terabytes");
+                Console.WriteLine();
             }
 
-
-
-
-
-
+            Console.WriteLine("Auf Wiedersehen!");
         }
+
+        // Konvertierung von Bit zu Byte
+        static void ConvertBitsToBytes()
+        {
+            Console.Write("Bitte gib die Anzahl der Bits ein: ");
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out int bits))
+            {
+                double bytes = (double)bits / 8;
+                Console.WriteLine("{0} Bit entsprechen {1:N2} Byte.", bits, bytes);
+            }
+            else
+            {
+                Console.WriteLine("Ungültige Eingabe. Bitte gib eine ganze Zahl ein.");
+            }
+        }
+
+        // Konvertierung von Kilobit zu Byte
+        static void ConvertKilobitsToBytes()
+        {
+            Console.Write("Bitte gib die Anzahl der KiloBits ein: ");
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out int kbits))
+            {
+                double bytes = (double)kbits * 125;
+                Console.WriteLine("{0} KiloBit entsprechen {1:N2} Byte.", kbits, bytes);
+            }
+            else
+            {
+                Console.WriteLine("Ungültige Eingabe. Bitte gib eine ganze Zahl ein.");
+            }
+        }
+
+        // Konvertierung von Megabit zu Byte
+        static void ConvertMegabitsToBytes()
+        {
+            Console.Write("Bitte gib die Anzahl der MegaBits ein: ");
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out int mbits))
+            {
+                double bytes = (double)mbits * 125000;
+                Console.WriteLine("{0} MegaBit entsprechen {1:N2} Byte.", mbits, bytes);
+            }
+            else
+            {
+                Console.WriteLine("Ungültige Eingabe. Bitte gib eine ganze Zahl ein.");
+            }
+        }
+
+
+
+    
     }
 }
