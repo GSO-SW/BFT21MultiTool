@@ -10,117 +10,238 @@ namespace ITBFTKlassenBibliothek
     {
         public Feature12()
         {
-            Console.WriteLine("Willkommen bei der Byte-Konvertierung!");
-            Console.WriteLine("------------------------------------");
 
-            bool exit = false;
-            while (!exit)
+
+            bool exitProgram = false;
+            while (!exitProgram)
             {
-                // Menü anzeigen
-                Console.WriteLine("Was möchtest du tun?");
-                Console.WriteLine("1) Bit -> Byte");
-                Console.WriteLine("2) Kbit -> Byte");
-                Console.WriteLine("3) Mbit -> Byte");
-                Console.WriteLine("4) Gbit -> Byte");
-                Console.WriteLine("5) Tbit -> Byte");
-                Console.WriteLine("6) Wechsel zwischen Normal und Windows Rechnung");
-                Console.WriteLine("7) Exit");
-                Console.Write("Auswahl: ");
+                Console.WriteLine("Bitte wählen Sie eine Option:");
+                Console.WriteLine("1. Bit zu Byte Konvertierung");
+                Console.WriteLine("2. Windows Rechnung");
+                Console.WriteLine("3. Programm beenden");
 
-                string input = Console.ReadLine();
-
-                // Prüfen, welche Option ausgewählt wurde
-                switch (input)
+                int selectedOption;
+                if (!int.TryParse(Console.ReadLine(), out selectedOption))
                 {
-                    case "1":
-                        ConvertBitsToBytes();
+                    Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 3.");
+                    continue;
+                }
+
+                switch (selectedOption)
+                {
+                    case 1:
+                        ConvertBitToByte();
                         break;
-                    case "2":
-                        ConvertKilobitsToBytes();
+                    case 2:
+                        WindowsCalculation();
                         break;
-                    case "3":
-                        ConvertMegabitsToBytes();
-                        break;
-                    case "4":
-                        ConvertGigabitsToBytes();
-                        break;
-                    case "5":
-                        ConvertTerabitsToBytes();
-                        break;
-                    case "6":
-                        ToggleCalculationMode();
-                        break;
-                    case "7":
-                        exit = true;
-                        break;
-                    case "a l e n d":
+                    case 4:
                         Console.WriteLine("Werde umgeleitet...");
                         System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
                         break;
+                    case 3:
+                        exitProgram = true;
+                        break;
                     default:
-                        Console.WriteLine("Ungültige Auswahl. Bitte wähle eine Option aus dem Menü.");
+                        Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 3.");
                         break;
                 }
+            
+        
 
-                Console.WriteLine();
-            }
+                static void ConvertBitToByte()
+                {
+                    Console.WriteLine("Bitte geben Sie die Bit-Zahl ein:");
+                    double bitNumber;
+                    if (!double.TryParse(Console.ReadLine(), out bitNumber))
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine gültige Zahl ein.");
+                        return;
+                    }
 
-            Console.WriteLine("Auf Wiedersehen!");
+                    Console.WriteLine("Bitte wählen Sie die Byte-Einheit:");
+                    Console.WriteLine("1. Bit  -> Byte");
+                    Console.WriteLine("2. Kbit -> Byte");
+                    Console.WriteLine("3. Mbit -> Byte");
+                    Console.WriteLine("4. Gbit -> Byte");
+                    Console.WriteLine("5. TBit -> Byte");
+
+                    int selectedUnit;
+                    if (!int.TryParse(Console.ReadLine(), out selectedUnit) || selectedUnit < 1 || selectedUnit > 5)
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
+                        return;
+                    }
+
+                    double byteNumber;
+                    switch (selectedUnit)
+                    {
+                        case 1:
+                            byteNumber = bitNumber / 8;
+                            Console.WriteLine($"{bitNumber} Bit entspricht {byteNumber} Byte.");
+                            break;
+                        case 2:
+                            byteNumber = bitNumber / 8 * 1000;
+                            Console.WriteLine($"{bitNumber} KBit entspricht {byteNumber} Byte.");
+                            break;
+                        case 3:
+                            byteNumber = bitNumber / 8 * 1000 * 1000;
+                            Console.WriteLine($"{bitNumber} MBit entspricht {byteNumber} Byte.");
+                            break;
+                        case 4:
+                            byteNumber = bitNumber / 8 * 1000 * 1000 * 1000;
+                            Console.WriteLine($"{bitNumber} GBit entspricht {byteNumber} Byte.");
+                            break;
+                        case 5:
+                            byteNumber = bitNumber / 8 * 1000 * 1000 * 1000 * 1000;
+                            Console.WriteLine($"{bitNumber} TBit entspricht {byteNumber} Byte.");
+                            break;
+                        default:
+                            Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
+                            break;
+                    }
+
+                    int SelectedUnit;
+                    if (!int.TryParse(Console.ReadLine(), out SelectedUnit) || SelectedUnit < 1 || SelectedUnit > 4)
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
+                        return;
+                    }
+                    Console.WriteLine("Bitte wählen Sie die Byte-Einheit:");
+                    Console.WriteLine("1. Überspringen ");
+                    Console.WriteLine("2. Byte -> KByte");
+                    Console.WriteLine("3. Byte -> MByte");
+                    Console.WriteLine("4. Byte -> GByte");
+                    Console.WriteLine("5. Byte -> TByte");
+                    double Summe = 0;
+                    switch (SelectedUnit)
+                    {
+                        case 1:
+                            Console.ReadLine();
+                            break;
+                        case 2:
+                            Summe = byteNumber / 1000;
+                            Console.WriteLine($"{byteNumber} Byte entspricht {Summe} KByte.");
+                            break;
+                        case 3:
+                            Summe = bitNumber / 1000 / 1000;
+                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} MByte.");
+                            break;
+                        case 4:
+                            Summe = bitNumber / 1000 / 1000 / 1000;
+                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} GByte.");
+                            break;
+                        case 5:
+                            Summe = bitNumber / 1000 / 1000 / 1000 / 1000;
+                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} TByte.");
+                            break;
+                        default:
+                            Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
+                            break;
+                    }
+
+                    Console.WriteLine("Wollen sie das Program wiederholen ?");
+                    Console.WriteLine("1. nein ");
+                    Console.WriteLine("2. ja ");
+
+
+                }
+
+
+
+                static void WindowsCalculation();
+                {
+                    Console.WriteLine("Bitte geben Sie die Bit-Zahl ein:");
+                    double IbitNumber;
+                    if (!double.TryParse(Console.ReadLine(), out IbitNumber))
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine gültige Zahl ein.");
+                        return;
+                    }
+
+                    Console.WriteLine("Bitte wählen Sie die Byte-Einheit:");
+                    Console.WriteLine("1. Bit  -> Byte");
+                    Console.WriteLine("2. Kbit -> Byte");
+                    Console.WriteLine("3. Mbit -> Byte");
+                    Console.WriteLine("4. Gbit -> Byte");
+                    Console.WriteLine("5. TBit -> Byte");
+
+                    int selectedUnit;
+                    if (!int.TryParse(Console.ReadLine(), out selectedUnit) || selectedUnit < 1 || selectedUnit > 5)
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
+                        return;
+                    }
+
+                    double byteNumber;
+                    switch (selectedUnit)
+                    {
+                        case 1:
+                            byteNumber = bitNumber / 8;
+                            Console.WriteLine($"{bitNumber} Bit entspricht {byteNumber} Byte.");
+                            break;
+                        case 2:
+                            byteNumber = bitNumber / 8 * 1024;
+                            Console.WriteLine($"{bitNumber} KBit entspricht {byteNumber} Byte.");
+                            break;
+                        case 3:
+                            byteNumber = bitNumber / 8 * 1024 * 1024;
+                            Console.WriteLine($"{bitNumber} MBit entspricht {byteNumber} Byte.");
+                            break;
+                        case 4:
+                            byteNumber = bitNumber / 8 * 1024 * 1024 * 1024;
+                            Console.WriteLine($"{bitNumber} GBit entspricht {byteNumber} Byte.");
+                            break;
+                        case 5:
+                            byteNumber = bitNumber / 8 * 1024 * 1024 * 1024 * 1024;
+                            Console.WriteLine($"{bitNumber} TBit entspricht {byteNumber} Byte.");
+                            break;
+                        default:
+                            Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
+                            break;
+                    }
+
+                    int SelectedUnit;
+                    if (!int.TryParse(Console.ReadLine(), out SelectedUnit) || SelectedUnit < 1 || SelectedUnit > 4)
+                    {
+                        Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
+                        return;
+                    }
+                    Console.WriteLine("Bitte wählen Sie die Byte-Einheit:");
+                    Console.WriteLine("1. Überspringen ");
+                    Console.WriteLine("2. Byte -> KiByte");
+                    Console.WriteLine("3. Byte -> MiByte");
+                    Console.WriteLine("4. Byte -> GiByte");
+                    Console.WriteLine("5. Byte -> TiByte");
+                    double Summe = 0;
+                    switch (SelectedUnit)
+                    {
+                        case 1:
+                            Console.ReadLine();
+                            break;
+                        case 2:
+                            Summe = byteNumber / 1024;
+                            Console.WriteLine($"{byteNumber} Byte entspricht {Summe} KByte.");
+                            break;
+                        case 3:
+                            Summe = bitNumber / 1000 / 1000;
+                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} MByte.");
+                            break;
+                        case 4:
+                            Summe = bitNumber / 1000 / 1000 / 1000;
+                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} GByte.");
+                            break;
+                        case 5:
+                            Summe = bitNumber / 1000 / 1000 / 1000 / 1000;
+                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} TByte.");
+                            break;
+                        default:
+                            Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
+                            break;
+                    }
+                }   
+
         }
-
-        // Konvertierung von Bit zu Byte
-        static void ConvertBitsToBytes()
-        {
-            Console.Write("Bitte gib die Anzahl der Bits ein: ");
-            string input = Console.ReadLine();
-
-            if (int.TryParse(input, out int bits))
-            {
-                double bytes = (double)bits / 8;
-                Console.WriteLine("{0} Bit entsprechen {1:N2} Byte.", bits, bytes);
-            }
-            else
-            {
-                Console.WriteLine("Ungültige Eingabe. Bitte gib eine ganze Zahl ein.");
-            }
-        }
-
-        // Konvertierung von Kilobit zu Byte
-        static void ConvertKilobitsToBytes()
-        {
-            Console.Write("Bitte gib die Anzahl der KiloBits ein: ");
-            string input = Console.ReadLine();
-
-            if (int.TryParse(input, out int kbits))
-            {
-                double bytes = (double)kbits * 125;
-                Console.WriteLine("{0} KiloBit entsprechen {1:N2} Byte.", kbits, bytes);
-            }
-            else
-            {
-                Console.WriteLine("Ungültige Eingabe. Bitte gib eine ganze Zahl ein.");
-            }
-        }
-
-        // Konvertierung von Megabit zu Byte
-        static void ConvertMegabitsToBytes()
-        {
-            Console.Write("Bitte gib die Anzahl der MegaBits ein: ");
-            string input = Console.ReadLine();
-
-            if (int.TryParse(input, out int mbits))
-            {
-                double bytes = (double)mbits * 125000;
-                Console.WriteLine("{0} MegaBit entsprechen {1:N2} Byte.", mbits, bytes);
-            }
-            else
-            {
-                Console.WriteLine("Ungültige Eingabe. Bitte gib eine ganze Zahl ein.");
-            }
-        }
-
-
-
-    
     }
 }
+
