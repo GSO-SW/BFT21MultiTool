@@ -46,8 +46,8 @@ namespace ITBFTKlassenBibliothek
                         Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 3.");
                         break;
                 }
-            
-        
+
+
 
                 static void ConvertBitToByte()
                 {
@@ -124,27 +124,21 @@ namespace ITBFTKlassenBibliothek
                             Console.WriteLine($"{byteNumber} Byte entspricht {Summe} KByte.");
                             break;
                         case 3:
-                            Summe = bitNumber / 1000 / 1000;
-                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} MByte.");
+                            Summe = byteNumber / 1000 / 1000;
+                            Console.WriteLine($"{byteNumber} Byte entspricht {Summe} MByte.");
                             break;
                         case 4:
-                            Summe = bitNumber / 1000 / 1000 / 1000;
-                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} GByte.");
+                            Summe = byteNumber / 1000 / 1000 / 1000;
+                            Console.WriteLine($"{byteNumber} Byte entspricht {Summe} GByte.");
                             break;
                         case 5:
-                            Summe = bitNumber / 1000 / 1000 / 1000 / 1000;
-                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} TByte.");
+                            Summe = byteNumber / 1000 / 1000 / 1000 / 1000;
+                            Console.WriteLine($"{byteNumber} Byte entspricht {Summe} TByte.");
                             break;
                         default:
                             Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
                             break;
                     }
-
-                    Console.WriteLine("Wollen sie das Program wiederholen ?");
-                    Console.WriteLine("1. nein ");
-                    Console.WriteLine("2. ja ");
-
-
                 }
 
 
@@ -161,47 +155,47 @@ namespace ITBFTKlassenBibliothek
 
                     Console.WriteLine("Bitte wählen Sie die Byte-Einheit:");
                     Console.WriteLine("1. Bit  -> Byte");
-                    Console.WriteLine("2. Kbit -> Byte");
-                    Console.WriteLine("3. Mbit -> Byte");
-                    Console.WriteLine("4. Gbit -> Byte");
-                    Console.WriteLine("5. TBit -> Byte");
+                    Console.WriteLine("2. Kibit -> Byte");
+                    Console.WriteLine("3. Mibit -> Byte");
+                    Console.WriteLine("4. Gibit -> Byte");
+                    Console.WriteLine("5. TiBit -> Byte");
 
-                    int selectedUnit;
-                    if (!int.TryParse(Console.ReadLine(), out selectedUnit) || selectedUnit < 1 || selectedUnit > 5)
+                    int SelectedUnit;
+                    if (!int.TryParse(Console.ReadLine(), out SelectedUnit) || SelectedUnit < 1 || SelectedUnit > 5)
                     {
                         Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
                         return;
                     }
 
                     double byteNumber;
-                    switch (selectedUnit)
+                    switch (SelectedUnit)
                     {
                         case 1:
-                            byteNumber = bitNumber / 8;
-                            Console.WriteLine($"{bitNumber} Bit entspricht {byteNumber} Byte.");
+                            byteNumber = IbitNumber / 8;
+                            Console.WriteLine($"{IbitNumber} Bit entspricht {byteNumber} Byte.");
                             break;
                         case 2:
-                            byteNumber = bitNumber / 8 * 1024;
-                            Console.WriteLine($"{bitNumber} KBit entspricht {byteNumber} Byte.");
+                            byteNumber = IbitNumber / 8 * 1024;
+                            Console.WriteLine($"{IbitNumber} KiBit entspricht {byteNumber} Byte.");
                             break;
                         case 3:
-                            byteNumber = bitNumber / 8 * 1024 * 1024;
-                            Console.WriteLine($"{bitNumber} MBit entspricht {byteNumber} Byte.");
+                            byteNumber = IbitNumber / 8 * 1024 * 1024;
+                            Console.WriteLine($"{IbitNumber} MiBit entspricht {byteNumber} Byte.");
                             break;
                         case 4:
-                            byteNumber = bitNumber / 8 * 1024 * 1024 * 1024;
-                            Console.WriteLine($"{bitNumber} GBit entspricht {byteNumber} Byte.");
+                            byteNumber = IbitNumber / 8 * 1024 * 1024 * 1024;
+                            Console.WriteLine($"{IbitNumber} GiBit entspricht {byteNumber} Byte.");
                             break;
                         case 5:
-                            byteNumber = bitNumber / 8 * 1024 * 1024 * 1024 * 1024;
-                            Console.WriteLine($"{bitNumber} TBit entspricht {byteNumber} Byte.");
+                            byteNumber = IbitNumber / 8 * 1024 * 1024 * 1024 * 1024;
+                            Console.WriteLine($"{IbitNumber} TiBit entspricht {byteNumber} Byte.");
                             break;
                         default:
                             Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
                             break;
                     }
 
-                    int SelectedUnit;
+                    int selectedUnit;
                     if (!int.TryParse(Console.ReadLine(), out SelectedUnit) || SelectedUnit < 1 || SelectedUnit > 4)
                     {
                         Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
@@ -214,32 +208,49 @@ namespace ITBFTKlassenBibliothek
                     Console.WriteLine("4. Byte -> GiByte");
                     Console.WriteLine("5. Byte -> TiByte");
                     double Summe = 0;
-                    switch (SelectedUnit)
+                    switch (selectedUnit)
                     {
                         case 1:
                             Console.ReadLine();
                             break;
                         case 2:
                             Summe = byteNumber / 1024;
-                            Console.WriteLine($"{byteNumber} Byte entspricht {Summe} KByte.");
+                            Console.WriteLine($"{byteNumber} Byte entspricht {Summe} KiByte.");
                             break;
                         case 3:
-                            Summe = bitNumber / 1000 / 1000;
-                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} MByte.");
+                            Summe = byteNumber / 1024 / 1024;
+                            Console.WriteLine($"{byteNumber} Byte entspricht {Summe} MiByte.");
                             break;
                         case 4:
-                            Summe = bitNumber / 1000 / 1000 / 1000;
-                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} GByte.");
+                            Summe = byteNumber / 1024 / 1024 / 1024;
+                            Console.WriteLine($"{byteNumber} Byte entspricht {Summe} GiByte.");
                             break;
                         case 5:
-                            Summe = bitNumber / 1000 / 1000 / 1000 / 1000;
-                            Console.WriteLine($"{bitNumber} Byte entspricht {Summe} TByte.");
+                            Summe = byteNumber / 1024 / 1024 / 1024 / 1024;
+                            Console.WriteLine($"{byteNumber} Byte entspricht {Summe} TiByte.");
                             break;
                         default:
                             Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
                             break;
                     }
-                }   
+
+                }
+
+                Console.WriteLine("Wollen sie das Program wiederholen ?");
+                Console.WriteLine("1. nein ");
+                Console.WriteLine("2. ja ");
+                int Aita;
+                switch (Aita)
+                {
+                    case 1:
+                         exitProgram = true;
+                         break;
+                    case 2:
+                         exitProgram = false;
+                         break;
+                }
+                
+            }
 
         }
     }

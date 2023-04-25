@@ -44,7 +44,8 @@ namespace ITBFTKlassenBibliothek
                 Console.WriteLine("\t4 - Binärer Rechner");
                 Console.WriteLine("\texit - Beendung des Programmes\n");
                 Console.Write("Eingabe:");
-                HauptAusw = Console.ReadLine().ToLower();
+                HauptAusw = Console.ReadLine()
+                    .ToLower();
 
                 switch (HauptAusw)
                 {
