@@ -83,6 +83,8 @@ namespace WIBFTKlassenBibliothek
                     Console.WriteLine("Faktor ist 1" + ip1 + "=" + op1 + "USD");
                     Console.ReadLine();
                 }
+                else if (ip1 == "EXIT")
+                    goto exit;
                 else
                 {
                     Console.WriteLine("Format Fehler. der currency code muss aus exakt 3 zeichen bestehen\nDrücke Eingabe um fortzufahren");
@@ -110,6 +112,8 @@ namespace WIBFTKlassenBibliothek
                     Console.WriteLine("Faktor ist 1" + ip2 + "=" + op2 + "USD");
                     Console.ReadLine();
                 }
+                else if (ip2 == "EXIT")
+                    goto exit;
                 else
                 {
                     Console.WriteLine("Format Fehler. der currency code muss aus exakt 3 zeichen bestehen\nDrücke Eingabe um fortzufahren");
@@ -123,13 +127,17 @@ namespace WIBFTKlassenBibliothek
                 {
                     Console.Clear();
                     Console.WriteLine("Bitte zuletzt geldbetrag eingeben:");
-                    conf = double.TryParse(Console.ReadLine(), out w1);
+                    string temp = Console.ReadLine().ToUpper();
+                    conf = double.TryParse(temp, out w1);
+                    if (temp == "EXIT")
+                        goto exit;
                 } while (!conf);
                 Console.Clear();
                 Console.WriteLine("Conversion rate is 1{2} -> {3}USD -> {0}{1}",(op1 * (op2 / 1)), ip2, ip1,op1);
                 Console.WriteLine("Resulting in:{0}",(w1*op1*(op2/1)));
 
             }
+        exit:;
         }
 
     }
