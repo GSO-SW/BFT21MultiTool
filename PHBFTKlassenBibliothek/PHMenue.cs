@@ -65,7 +65,7 @@ namespace PHBFTKlassenBibliothek
 
                     case "4":
                         Console.Clear();
-                        //Feature9
+                        Feature9.einfacheschaltung();
                         break;
                     case "mainmenu":
                         Console.Clear();
