@@ -19,6 +19,8 @@ namespace WIBFTKlassenBibliothek
             double jahr = 0;
             double gewinn = 0;
             double kontostand = 0;
+
+            
           
             Console.WriteLine("Bitte geben sie ihr kapital ein");
 
