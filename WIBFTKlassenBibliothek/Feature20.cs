@@ -79,9 +79,6 @@ namespace WIBFTKlassenBibliothek
                         Console.ReadLine();
                     }
                     else conf = true;
-
-                    Console.WriteLine("Faktor ist 1" + ip1 + "=" + op1 + "USD");
-                    Console.ReadLine();
                 }
                 else if (ip1 == "EXIT")
                     goto exit;
@@ -91,6 +88,8 @@ namespace WIBFTKlassenBibliothek
                     Console.ReadLine();
                 }
             } while (!conf);
+            Console.WriteLine("Faktor ist 1" + ip1 + "=" + op1 + "USD");
+            Console.ReadLine();
             conf = false;
             //currency 2 select
             do
@@ -108,9 +107,6 @@ namespace WIBFTKlassenBibliothek
                         Console.ReadLine();
                     }
                     else conf = true;
-
-                    Console.WriteLine("Faktor ist 1" + ip2 + "=" + op2 + "USD");
-                    Console.ReadLine();
                 }
                 else if (ip2 == "EXIT")
                     goto exit;
@@ -120,6 +116,8 @@ namespace WIBFTKlassenBibliothek
                     Console.ReadLine();
                 }
             } while (!conf);
+            Console.WriteLine("Faktor ist 1" + ip2 + "=" + op2 + "USD");
+            Console.ReadLine();
             //currency calculations
             {
                 conf = false;
