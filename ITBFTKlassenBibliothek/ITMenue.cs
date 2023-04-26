@@ -1,4 +1,4 @@
-﻿using Figgle;
+using Figgle;
 namespace ITBFTKlassenBibliothek
 
 {
@@ -47,29 +47,32 @@ namespace ITBFTKlassenBibliothek
                 Console.WriteLine("\t4 - Binärer Rechner");
                 Console.WriteLine("\texit - Beendung des Programmes\n");
                 Console.Write("Eingabe:");
-                HauptAusw = Console.ReadLine().ToLower();
+                HauptAusw = Console.ReadLine()
+                    .ToLower();
 
                 switch (HauptAusw)
                 {
                     case "1":
                         Console.Clear();
-                        //Feature12.Feature_12();
+
+
+                        //Hier das Etechnikmenü aufrufen
+                        Feature12.Feature_12();
                         break;
 
                     case "2":
                         Console.Clear();
-                        //Feature14.Feature_14();
+                        Feature14.Feature_14();
                         break;
 
                     case "3":
                         Console.Clear();
                         Feature11.Feature_11();
-                        //Test
                         break;
 
                     case "4":
                         Console.Clear();
-                        //sFeature13.Feature_13();
+                        Feature13.Feature_13();
                         break;
 
 
