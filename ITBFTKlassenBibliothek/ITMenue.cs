@@ -51,6 +51,7 @@ namespace ITBFTKlassenBibliothek
                 {
                     case "1":
                         Console.Clear();
+
                         //Hier das Etechnikmenü aufrufen
                         break;
 

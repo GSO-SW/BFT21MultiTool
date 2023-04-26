@@ -73,7 +73,7 @@ namespace ITBFTKlassenBibliothek
                         return;
                     }
 
-                    double byteNumber;
+                    double byteNumber=0;
                     switch (selectedUnit)
                     {
                         case 1:
@@ -143,7 +143,7 @@ namespace ITBFTKlassenBibliothek
 
 
 
-                static void WindowsCalculation();
+                static void WindowsCalculation()
                 {
                     Console.WriteLine("Bitte geben Sie die Bit-Zahl ein:");
                     double IbitNumber;
@@ -167,7 +167,7 @@ namespace ITBFTKlassenBibliothek
                         return;
                     }
 
-                    double byteNumber;
+                    double byteNumber=0;
                     switch (SelectedUnit)
                     {
                         case 1:
@@ -196,7 +196,7 @@ namespace ITBFTKlassenBibliothek
                     }
 
                     int selectedUnit;
-                    if (!int.TryParse(Console.ReadLine(), out SelectedUnit) || SelectedUnit < 1 || SelectedUnit > 4)
+                    if (!int.TryParse(Console.ReadLine(), out selectedUnit) || SelectedUnit < 1 || SelectedUnit > 4)
                     {
                         Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
                         return;
@@ -207,6 +207,7 @@ namespace ITBFTKlassenBibliothek
                     Console.WriteLine("3. Byte -> MiByte");
                     Console.WriteLine("4. Byte -> GiByte");
                     Console.WriteLine("5. Byte -> TiByte");
+                    
                     double Summe = 0;
                     switch (selectedUnit)
                     {
@@ -239,7 +240,15 @@ namespace ITBFTKlassenBibliothek
                 Console.WriteLine("Wollen sie das Program wiederholen ?");
                 Console.WriteLine("1. nein ");
                 Console.WriteLine("2. ja ");
-                int Aita;
+                int Aita ;
+
+                bool flag = !int.TryParse(Console.ReadLine(), out Aita);
+                if ( flag || Aita < 1 || Aita > 4)
+                {
+                    Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine Zahl zwischen 1 und 5.");
+                    return;
+                }
+
                 switch (Aita)
                 {
                     case 1:
