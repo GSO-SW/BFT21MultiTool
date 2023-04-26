@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -49,6 +50,7 @@ namespace MABFTKlassenBibliothek
 
             do
             {
+                menue:
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Flächen- und Umfangberechnung <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
@@ -63,7 +65,8 @@ namespace MABFTKlassenBibliothek
                     "7 - Kreis\n" +
                     "8 - Formeln\n" +
                     "9 - Letztes Ergebnis erneut ausgeben\n" +
-                    "Tipp: mit der Eingabe des Wortes exit können sie das programm jederzeit verlassen.");
+                    "10 - Zurück ins Mathemenü\n" +
+                    "Tipp: mit der Eingabe des Wortes exit können sie das programm jederzeit verlassen, mit menu zurück in dieses Menü gelangen.");
                 Smenu = Console.ReadLine();
 
                 if (Smenu == "exit")
@@ -82,6 +85,11 @@ namespace MABFTKlassenBibliothek
                         if (s1 == "exit")
                         {
                             Environment.Exit(0);
+                        }
+                        if (s1 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
                         }
                         tryparseout = int.TryParse(s1, out i1);
                         if (tryparseout == false)
@@ -105,6 +113,11 @@ namespace MABFTKlassenBibliothek
                         {
                             Environment.Exit(0);
                         }
+                        if (s1 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
+                        }
                         tryparseout = int.TryParse(s1, out i1);
                         if (tryparseout == false)
                         {
@@ -118,6 +131,11 @@ namespace MABFTKlassenBibliothek
                         if (s2 == "exit")
                         {
                             Environment.Exit(0);
+                        }
+                        if (s2 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
                         }
                         tryparseout = int.TryParse(s2, out i2);
                         if (tryparseout == false)
@@ -141,6 +159,11 @@ namespace MABFTKlassenBibliothek
                         {
                             Environment.Exit(0);
                         }
+                        if (s1 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
+                        }
                         tryparseout = int.TryParse(s1, out i1);
                         if (tryparseout == false)
                         {
@@ -154,6 +177,11 @@ namespace MABFTKlassenBibliothek
                         if (s2 == "exit")
                         {
                             Environment.Exit(0);
+                        }
+                        if (s2 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
                         }
                         tryparseout = int.TryParse(s2, out i2);
                         if (tryparseout == false)
@@ -173,6 +201,15 @@ namespace MABFTKlassenBibliothek
                             {
                                 Console.WriteLine("Geben sie die Länge der Seite b ein.");
                                 u1 = Console.ReadLine();
+                                if (u1 == "exit")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                if (u1 == "menu")
+                                {
+                                    Console.Clear();
+                                    goto menue;
+                                }
                                 tryparseout = int.TryParse(u1, out u1i);
                                 if (tryparseout == false)
                                 {
@@ -190,6 +227,11 @@ namespace MABFTKlassenBibliothek
                             Console.ReadKey();
                             Environment.Exit(0);
 
+                        }
+                        if (U == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
                         }
                         else
                         {
@@ -209,6 +251,11 @@ namespace MABFTKlassenBibliothek
                         {
                             Environment.Exit(0);
                         }
+                        if (s1 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
+                        }
                         tryparseout = int.TryParse(s1, out i1);
                         if (tryparseout == false)
                         {
@@ -223,6 +270,11 @@ namespace MABFTKlassenBibliothek
                         {
                             Environment.Exit(0);
                         }
+                        if (s2 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
+                        }
                         tryparseout = int.TryParse(s2, out i2);
                         if (tryparseout == false)
                         {
@@ -236,6 +288,11 @@ namespace MABFTKlassenBibliothek
                         if (s3 == "exit")
                         {
                             Environment.Exit(0);
+                        }
+                        if (s3 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
                         }
                         tryparseout = int.TryParse(s3, out i3);
                         if (tryparseout == false)
@@ -258,6 +315,15 @@ namespace MABFTKlassenBibliothek
 
                                 Console.WriteLine("Geben sie die Länge der Seite b ein.");
                                 u1 = Console.ReadLine();
+                                if (u1 == "exit")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                if (u1 == "menu")
+                                {
+                                    Console.Clear();
+                                    goto menue;
+                                }
                                 tryparseout = int.TryParse(u1, out u1i);
                                 if (tryparseout == false)
                                 {
@@ -268,6 +334,15 @@ namespace MABFTKlassenBibliothek
                             {
                                 Console.WriteLine("Geben sie die Länge der Seite d ein.");
                                 u2 = Console.ReadLine();
+                                if (u2 == "exit")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                if (u2 == "menu")
+                                {
+                                    Console.Clear();
+                                    goto menue;
+                                }
                                 tryparseout = int.TryParse(u2, out u2i);
                                 if (tryparseout == false)
                                 {
@@ -285,6 +360,11 @@ namespace MABFTKlassenBibliothek
                                 "Drücken sie eine beliebige Taste um das Programm zu beenden.");
                             Console.ReadKey();
                             Environment.Exit(0);
+                        }
+                        if (U == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
                         }
                         else
                         {
@@ -304,6 +384,11 @@ namespace MABFTKlassenBibliothek
                         {
                             Environment.Exit(0);
                         }
+                        if (s1 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
+                        }
                         tryparseout = int.TryParse(s1, out i1);
                         if (tryparseout == false)
                         {
@@ -317,6 +402,11 @@ namespace MABFTKlassenBibliothek
                         if (s2 == "exit")
                         {
                             Environment.Exit(0);
+                        }
+                        if (s2 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
                         }
                         tryparseout = int.TryParse(s2, out i2);
                         if (tryparseout == false)
@@ -338,6 +428,15 @@ namespace MABFTKlassenBibliothek
                             {
                                 Console.WriteLine("Geben sie die Länge der Seite b ein.");
                                 u1 = Console.ReadLine();
+                                if (u1 == "exit")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                if (u1 == "menu")
+                                {
+                                    Console.Clear();
+                                    goto menue;
+                                }
                                 tryparseout = int.TryParse(u1, out u1i);
                                 if (tryparseout == false)
                                 {
@@ -348,6 +447,15 @@ namespace MABFTKlassenBibliothek
                             {
                                 Console.WriteLine("Geben sie die Länge der Seite c ein.");
                                 u2 = Console.ReadLine();
+                                if (u2 == "exit")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                if (u2 == "menu")
+                                {
+                                    Console.Clear();
+                                    goto menue;
+                                }
                                 tryparseout = int.TryParse(u2, out u2i);
                                 if (tryparseout == false)
                                 {
@@ -365,9 +473,15 @@ namespace MABFTKlassenBibliothek
                             Console.ReadKey();
                             Environment.Exit(0);
                         }
+                        if (U == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
+                        }
                         else
                         {
                             Console.WriteLine("Fehler, bitte versuchen sie es erneut.");
+                            Uf = false;
                         }
                     } while (Uf == false);
                 }
@@ -380,6 +494,11 @@ namespace MABFTKlassenBibliothek
                         if (s1 == "exit")
                         {
                             Environment.Exit(0);
+                        }
+                        if (s1 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
                         }
                         tryparseout = int.TryParse(s1, out i1);
                         if (tryparseout == false)
@@ -394,6 +513,11 @@ namespace MABFTKlassenBibliothek
                         if (s2 == "exit")
                         {
                             Environment.Exit(0);
+                        }
+                        if (s2 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
                         }
                         tryparseout = int.TryParse(s2, out i2);
                         if (tryparseout == false)
@@ -414,6 +538,15 @@ namespace MABFTKlassenBibliothek
                             {
                                 Console.WriteLine("Geben sie die Länge der Seite a ein.");
                                 u1 = Console.ReadLine();
+                                if (u1 == "exit")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                if (u1 == "menu")
+                                {
+                                    Console.Clear();
+                                    goto menue;
+                                }
                                 tryparseout = int.TryParse(u1, out u1i);
                                 if (tryparseout == false)
                                 {
@@ -424,6 +557,15 @@ namespace MABFTKlassenBibliothek
                             {
                                 Console.WriteLine("Geben sie die Länge der Seite b ein.");
                                 u2 = Console.ReadLine();
+                                if (u2 == "exit")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                if (u2 == "menu")
+                                {
+                                    Console.Clear();
+                                    goto menue;
+                                }
                                 tryparseout = int.TryParse(u2, out u2i);
                                 if (tryparseout == false)
                                 {
@@ -434,6 +576,15 @@ namespace MABFTKlassenBibliothek
                             {
                                 Console.WriteLine("Geben sie die Länge der Seite c ein.");
                                 u3 = Console.ReadLine();
+                                if (u3 == "exit")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                if (u3 == "menu")
+                                {
+                                    Console.Clear();
+                                    goto menue;
+                                }
                                 tryparseout = int.TryParse(u3, out u3i);
                                 if (tryparseout == false)
                                 {
@@ -444,6 +595,15 @@ namespace MABFTKlassenBibliothek
                             {
                                 Console.WriteLine("Geben sie die Länge der Seite d ein.");
                                 u4 = Console.ReadLine();
+                                if (u4 == "exit")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                if (u4 == "menu")
+                                {
+                                    Console.Clear();
+                                    goto menue;
+                                }
                                 tryparseout = int.TryParse(u4, out u4i);
                                 if (tryparseout == false)
                                 {
@@ -461,6 +621,11 @@ namespace MABFTKlassenBibliothek
                             Console.ReadKey();
                             Environment.Exit(0);
                         }
+                        if (U == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
+                        }
                         else
                         {
                             Console.WriteLine("Fehler, bitte verscuhen sie es erneut.");
@@ -477,6 +642,11 @@ namespace MABFTKlassenBibliothek
                         if (s1 == "exit")
                         {
                             Environment.Exit(0);
+                        }
+                        if (s1 == "menu")
+                        {
+                            Console.Clear();
+                            goto menue;
                         }
                         tryparseout = double.TryParse(s1, out d1);
                         if (tryparseout == false)
@@ -509,6 +679,10 @@ namespace MABFTKlassenBibliothek
                         Console.WriteLine($"{fdsum}__² als Summe des Flächeninhalts raus und\n" +
                         $"{fusum}__ als Summe des Umfangs heraus.");
                     }
+                }
+                if (menu == 10)
+                {
+                    return;
                 }
                 else if (menu < 1 || menu > 9 || tryparseoutmenu == false)
                 {
