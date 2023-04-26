@@ -1,4 +1,4 @@
-﻿using Figgle;
+using Figgle;
 using System;
 namespace PHBFTKlassenBibliothek
 {
