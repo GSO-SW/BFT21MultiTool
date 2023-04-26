@@ -55,8 +55,6 @@ namespace MABFTKlassenBibliothek
 
                 }
                       
-
-                Console.ForegroundColor = ConsoleColor.Green;
                 while (!exit)
                 {
                     Console.Clear();
@@ -105,6 +103,7 @@ namespace MABFTKlassenBibliothek
                         }
                         else if (selectedItem == 1)
                         {
+                            Feature22.flachenberechnung();
                             Console.Clear();
 
                         }
