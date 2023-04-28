@@ -74,17 +74,5 @@ namespace WIBFTKlassenBibliothek
                 }
             }
         }
-        public class Saves
-        {
-            double[] doubles;
-            public static void save(float data)
-            {
-
-            }
-            public static float load()
-            {
-                return 0;
-            }
-        }
     }
 }
