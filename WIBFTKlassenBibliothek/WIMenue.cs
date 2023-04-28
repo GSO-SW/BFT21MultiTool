@@ -40,7 +40,6 @@ namespace WIBFTKlassenBibliothek
                 Console.WriteLine("\t2 - Lohnsteuerberrechnung");
                 Console.WriteLine("\t3 - ZinsBerrechnung");
                 Console.WriteLine("\t4 - ImmobilienBerrechnung");
-                Console.WriteLine("\t5 - Zwischenspeicher Bearbeiten\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
@@ -63,10 +62,6 @@ namespace WIBFTKlassenBibliothek
                     case "4":
                         Console.Clear();
                         Feature19.run();
-                        break;
-
-                    case "5":
-                        Console.Clear();
                         break;
 
                     case "exit":
