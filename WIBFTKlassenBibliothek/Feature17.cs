@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WIBFTKlassenBibliothek
 {
-    internal class Feature17
+    internal class Class1
     {
     
     public static void run()
