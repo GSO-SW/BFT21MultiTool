@@ -48,6 +48,7 @@ namespace WIBFTKlassenBibliothek
                 {
                     case "1":
                         Console.Clear();
+                        Feature20.run();
                         break;
 
                     case "2":
