@@ -109,11 +109,11 @@ namespace MABFTKlassenBibliothek
                         if (selectedItem == 0) // Wenn der erste Menüpunkt ausgewählt wurde
                         {
                             Console.Clear();
+                            Feature21.Polynom();
 
                         }
                         else if (selectedItem == 1) // Wenn der zweite Menüpunkt ausgewählt wurde
                         {
-                            Feature22.flachenberechnung();
                             Console.Clear();
 
                         }
