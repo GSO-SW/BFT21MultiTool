@@ -114,15 +114,18 @@ namespace MABFTKlassenBibliothek
                         }
                         else if (selectedItem == 1) // Wenn der zweite Menüpunkt ausgewählt wurde
                         {
+                            Feature22.flachenberechnung();
                             Console.Clear();
 
                         }
                         else if (selectedItem == 2) // Wenn der dritte Menüpunkt ausgewählt wurde
                         {
+                            Feature23.quadratischefunktionen();
                             Console.Clear();
                         }
                         else if (selectedItem == 3) // Wenn der vierte Menüpunkt ausgewählt wurde
                         {
+                            Feature24.linearefunktionen();
                             Console.Clear();
                         }
                         else if (selectedItem == 4) // Wenn der fünfte Menüpunkt ausgewählt wurde

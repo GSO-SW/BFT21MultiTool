@@ -66,7 +66,7 @@ namespace MABFTKlassenBibliothek
                     "8 - Formeln\n" +
                     "9 - Letztes Ergebnis erneut ausgeben\n" +
                     "10 - Zurück ins Mathemenü\n" +
-                    "Tipp: mit der Eingabe des Wortes exit können sie das programm jederzeit verlassen, mit menu zurück in dieses Menü gelangen.");
+                    "Tipp: mit der Eingabe des Wortes exit können sie das Programm jederzeit verlassen, mit menu zurück in dieses Menü gelangen.");
                 Smenu = Console.ReadLine();
 
                 if (Smenu == "exit")
@@ -89,7 +89,7 @@ namespace MABFTKlassenBibliothek
                         if (s1 == "menu")
                         {
                             Console.Clear();
-                            goto menue;
+                            MAMenue.MASubMenue();
                         }
                         tryparseout = int.TryParse(s1, out i1);
                         if (tryparseout == false)
