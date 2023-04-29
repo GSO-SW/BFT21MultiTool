@@ -55,6 +55,8 @@ namespace ITBFTKlassenBibliothek
                     case "1":
                         Console.Clear();
 
+                        //Feature12.Feature_12();
+
 
                         //Hier das Etechnikmenü aufrufen
                         Feature12.Feature_12();
@@ -72,6 +74,8 @@ namespace ITBFTKlassenBibliothek
 
                     case "4":
                         Console.Clear();
+
+                        //Feature13.Feature_13();
                         Feature13.Feature_13();
                         break;
 
