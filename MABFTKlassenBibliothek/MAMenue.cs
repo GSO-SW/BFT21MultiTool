@@ -15,7 +15,7 @@ namespace MABFTKlassenBibliothek
             {
                 int time = DateTime.Now.Hour;
                 Console.Title = "Mathematik";
-                string[] menuItems = { "1 -> Polynom", "2 -> Flächenberechnung", "3 -> Quadratische Funktionen", "4 -> Lineare Funktionen", "5 -> Zurück ins Hauptmenü" };
+                string[] menuItems = { "1 → Polynom", "2 → Flächenberechnung", "3 → Quadratische Funktionen", "4 → Lineare Funktionen", "5 → Zurück ins Hauptmenü", "6 → Exit" };
                 int selectedItem = 0;
                 Console.CursorVisible = false;
                 bool exit = false;
@@ -133,6 +133,12 @@ namespace MABFTKlassenBibliothek
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.Clear();
                             return;
+                        }
+                        else if (selectedItem == 5) // Wenn der sechste Menüpunkt ausgewählt wurde
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Das Programm wurde beendet!");
+                            Environment.Exit(0);
                         }
                     }
 
