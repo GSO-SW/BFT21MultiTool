@@ -193,7 +193,7 @@ namespace MABFTKlassenBibliothek
                     Fsum = i1 * i2;
                     do
                     {
-                        Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder den Flächeninhalt wissen und das Programm beenden [exit]?");
+                        Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder den Flächeninhalt wissen und das Programm beenden [exit] oder ins Menü [menu] gehen?");
                         U = Console.ReadLine();
                         if (U == "ja")
                         {
@@ -203,10 +203,16 @@ namespace MABFTKlassenBibliothek
                                 u1 = Console.ReadLine();
                                 if (u1 == "exit")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um das Programm zu verlassen.");
+                                    Console.ReadKey();
                                     Environment.Exit(0);
                                 }
                                 if (u1 == "menu")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                                    Console.ReadKey();
                                     Console.Clear();
                                     goto menue;
                                 }
@@ -230,6 +236,9 @@ namespace MABFTKlassenBibliothek
                         }
                         if (U == "menu")
                         {
+                            Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                            Console.ReadKey();
                             Console.Clear();
                             goto menue;
                         }
@@ -317,10 +326,16 @@ namespace MABFTKlassenBibliothek
                                 u1 = Console.ReadLine();
                                 if (u1 == "exit")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um das Programm zu verlassen.");
+                                    Console.ReadKey();
                                     Environment.Exit(0);
                                 }
                                 if (u1 == "menu")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                                    Console.ReadKey();
                                     Console.Clear();
                                     goto menue;
                                 }
@@ -336,10 +351,16 @@ namespace MABFTKlassenBibliothek
                                 u2 = Console.ReadLine();
                                 if (u2 == "exit")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um das Programm zu verlassen.");
+                                    Console.ReadKey();
                                     Environment.Exit(0);
                                 }
                                 if (u2 == "menu")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                                    Console.ReadKey();
                                     Console.Clear();
                                     goto menue;
                                 }
@@ -363,6 +384,9 @@ namespace MABFTKlassenBibliothek
                         }
                         if (U == "menu")
                         {
+                            Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                            Console.ReadKey();
                             Console.Clear();
                             goto menue;
                         }
@@ -420,7 +444,7 @@ namespace MABFTKlassenBibliothek
                     do
                     {
 
-                        Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder den Flächeninhalt wissen und das Programm beenden [exit]?");
+                        Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder den Flächeninhalt wissen und das Programm beenden [exit] oder mit [menu] ins Menü zurück?");
                         U = Console.ReadLine();
                         if (U == "ja")
                         {
@@ -430,10 +454,16 @@ namespace MABFTKlassenBibliothek
                                 u1 = Console.ReadLine();
                                 if (u1 == "exit")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um das Programm zu verlassen.");
+                                    Console.ReadKey();
                                     Environment.Exit(0);
                                 }
                                 if (u1 == "menu")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                                    Console.ReadKey();
                                     Console.Clear();
                                     goto menue;
                                 }
@@ -449,10 +479,16 @@ namespace MABFTKlassenBibliothek
                                 u2 = Console.ReadLine();
                                 if (u2 == "exit")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um das Programm zu verlassen.");
+                                    Console.ReadKey();
                                     Environment.Exit(0);
                                 }
                                 if (u2 == "menu")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                                    Console.ReadKey();
                                     Console.Clear();
                                     goto menue;
                                 }
@@ -475,6 +511,9 @@ namespace MABFTKlassenBibliothek
                         }
                         if (U == "menu")
                         {
+                            Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                            Console.ReadKey();
                             Console.Clear();
                             goto menue;
                         }
@@ -530,7 +569,7 @@ namespace MABFTKlassenBibliothek
                     Fsum = zsum * i1 * i2;
                     do
                     {
-                        Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder den Flächeninhalt wissen und das Programm beenden [exit]?");
+                        Console.WriteLine("Wollen sie den Umfang berechnen [ja] oder den Flächeninhalt wissen und das Programm beenden [exit] oder ins Menü [menu] gehen?");
                         U = Console.ReadLine();
                         if (U == "ja")
                         {
@@ -540,10 +579,16 @@ namespace MABFTKlassenBibliothek
                                 u1 = Console.ReadLine();
                                 if (u1 == "exit")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um das Programm zu verlassen.");
+                                    Console.ReadKey();
                                     Environment.Exit(0);
                                 }
                                 if (u1 == "menu")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                                    Console.ReadKey();
                                     Console.Clear();
                                     goto menue;
                                 }
@@ -559,10 +604,16 @@ namespace MABFTKlassenBibliothek
                                 u2 = Console.ReadLine();
                                 if (u2 == "exit")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um das Programm zu verlassen.");
+                                    Console.ReadKey();
                                     Environment.Exit(0);
                                 }
                                 if (u2 == "menu")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                                    Console.ReadKey();
                                     Console.Clear();
                                     goto menue;
                                 }
@@ -578,10 +629,16 @@ namespace MABFTKlassenBibliothek
                                 u3 = Console.ReadLine();
                                 if (u3 == "exit")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um das Programm zu verlassen.");
+                                    Console.ReadKey();
                                     Environment.Exit(0);
                                 }
                                 if (u3 == "menu")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                                    Console.ReadKey();
                                     Console.Clear();
                                     goto menue;
                                 }
@@ -597,10 +654,16 @@ namespace MABFTKlassenBibliothek
                                 u4 = Console.ReadLine();
                                 if (u4 == "exit")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um das Programm zu verlassen.");
+                                    Console.ReadKey();
                                     Environment.Exit(0);
                                 }
                                 if (u4 == "menu")
                                 {
+                                    Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                                    Console.ReadKey();
                                     Console.Clear();
                                     goto menue;
                                 }
@@ -623,6 +686,9 @@ namespace MABFTKlassenBibliothek
                         }
                         if (U == "menu")
                         {
+                            Console.WriteLine($"Ihre Fläche beträgt: {Fsum}__²\n" +
+                                        "Drücken sie ENTER um ins Menü zu gelangen.");
+                            Console.ReadKey();
                             Console.Clear();
                             goto menue;
                         }
@@ -689,7 +755,7 @@ namespace MABFTKlassenBibliothek
                     Console.WriteLine("Falsche Eingabe, bitte versuchen sie es nochmal");
                 }
                 Console.WriteLine("Drücken sie die Taste ENTER um ins Menü zu gelangen.");
-                Console.ReadLine();
+                Console.ReadKey();
                 Console.Clear();
             } while (true);
         }
