@@ -1,0 +1,7 @@
+﻿
+
+//DatenspeicherNutzung\\
+speichern eines errechneten wertes:
+WIMenue.Saves.save(NumberVariable)
+laden eines wertes zum verwenden in einer rechnung
+float variablenname = WIMenu.Saves.load();
