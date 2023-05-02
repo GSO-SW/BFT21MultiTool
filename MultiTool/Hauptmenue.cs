@@ -61,6 +61,7 @@ namespace MultiTool
                     case "i":
                         Console.Clear();
                         //Hier das Informationstechnikmenü aufrufen
+                        ITBFTKlassenBibliothek.ITMenue.SubmenueAufruf();
                         break;
 
                     case "m":
