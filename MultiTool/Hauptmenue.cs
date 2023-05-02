@@ -25,7 +25,7 @@ namespace MultiTool
                     (FiggleFonts.Slant.Render("BFTMultiTool"));
 
                 //Konsolentitel wird geändert.
-                Console.Title = "BFTMultiTool";
+                Console.Title = "BFTMultiTool"; 
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Hauptmenü <<<\n" +
@@ -65,7 +65,7 @@ namespace MultiTool
 
                     case "m":
                         Console.Clear();
-                        //Hier das Mathematikmenü aufrufen
+                        MABFTKlassenBibliothek.MAMenue.MASubMenue();
                         break;
 
                     case "p":
