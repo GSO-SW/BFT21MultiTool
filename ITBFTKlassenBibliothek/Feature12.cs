@@ -8,7 +8,7 @@ namespace ITBFTKlassenBibliothek
 {
     internal class Feature12
     {
-        public Feature12()
+        public static void Feature_12()
         {
 
 
