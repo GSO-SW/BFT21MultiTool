@@ -1,82 +1,69 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Figgle;
+﻿using Figgle;
 
-namespace MultiTool
+
+namespace ETBFTKlassenBibliothek
 {
-    internal class Hauptmenue
+    public class ETBFTMenue
     {
-        public static void HauptmenueAufruf()
+        public static void ETMenue()
         {
             bool Exit = false;
 
             do
             {
-
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 (int, int) cPosBM = Console.GetCursorPosition();
+
                 Console.WriteLine();
 
                 //ASCII art Logo wird erzeugt.
                 Console.WriteLine
-                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                    (FiggleFonts.Slant.Render("Elektrotechink"));
 
                 //Konsolentitel wird geändert.
-                Console.Title = "BFTMultiTool"; 
+                Console.Title = "Elektrotechink";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Hauptmenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
-
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
 
                 //Beschreibung der Software.
-                Console.WriteLine("\n\nMit der Software 'BFTMulti-Tool' sollen wiederkehrende oder besonders aufwendige\n" +
-                                  "Aufgabenaus dem schulischen Kontext erleichtert oder gelöst werden. Diese Aufgaben\n" +
-                                  "ergeben sich aus den Problemstellungen aus dem Unterricht der Berufsfachschule für Technik.\n\n");
+                Console.WriteLine("");
 
                 string HauptAusw;
 
-
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\te - Elektrotechnik");
-                Console.WriteLine("\ti - Informatik");
-                Console.WriteLine("\tm - Mathematik");
-                Console.WriteLine("\tp - Physik");
-                Console.WriteLine("\tw - Wirtschaft\n");
+                Console.WriteLine("\t1 - Spannung als Energieaufteilung & Strom aus Ladungen je Zeit");
+                Console.WriteLine("\t2 - Ohm'schesGesetz / Leistungsgesetz");
+                Console.WriteLine("\t3 - Widerstand, Kondensator & Spule Berechnung");
+                Console.WriteLine("\t4 - Spannungsfall & Leitungsquerschnitt berechnen\n");
+                Console.WriteLine("");
+
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
                 switch (HauptAusw)
                 {
-                    case "e":
+                    case "1":
                         Console.Clear();
-                        ETBFTKlassenBibliothek.ETBFTMenue.ETMenue();
                         break;
 
-                    case "i":
+                    case "2":
                         Console.Clear();
-                        //Hier das Informationstechnikmenü aufrufen
-                        ITBFTKlassenBibliothek.ITMenue.SubmenueAufruf();
+                        
                         break;
 
-                    case "m":
+                    case "3":
                         Console.Clear();
-                        MABFTKlassenBibliothek.MAMenue.MASubMenue();
+                        
                         break;
 
-                    case "p":
+                    case "4":
                         Console.Clear();
-                        PHBFTKlassenBibliothek.PHMenue.PHSubMenue();
-                        break;
-
-                    case "w":
-                        Console.Clear();
-                        //Hier das Wirtschaftsmenü aufrufen
-                        WIBFTKlassenBibliothek.WIMenue.WISubMenue();
+                        
                         break;
 
                     case "exit":
@@ -86,7 +73,7 @@ namespace MultiTool
 
                         Console.WriteLine("Ungültige Eingabe");
                         Console.ReadKey();
-
+                        Console.SetCursorPosition(0, 0);
                         (int, int) cPosAM = Console.GetCursorPosition();
 
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
@@ -95,8 +82,8 @@ namespace MultiTool
                 }
 
             } while (!Exit);
-
-
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Clear();
         }
     }
 }
