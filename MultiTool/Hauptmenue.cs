@@ -17,7 +17,6 @@ namespace MultiTool
             {
 
                 (int, int) cPosBM = Console.GetCursorPosition();
-                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine();
 
                 //ASCII art Logo wird erzeugt.
