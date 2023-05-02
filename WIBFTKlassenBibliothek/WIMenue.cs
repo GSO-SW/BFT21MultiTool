@@ -40,7 +40,6 @@ namespace WIBFTKlassenBibliothek
                 Console.WriteLine("\t2 - Lohnsteuerberrechnung");
                 Console.WriteLine("\t3 - ZinsBerrechnung");
                 Console.WriteLine("\t4 - ImmobilienBerrechnung");
-                Console.WriteLine("\t5 - Zwischenspeicher Bearbeiten\n");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
@@ -48,22 +47,22 @@ namespace WIBFTKlassenBibliothek
                 {
                     case "1":
                         Console.Clear();
+                        Feature20.run();
                         break;
 
                     case "2":
                         Console.Clear();
+                        Feature18.run();
                         break;
 
                     case "3":
                         Console.Clear();
+                        Feature17.run();
                         break;
 
                     case "4":
                         Console.Clear();
-                        break;
-
-                    case "5":
-                        Console.Clear();
+                        Feature19.run();
                         break;
 
                     case "exit":
@@ -73,18 +72,6 @@ namespace WIBFTKlassenBibliothek
                         Console.Clear();
                         break;
                 }
-            }
-        }
-        public class Saves
-        {
-            double[] doubles;
-            public static void save(float data)
-            {
-
-            }
-            public static float load()
-            {
-                return 0;
             }
         }
     }
