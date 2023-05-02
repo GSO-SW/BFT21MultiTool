@@ -17,7 +17,7 @@ namespace MultiTool
             {
 
                 (int, int) cPosBM = Console.GetCursorPosition();
-
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine();
 
                 //ASCII art Logo wird erzeugt.
@@ -71,7 +71,7 @@ namespace MultiTool
 
                     case "p":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
+                        PHBFTKlassenBibliothek.PHMenue.PHSubMenue();
                         break;
 
                     case "w":
