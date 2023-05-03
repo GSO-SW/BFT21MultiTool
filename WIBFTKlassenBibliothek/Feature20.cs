@@ -132,8 +132,8 @@ namespace WIBFTKlassenBibliothek
                 } while (!conf);
                 Console.Clear();
                 Console.WriteLine("Conversion rate is 1{2} -> {3}USD -> {0}{1}",(op1 * (op2 / 1)), ip2, ip1,op1);
-                Console.WriteLine("Resulting in:{0}",(w1*op1*(op2/1)));
-
+                Console.WriteLine("Resulting in:{0}",(w1*op1/op2));
+                Console.ReadLine();
             }
         exit:;
         }
