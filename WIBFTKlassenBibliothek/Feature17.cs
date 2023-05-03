@@ -36,7 +36,7 @@ namespace WIBFTKlassenBibliothek
                 {
                     Console.WriteLine("Zurück zum Submenü");
                     Console.ReadKey();
-                    submenü = true;
+                    return;
                 }
                 else
                 {

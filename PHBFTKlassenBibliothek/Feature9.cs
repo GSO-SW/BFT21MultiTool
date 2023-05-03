@@ -101,6 +101,7 @@ namespace PHBFTKlassenBibliothek
 
         static void KirchhoffSimulator()
         {
+
             Console.WriteLine("Willkommen beim Kirchhoff-Simulator!");
 
             while (true)

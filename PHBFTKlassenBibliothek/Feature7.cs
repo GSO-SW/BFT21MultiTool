@@ -241,9 +241,9 @@ namespace PHBFTKlassenBibliothek
                                 Console.WriteLine("Zeit (s)\tPosition (m)\tGeschwindigkeit (m/s)");
                                 Console.WriteLine("----------------------------------");
                                 Console.WriteLine("Geben Sie 'exit' ein um das Programm zu beenden oder 'submenu' um ins submenu zurück zu kommen...");
-                                while (zeit2 < 1200)
+                                while (zeit2 < 100)
                                 {
-                                    Console.Write(zeit2 + "\t\t" + position2 + "\t\t" + geschwindigkeit + "\n");
+                                    Console.Write($"{zeit2:F2}  \t\t  {position2:F2}  \t\t  {geschwindigkeit:F2} \n");
                                     zeit2 += 0.1;
                                     position2 = auslenkung * Math.Cos(omega2 * zeit2);
                                     geschwindigkeit = -auslenkung * omega2 * Math.Sin(omega2 * zeit2);
