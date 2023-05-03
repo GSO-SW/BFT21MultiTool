@@ -49,10 +49,10 @@ namespace ETBFTKlassenBibliothek
                 {
                     case "1":
                         Console.Clear();
-                        Feature1.Feature_1();
                         break;
 
                     case "2":
+
                         Console.Clear();
                         
                         break;
@@ -63,6 +63,7 @@ namespace ETBFTKlassenBibliothek
                         break;
 
                     case "4":
+                        Feature4.Feature_4();
                         Console.Clear();
                         
                         break;
