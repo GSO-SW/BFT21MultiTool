@@ -52,6 +52,7 @@ namespace ETBFTKlassenBibliothek
                         break;
 
                     case "2":
+
                         Console.Clear();
                         
                         break;
@@ -62,6 +63,7 @@ namespace ETBFTKlassenBibliothek
                         break;
 
                     case "4":
+                        Feature4.Feature_4();
                         Console.Clear();
                         
                         break;

@@ -97,15 +97,15 @@ namespace MABFTKlassenBibliothek
                             Console.Clear();
                             Console.WriteLine("Geben Sie den Wert von x ein:");
                             wrongAttempts++;
-                            if (wrongAttempts == 18)
+                            if (wrongAttempts == 3)
                             {
                                 Console.WriteLine("Wenn du nochmal eine falsche Eingabe machst, explodiert dein Computer!");
                             }
-                            else if (wrongAttempts == 19)
+                            else if (wrongAttempts == 4)
                             {
                                 Console.WriteLine("Ich habe dir gesagt, dass dein Computer explodiert, wenn du nochmal eine falsche Eingabe machst! Du wurdest gewarnt...");
                             }
-                            else if (wrongAttempts == 20)
+                            else if (wrongAttempts == 5)
                             {
                                 Console.WriteLine("Tut mir leid, aber jetzt ist es zu spät. Dein Computer wird in \n3...");
                                 Thread.Sleep(1000);

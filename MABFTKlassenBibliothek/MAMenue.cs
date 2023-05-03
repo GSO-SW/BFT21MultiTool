@@ -15,7 +15,7 @@ namespace MABFTKlassenBibliothek
             {
                 int time = DateTime.Now.Hour;
                 Console.Title = "Mathematik";
-                string[] menuItems = { "1 -> Polynom", "2 -> Flächenberechnung", "3 -> Quadratische Funktionen", "4 -> Lineare Funktionen", "5 -> Zurück ins Hauptmenü" };
+                string[] menuItems = { "1 → Polynom", "2 → Flächenberechnung", "3 → Quadratische Funktionen", "4 → Lineare Funktionen", "5 → Zurück ins Hauptmenü", "6 → Exit" };
                 int selectedItem = 0;
                 Console.CursorVisible = false;
                 bool exit = false;
@@ -109,6 +109,7 @@ namespace MABFTKlassenBibliothek
                         if (selectedItem == 0) // Wenn der erste Menüpunkt ausgewählt wurde
                         {
                             Console.Clear();
+                            Feature21.Polynom();
 
                         }
                         else if (selectedItem == 1) // Wenn der zweite Menüpunkt ausgewählt wurde
@@ -119,10 +120,12 @@ namespace MABFTKlassenBibliothek
                         }
                         else if (selectedItem == 2) // Wenn der dritte Menüpunkt ausgewählt wurde
                         {
+                            Feature23.quadratischefunktionen();
                             Console.Clear();
                         }
                         else if (selectedItem == 3) // Wenn der vierte Menüpunkt ausgewählt wurde
                         {
+                            Feature24.linearefunktionen();
                             Console.Clear();
                         }
                         else if (selectedItem == 4) // Wenn der fünfte Menüpunkt ausgewählt wurde
@@ -130,6 +133,12 @@ namespace MABFTKlassenBibliothek
                             Console.ForegroundColor = ConsoleColor.Green;
                             Console.Clear();
                             return;
+                        }
+                        else if (selectedItem == 5) // Wenn der sechste Menüpunkt ausgewählt wurde
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Das Programm wurde beendet!");
+                            Environment.Exit(0);
                         }
                     }
 
