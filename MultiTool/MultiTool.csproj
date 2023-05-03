@@ -12,7 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ETBFTKlassenBibliothek\ETBFTKlassenBibliothek.csproj" />
+    <ProjectReference Include="..\ITBFTKlassenBibliothek\ITBFTKlassenBibliothek.csproj" />
     <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
+    <ProjectReference Include="..\MABFTKlassenBibliothek\MABFTKlassenBibliothek.csproj" />
+    <ProjectReference Include="..\PHBFTKlassenBibliothek\PHBFTKlassenBibliothek.csproj" />
+    <ProjectReference Include="..\WIBFTKlassenBibliothek\WIBFTKlassenBibliothek.csproj" />
   </ItemGroup>
 
 </Project>

@@ -16,6 +16,7 @@ namespace KonsolenExtrasBibliothek
             }
 
             Console.SetCursorPosition(0, from);
+          
         }
     }
 }
