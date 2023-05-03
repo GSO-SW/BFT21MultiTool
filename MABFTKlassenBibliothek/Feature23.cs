@@ -187,7 +187,7 @@ namespace MABFTKlassenBibliothek
                             Console.WriteLine("Gib den dritten y Koordinat ein:"); // Benutzereingabe für y3
                             input6 = Console.ReadLine();
 
-                            if (input6.ToLower() == "exit") ;   // Überprüfung ob die Benutzereingabe "exit" ist
+                            if (input6.ToLower() == "exit")   // Überprüfung ob die Benutzereingabe "exit" ist
                             {
                                 Environment.Exit(0);
                                 break;
